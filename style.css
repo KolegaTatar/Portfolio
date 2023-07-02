@@ -1,0 +1,74 @@
+:root{
+    --dark_grey:#a9a9a9;
+}
+*{
+    scroll-behavior: smooth;
+    scroll-padding-top: 0rem;
+}
+body{
+
+    margin: 0;
+    background-color: lightgrey;
+    scroll-behavior:auto;
+}
+
+/*header section*/
+header{
+    height: 5rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+}
+header nav a, header div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 2rem;
+    text-decoration: none;
+    color: black;
+    font-size:1.2rem;
+}
+header .logo{
+    margin-left: 4rem;
+}
+header .clear{
+    width: 30rem;
+}
+header nav{
+    min-width: 20rem;
+}
+header .dark_light_mode{
+    margin-right: 4rem;
+}
+
+/* mian section */
+main{
+    min-height: 100rem;
+}
+main #About{
+    height: 20rem;
+}
+main #Languages{
+    height: 20rem;
+}
+main #Projects{
+    height: 20rem;
+}
+main #Contact{
+    height: 20rem;
+}
+main section h3{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+footer{
+    height: 20rem;
+    background-color: var(--dark_grey);
+}
