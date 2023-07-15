@@ -1,6 +1,6 @@
 :root{
-    --dark_grey:#a9a9a9;
-    
+    --white:#ffffff;
+    --blue:#546883;
 }
 *{
     scroll-behavior: smooth;
@@ -9,7 +9,7 @@
 body{
 
     margin: 0;
-    background-color: lightgrey;
+    background-color: white;
     scroll-behavior:auto;
 }
 
@@ -17,10 +17,21 @@ body{
 header{
     height: 5rem;
     display: flex;
-    background-color: aliceblue;
-    font-size: 1.1rem;
+    background-color: white;
+    font-size: 1.1rem; 
+    position:fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
 }
-
+.background_to_header{
+    background-color: var(--blue);
+    position: absolute;
+    height: 5rem;
+    width: 100%;
+    top: 1;
+    z-index: 0;
+}
 header nav .logo{
     height:3rem;
 }
@@ -30,6 +41,9 @@ nav{
 .nav-link{
     padding: 2rem;
 }
+/*.bg-nav{
+    background-color: var(--blue);
+}*/
 header .mode{
     font-size: 1.3rem;
 }
