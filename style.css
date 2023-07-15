@@ -14,38 +14,15 @@ body{
 
 /*header section*/
 header{
-    height: 5rem;
+    height: 4rem;
     display: flex;
-    flex-direction:row;
-    justify-content: space-between;
     background-color: aliceblue;
 }
-header nav{
-    display: flex;
-    flex-direction: row;
+
+header nav .logo{
+    height: 3rem;
 }
-header nav a, header div{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:0 2rem;
-    text-decoration: none;
-    color: black;
-    font-size:1.2rem;
-}
-header .logo{
-    margin-left: 4rem;
-}
-header .clear{
-    width: 30rem;
-}
-header nav{
-    min-width: 20rem;
-}
-header .dark_light_mode{
-    margin-right: 4rem;
-}
+
 
 /* mian section */
 main{
@@ -69,6 +46,6 @@ main section h3{
     font-size: 1.5rem;
 }
 footer{
-    height: 20rem;
+    height: 5rem;
     background-color: var(--dark_grey);
 }
