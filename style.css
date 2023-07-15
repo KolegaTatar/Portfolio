@@ -14,13 +14,13 @@ body{
 
 /*header section*/
 header{
-    height: 4rem;
+    height: 3rem;
     display: flex;
     background-color: aliceblue;
 }
 
 header nav .logo{
-    height: 3rem;
+    height:2rem;
 }
 nav{
     width: 100%;
