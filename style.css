@@ -22,6 +22,9 @@ header{
 header nav .logo{
     height: 3rem;
 }
+nav{
+    width: 100%;
+}
 
 
 /* mian section */
