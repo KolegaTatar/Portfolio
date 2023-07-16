@@ -26,8 +26,16 @@ header{
 }
 .background_to_header{
     background-color: var(--blue);
+    position: fixed;
+    height: 4.5rem;
+    width: 100%;
+    top: 1;
+    z-index: 0;
+}
+.background_to_header_white{
+    background-color: var(--white);
     position: absolute;
-    height: 5rem;
+    height: 4.5rem;
     width: 100%;
     top: 1;
     z-index: 0;
