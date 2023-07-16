@@ -1,6 +1,7 @@
 :root{
     --white:#ffffff;
     --blue:#546883;
+
 }
 *{
     scroll-behavior: smooth;
@@ -23,22 +24,25 @@ header{
     width: 100%;
     top: 0;
     z-index: 1;
+    border-bottom: 1px lightgray solid;
 }
 .background_to_header{
     background-color: var(--blue);
     position: fixed;
-    height: 4.5rem;
+    height: 4.1rem;
     width: 100%;
     top: 1;
     z-index: 0;
+    box-shadow: var(--blue) 0px 5px 25px;
 }
 .background_to_header_white{
-    background-color: var(--white);
+    background-color: lightgray;
     position: absolute;
-    height: 4.5rem;
+    height: 4.1rem;
     width: 100%;
     top: 1;
     z-index: 0;
+    box-shadow: var(--white) 1px 40px 25px;
 }
 header nav .logo{
     height:3rem;
@@ -56,6 +60,9 @@ header .mode{
     font-size: 1.3rem;
 }
 
+.nav-item :hover{
+    color: var(--blue);
+}
 
 /* mian section */
 main{
@@ -71,6 +78,10 @@ main section h3{
     font-size: 1.5rem;
 }
 footer{
-    height: 5rem;
-    background-color: var(--dark_grey);
+    height: 4rem;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
