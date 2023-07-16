@@ -8,10 +8,11 @@
     scroll-padding-top: 0rem;
 }
 body{
-
     margin: 0;
     background-color: white;
     scroll-behavior:auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /*header section*/
@@ -67,15 +68,20 @@ header .mode{
 /* mian section */
 main{
     min-height: 100rem;
+    position: relative;
+    top: 5rem;
 }
 
-main #Start, main #About,main #Skils,main #Projects, main #Contact{
-    height: 20rem;
+main #Start{
+
 }
 main section h3{
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+}
+section{
+    height: 40rem;
 }
 footer{
     height: 4rem;
