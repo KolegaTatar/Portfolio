@@ -72,9 +72,7 @@ main{
     top: 5rem;
 }
 
-main #Start{
 
-}
 main section h3{
     display: flex;
     justify-content: center;
@@ -83,8 +81,29 @@ main section h3{
 section{
     height: 40rem;
 }
+#Start .row{
+    height: 40rem;
+}
+#Start .row article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
 .img-start{
     border-radius: 0.9rem;
+}
+#Start article h1{
+    font-size: 3.5rem;
+}
+#Start article a{
+    background-color: var(--blue);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
 }
 
 /* Footer section */
