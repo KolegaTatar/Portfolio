@@ -83,6 +83,11 @@ main section h3{
 section{
     height: 40rem;
 }
+.img-start{
+    border-radius: 0.9rem;
+}
+
+/* Footer section */
 footer{
     height: 4rem;
     background-color: var(--blue);
