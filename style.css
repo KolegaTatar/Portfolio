@@ -81,6 +81,13 @@ main section h3{
 section{
     height: 40rem;
 }
+#Start, #Skils ,#Contact{
+    background-color: white;
+}
+#About, #Projects{
+    background-color: lightgray;
+
+}
 #Start .row{
     height: 40rem;
 }
