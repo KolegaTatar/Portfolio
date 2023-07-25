@@ -10,25 +10,26 @@
 }
 body{
     margin: 0;
-    background-color: var(--dark_blue);
+    background-color: var(--dark_blue2);
     scroll-behavior:auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: var(--white);
+    padding-top:5rem;
 }
-.head_icon{
-    border-radius: 9rem;
-}
+
+
 /*header section*/
 header{
     height: 5rem;
     display: flex;
     background-color: var(--dark_blue);
     font-size: 1.1rem; 
-    position:fixed;
     width: 100%;
+    position: fixed; 
     z-index: 1;
-
+    top: 0;
 }
 
 header nav .logo{
@@ -71,11 +72,8 @@ header .mode{
 /* mian section */
 main{
     min-height: 100rem;
-    position: relative;
-    top: 5rem;
+
 }
-
-
 main section h3{
     display: flex;
     justify-content: center;
@@ -86,7 +84,8 @@ main section{
     padding: 0rem 7rem;
 }
 #Start{
-    
+    position: relative;
+    background-color: rgb(43, 115, 91);
 }
 #About, #Projects {
     background-color: var(--dark_blue2);
@@ -119,7 +118,11 @@ main section{
     justify-content: center;
     font-size: 1.1rem;
 }
-
+#Start aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* Footer section */
 footer{
@@ -130,3 +133,7 @@ footer{
     align-items: center;
     color: white;
 }
+/*
+@media  {
+    
+}*/
