@@ -1,8 +1,8 @@
 :root{
     --white:rgb(255, 255, 255);
-    --blue:rgba(0,161,225,255);
-    --dark_blue:rgba(8,28,41,255);
-    --dark_blue2:rgba(15,44,67,255);
+    --blue:#00a1e1;
+    --dark_blue:rgba(8,28,41,1);
+    --dark_blue2:rgba(15,44,67,1);
 }
 *{
     scroll-behavior: smooth;
@@ -16,7 +16,9 @@ body{
     flex-direction: column;
     color: var(--white);
 }
-
+.head_icon{
+    border-radius: 9rem;
+}
 /*header section*/
 header{
     height: 5rem;
@@ -34,13 +36,15 @@ header nav .logo{
 }
 nav{
     width: 100%;
+
 }
 .nav-link{
-    padding: 2rem;
+    padding: 1.5rem;
 }
 .nav-link:hover{
     color: var(--blue) !important;
 }
+
 header .mode{
     font-size: 1.3rem;
 }
@@ -52,7 +56,7 @@ header .mode{
     color: var(--blue);
 }
 .mode{
-    padding: 2rem;
+    padding: 1rem;
 }
 .mode:hover{
     color: var(--blue) !important;
@@ -62,6 +66,7 @@ header .mode{
     background-color: rgba(8, 28, 41, 0.8);
     margin:1 0 !important;
 }
+
 
 /* mian section */
 main{
