@@ -14,25 +14,29 @@
 </head>
 <body>
     <header>
-        <nav class="navbar bg-nav navbar-expand-lg navbar-light">
-            <a href="#Start" class="ms-5 navbar-brand"><img src="logo.png" alt="" class="logo me-1 align-bottom">Tatarynowicz. code</a>
-            <div class="navbar-collapse collapse ms-5">
+        <nav class="navbar bg-nav navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+            <a href="#Start" class="navbar-brand fw-bold Start_text ms-5">Tatarynowicz <span class="dotted_color">.</span></a>
+            
+            <div class="navbar-collapse collapse ms-5" id="main-menu">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a href="#About" class="nav-link ">About me</a>
+                        <a href="#About" class="nav-link text-light fw-bold ms-4">About me</a>
                     </li>
-                    <li class="nav-item ms-3">
-                        <a href="#Skils" class="nav-link">Skils</a>
+                    <li class="nav-item ms-4">
+                        <a href="#Skils" class="nav-link text-light fw-bold">Skils</a>
                     </li>
-                    <li class="nav-item ms-3">
-                        <a href="#Projects" class="nav-link">Projects</a>
+                    <li class="nav-item ms-4">
+                        <a href="#Projects" class="nav-link text-light fw-bold">Projects</a>
                     </li>
-                    <li class="nav-item ms-3">
-                        <a href="#Contact" class="nav-link">Contact</a>
+                    <li class="nav-item ms-4">
+                        <a href="#Contact" class="nav-link text-light fw-bold">Contact</a>
                     </li>
                 </ul>  
             </div>
-            <i class="fa-solid fa-circle-half-stroke me-5 mode text-dark"></i>
+            <i class="fa-solid fa-circle-half-stroke me-5 mode text-light"></i>
         </nav>
     </header>
     
@@ -77,7 +81,7 @@
             </form>
         </section>
     </main>
-    <footer class="mt-5">
+    <footer class="mt-5 fw-bold">
         By Wiktor Tatarynowicz
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
