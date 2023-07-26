@@ -1,6 +1,6 @@
 :root{
     --white:rgb(255, 255, 255);
-    --blue:#00a1e1;
+    --blue:rgb(0, 161, 224);
     --dark_blue:rgba(8,28,41,1);
     --dark_blue2:rgba(15,44,67,1);
 }
@@ -192,6 +192,42 @@ main section{
 }
 .third_box1_content{
     min-height: 10rem;
+}
+.third_box_container .card{
+    display: flex;
+    justify-content: center;
+}
+.third_box_container .grade{
+    height: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1rem;
+}
+.third_box_container .grade .grade1{
+    background-color: rgba(0, 160, 224, 0.5);
+    width: 95%;
+}
+.third_box_container .grade .grade2{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.third_box_container .grade .grade1_1{
+    background-color: var(--blue);
+    height: 100%;
+    width: 75%;
+}
+.third_box_container .grade .grade1_2{
+    background-color: var(--blue);
+    height: 100%;
+    width: 50%;
+}
+.third_box_container .grade .grade1_3{
+    background-color: var(--blue);
+    height: 100%;
+    width: 80%;
 }
 
 /* Footer section */
