@@ -10,31 +10,25 @@
 }
 body{
     margin: 0;
-    background-color: var(--dark_blue2);
+    background-color: white;
     scroll-behavior:auto;
     color: var(--white);
-    
+ 
 }
 
 
 /*header section*/
 header{
-    height: 5rem;
-    display: flex;
     background-color: var(--dark_blue);
     font-size: 1.1rem; 
     width: 100%;
 }
 
-header nav .logo{
-    height:3rem;
-}
 nav{
     width: 100%;
-
 }
 .nav-link{
-    padding: 1.5rem;
+    padding: 1rem;
 }
 .nav-link:hover{
     color: var(--blue) !important;
@@ -48,7 +42,7 @@ header .mode{
     font-size: 2rem;
 }
 .dotted_color{
-    color: var(--blue);
+    color: var(--blue) !important;
 }
 .mode{
     padding: 1rem;
@@ -58,17 +52,19 @@ header .mode{
     cursor: pointer;
 }
 
-
 /* mian section */
 main{
     min-height: 100rem;
 }
 main section{
     height: 40rem;
-    background-color: aquamarine;
+    background-color: var(--dark_blue2);
 }
 .fake_padding{
-    height: 5rem;
+    height: 4.6rem;
+}
+.box1{
+    background-color: var(--dark_blue);
 }
 
 /* Footer section */
