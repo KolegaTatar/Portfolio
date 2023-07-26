@@ -229,6 +229,21 @@ main section{
     height: 100%;
     width: 80%;
 }
+.third_box_container .grade .grade1_4{
+    background-color: var(--blue);
+    height: 100%;
+    width: 80%;
+}
+.third_box_container .grade .grade1_5{
+    background-color: var(--blue);
+    height: 100%;
+    width: 50%;
+}
+.third_box_container .grade .grade1_6{
+    background-color: var(--blue);
+    height: 100%;
+    width: 30%;
+}
 
 /* Footer section */
 footer{
