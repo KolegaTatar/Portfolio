@@ -3,6 +3,7 @@
     --blue:rgb(0, 161, 224);
     --dark_blue:rgba(8,28,41,1);
     --dark_blue2:rgba(15,44,67,1);
+    --light_grey:#e6e6e6;
 }
 *{
     scroll-behavior: smooth;
@@ -197,6 +198,10 @@ main section{
     display: flex;
     justify-content: center;
 }
+.third_box_container .card:hover{
+    background-color: var(--light_grey);
+    cursor: pointer;
+}
 .third_box_container .grade{
     height: 1.5rem;
     width: 100%;
@@ -244,6 +249,15 @@ main section{
     height: 100%;
     width: 30%;
 }
+
+
+.sixth{
+    background-image: url(https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=996&t=st=1690487186~exp=1690487786~hmac=5976c803939213e7b4085a8a9c20761721620f56fc111f656ceec0ad45cad97a);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /* Footer section */
 footer{
