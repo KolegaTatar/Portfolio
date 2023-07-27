@@ -46,13 +46,13 @@ nav{
 .dotted_color{
     color: var(--blue) !important;
 }
-header .mode{
+header .mode_nav{
     font-size: 1.3rem;
 }
-.mode{
+header .mode_nav i{
     padding: 1rem;
 }
-.mode:hover{
+header .mode_nav i:hover{
     color: var(--blue) !important;
     cursor: pointer;
 }
@@ -62,6 +62,9 @@ header .mode{
 }
 
 /* mian section */
+h1{
+    font-size: 3rem;
+}
 main{
     min-height: 100rem;
     
@@ -256,6 +259,16 @@ main section{
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+.sixth .blur_efect{
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 
 
