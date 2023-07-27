@@ -49,10 +49,11 @@ nav{
 header .mode_nav{
     font-size: 1.3rem;
 }
-header .mode_nav i{
+header .mode_nav i, header .mode_nav a{
     padding: 1rem;
+    text-decoration: none;
 }
-header .mode_nav i:hover{
+header .mode_nav i:hover, header .mode_nav a:hover{
     color: var(--blue) !important;
     cursor: pointer;
 }
