@@ -15,7 +15,11 @@
 ::-webkit-scrollbar-thumb {
     background-color: var(--blue);
     border-radius: 0.3rem;
-  }
+}
+::selection{
+    background-color: var(--blue);
+    color: white;
+}
 body{
     margin: 0;
     background-color: white;
@@ -95,7 +99,7 @@ main section{
 .first article{
     display: flex;
     flex-direction: column;
-    justify-content: center !important; 
+    margin-top: 7rem;
     height: 100%;
 }
 .first aside{
@@ -104,7 +108,8 @@ main section{
     justify-content: center;
 }
 .img-start{
-    border-radius: 0.9rem;
+    border-radius: 1rem;
+    margin-right: 6rem;
 }
 .first article h1{
     font-size: 3.5rem;
@@ -117,9 +122,13 @@ main section{
     display: flex;
     justify-content: center;
     font-size: 1.1rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    color:var(--white);
 }
 .first article a:hover{
-    background-color: lightgrey;
+    background-color: var(--white);
+    color: black;
 }
 
 .second{
@@ -143,6 +152,13 @@ main section{
 }
 .second_container aside img{
     border-radius: 25%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+.second article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .second article a{
     background-color: var(--blue);
@@ -153,11 +169,19 @@ main section{
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
+    border-radius: 0.2rem;
+    color: var(--white);
+}
+.second article a:hover{
+    color: black;
+    background-color: var(--white);
 }
 .second article i{
     margin-right: 0.5rem;
 }
-
+.text_me{
+    font-size: 1.2rem;
+}
 .third{
     display: flex;
     flex-direction: column;
@@ -257,7 +281,7 @@ main section{
 
 
 .fifth{
-    background-image: url(https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=996&t=st=1690487186~exp=1690487786~hmac=5976c803939213e7b4085a8a9c20761721620f56fc111f656ceec0ad45cad97a);
+    background-image: url(img/contact-image.jpg);
     min-height: 50rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -286,6 +310,7 @@ main section{
     height: 4.2rem;
     margin-top: 1rem;
     padding: 1.5rem;
+    color: var(--white);
 
 }
 .fifth form input::placeholder, .fifth form textarea::placeholder{ 
@@ -312,12 +337,25 @@ main section{
     align-items: center;
     color: var(--dark_blue);
     font-weight: bold;
+    border-radius: 0.2rem;
 }
 .fifth button:hover{
     color: var(--white);
     background-color: var(--blue);
 }
-
+.arrow_up{
+    padding: 1rem;
+    background-color: var(--dark_blue);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    position: absolute;
+    text-decoration: none;
+    color: var(--white);
+    right: 1rem;
+}
+.arrow_up:hover{
+    color: var(--blue);
+}
 
 
 
