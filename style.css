@@ -99,8 +99,8 @@ main section{
 .first article{
     display: flex;
     flex-direction: column;
-    margin-top: 7rem;
-    height: 100%;
+    height: 30rem;
+    justify-content: center;
 }
 .first aside{
     display: flex;
@@ -110,6 +110,7 @@ main section{
 .img-start{
     border-radius: 1rem;
     margin-right: 6rem;
+    width: 100%;
 }
 .first article h1{
     font-size: 3.5rem;
@@ -153,7 +154,6 @@ main section{
 .second_container aside img{
     border-radius: 25%;
     margin-right: 3rem;
-    margin-left: 3rem;
 }
 .second article{
     display: flex;
@@ -162,15 +162,16 @@ main section{
 }
 .second article a{
     background-color: var(--blue);
-    padding: 1rem 3rem;
     text-decoration: none;
-    width: 20rem;
+    padding:1rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
     border-radius: 0.2rem;
     color: var(--white);
+    width: 12rem;
+
 }
 .second article a:hover{
     color: black;
@@ -330,7 +331,7 @@ main section{
     margin-top: 1rem;
     height: 2rem;
     width: 10%;
-    padding:2rem;
+    padding:2rem 5rem;
     border: none;
     display: flex;
     justify-content: center;
@@ -343,6 +344,9 @@ main section{
     color: var(--white);
     background-color: var(--blue);
 }
+
+
+
 .arrow_up{
     padding: 1rem;
     background-color: var(--dark_blue);
@@ -368,7 +372,16 @@ footer{
     align-items: center;
     color: white;
 }
-/*
-@media  {
-    
-}*/
+
+@media(max-width:320px)  {
+ .first article h1{
+    font-size: 2rem;
+ }
+ .first article{
+    width: 70%;
+ }   
+ .second_container{
+    margin-left: 0!important;
+    padding: 0px 1rem;
+ }
+}
