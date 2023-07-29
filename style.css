@@ -372,16 +372,43 @@ footer{
     align-items: center;
     color: white;
 }
+@media(max-width:1024px)  {
+    .third_box1, .third_box2, .third_box3{
+        width: 65%;
+    }
+}
 
 @media(max-width:320px)  {
- .first article h1{
-    font-size: 2rem;
- }
- .first article{
-    width: 70%;
- }   
- .second_container{
-    margin-left: 0!important;
-    padding: 0px 1rem;
- }
+    .first article h1{
+        font-size: 2rem;
+    }
+    .first article{
+        width: 70%;
+    }   
+    .second_container{
+        margin-left: 0!important;
+        padding: 0px 1rem;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .third article i{
+        margin-right: 1rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 100%;
+    }
+    .fifth form{
+        width: 80%;
+    }
+    .arrow_up{
+        padding: 0.6rem;
+    }
+    .third{
+        padding-bottom: 2rem;
+    }
+    main section{
+        min-height: 30rem;
+    }
 }
