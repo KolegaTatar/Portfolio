@@ -409,7 +409,7 @@ footer{
         padding-bottom: 2rem;
     }
     main section{
-        min-height: 30rem;
+        min-height: 20rem;
     }
     .Start_text{
         margin-left: 5px  !important;
@@ -423,5 +423,8 @@ footer{
     .first aside img{
         margin: 0;
         width: 90%;
+    }
+    .first section{
+        min-height: 20rem !important;
     }
 }
