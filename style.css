@@ -411,4 +411,17 @@ footer{
     main section{
         min-height: 30rem;
     }
+    .Start_text{
+        margin-left: 5px  !important;
+    }
+    .cv_text{
+        font-size: 1rem;
+    }
+    .second aside img{
+        margin: 0;
+    }
+    .first aside img{
+        margin: 0;
+        width: 90%;
+    }
 }
