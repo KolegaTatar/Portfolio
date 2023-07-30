@@ -424,7 +424,10 @@ footer{
         margin: 0;
         width: 90%;
     }
-    .first section{
-        min-height: 20rem !important;
+    .first article{
+        padding-top: 0rem  !important;
+    }
+    .fifth{
+        min-height: 45rem;
     }
 }
