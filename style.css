@@ -375,11 +375,129 @@ footer{
     align-items: center;
     color: white;
 }
+@media(max-width:1440px)  {
+    .third_box1, .third_box2, .third_box3{
+        width: 60%;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width: 60%;
+        padding: 1rem 1rem;
+    }
+    .third article i{
+        margin-right: 1rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 60%;
+    }
+    .third{
+        min-height: 30rem;
+    }
+    .fifth form{
+        width: 60%;
+    }
+    .fifth{
+        min-height: 45rem;
+    }
+}
+
+@media(max-width:1250px)  {
+    .third_box1, .third_box2, .third_box3{
+        width: 60%;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width: 65%;
+        padding: 1rem 1rem;
+    }
+    .third article i{
+        margin-right: 1rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 65%;
+    }
+    .third{
+        min-height: 30rem;
+    }
+    .fifth form{
+        width: 65%;
+    }
+    .fifth{
+        min-height: 45rem;
+    }
+}
+
+@media(max-width:1124px)  {
+    .third_box1, .third_box2, .third_box3{
+        width: 60%;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width: 70%;
+        padding: 1rem 1rem;
+    }
+    .third article i{
+        margin-right: 1rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 70%;
+    }
+    .third{
+        min-height: 30rem;
+    }
+    .fifth form{
+        width: 70%;
+    }
+    .fifth{
+        min-height: 45rem;
+    }
+}
 @media(max-width:1024px)  {
+    .third_box1, .third_box2, .third_box3{
+        width: 60%;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width: 75%;
+        padding: 1rem 1rem;
+    }
+    .third article i{
+        margin-right: 1rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 75%;
+    }
+    .third{
+        min-height: 30rem;
+    }
+    .fifth form{
+        width: 70%;
+    }
+    .fifth{
+        min-height: 45rem;
+    }
+}
+@media(max-width:900px)  {
     .third_box1, .third_box2, .third_box3{
         width: 65%;
     }
+    .third_box1, .third_box2, .third_box3{
+        width: 80%;
+        padding: 1rem 1rem;
+    }
+    .third article i{
+        margin-right: 1rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 80%;
+    }
+    .third{
+        min-height: 30rem;
+    }
+    .fifth form{
+        width: 75%;
+    }
+    .fifth{
+        min-height: 45rem;
+    }
 }
+
 @media (max-width:768px) {
     main .first article{
         padding-top: 0rem  !important;
