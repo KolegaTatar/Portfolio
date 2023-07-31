@@ -297,28 +297,38 @@ main section{
     justify-content: space-between;
     flex-wrap: wrap;
     min-height: 30rem;
+    width: 100%;
     padding: 0rem 6rem;
 }
-.fourth .project1, .fourth .project2{
+.fourth article .project1, .fourth article .project2{
     display: flex;
     flex-direction: column;
     width: 49%;
-    height:10%;
+    height: 30rem;
 }
-.fourth .blur_projects:hover{
-    position: relative;
-    z-index: 1;
-    background-color: antiquewhite;
-
-}
-
 .project1 img,.project2 img{
     min-height: 10rem;
     width: 100%;
     border-radius: 0.9rem;
 }
-
-
+.project2 a, .project1 a{
+    min-height: 20rem;
+    width: 100%;
+    border-radius: 0.9rem;
+    position: relative;
+}
+.blur_p{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    top: 0;
+    border-radius: 0.9rem;
+}
 
 .fifth{
     background-image: url(img/contact-image.jpg);
