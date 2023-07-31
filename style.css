@@ -304,7 +304,7 @@ main section{
     display: flex;
     flex-direction: column;
     width: 49%;
-    min-height: 30rem;
+    min-height: 10rem;
 }
 .project1 img,.project2 img{
     min-height: 10rem;
@@ -312,7 +312,7 @@ main section{
     border-radius: 0.9rem;
 }
 .project2 a, .project1 a{
-    min-height: 20rem;
+
     width: 100%;
     border-radius: 0.9rem;
     position: relative;
@@ -714,6 +714,22 @@ footer{
     .fifth{
         min-height: 45rem;
     }
+    .fourth article .project1,.fourth article .project2{
+        width: 100% !important;
+        min-height: 10rem !important;
+    }
+    .project1 a{
+        height: 50% !important;
+    }
+    .fourth h1{
+        margin-bottom: 1.5rem !important;
+    }
+    .fourth article{
+        padding: 0rem 1.5rem;
+    }
+    .p_title{
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width:320px) {
@@ -722,6 +738,16 @@ footer{
     }
     .first article{
         padding:0rem 3rem !important;
+    }
+    .fourth article .project1,.fourth article .project2{
+        width: 100% !important;
+        min-height: 10rem !important;
+    }
+    .fourth h1{
+        margin-bottom: 1.5rem !important;
+    }
+    .fourth article{
+        padding: 0rem 1.7rem;
     }
 }
 @media (max-width:290px) {
@@ -744,18 +770,18 @@ footer{
     .Start_text{
         font-size: 1.5rem;
     }
-    .project1{
+    .fourth article .project1,.fourth article .project2{
         width: 100% !important;
-        height: 20rem !important;
+        min-height: 10rem !important;
     }
-    .project2{
-        width: 100% !important;
-        height: 1rem !important;
+    .project1 a{
+        height: 50% !important;
     }
-    .p_title{
-        padding-top: 0rem ;
-    } 
-    .blur_p{
-        height: 20rem;
+    .fourth h1{
+        margin-bottom: 1.5rem !important;
     }
+    .fourth article{
+        padding: 0rem 1rem;
+    }
+
 }
