@@ -95,7 +95,9 @@ main section{
 .box1{
     background-color: var(--dark_blue);
 }
-
+.first{
+    min-height: 20rem !important;
+}
 .first article{
     display: flex;
     flex-direction: column;
@@ -106,10 +108,10 @@ main section{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 30rem;
 }
 .img-start{
     border-radius: 1rem;
-    margin-right: 6rem;
     width: 100%;
 }
 .first article h1{
@@ -379,9 +381,55 @@ footer{
     }
 }
 @media (max-width:770px) {
-    main .first{
-        max-height: 20rem !important;
+    main .first article{
         padding-top: 0rem  !important;
+        width: 60%;
+    }
+    .first aside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 20rem;
+    }
+    .first img{
+        width: 120%;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width: 80%;
+        padding: 1rem 1rem;
+    }
+    .third{
+        min-height: 30rem;
+    }
+    .fifth form{
+        width: 80%;
+    }
+    .fifth{
+        min-height: 45rem;
+    }
+    .second h1{
+        padding-bottom: 2rem;
+    }
+    .second aside img{
+        margin: 0;
+        padding: 0rem 2rem;
+    }       
+    .second .second_container{
+        margin-left: 0rem !important;
+    }
+    .cv_text{
+        padding-right: 1.5rem;
+    }
+
+}
+@media (max-width:685px) {
+    .first aside{
+        display: none;
+    }
+    main .first article{
+        padding-top: 0rem  !important;
+        width: 100%;
     }
 }
 
@@ -392,6 +440,10 @@ footer{
     .first article{
         width: 100%;
         padding:0rem 3rem !important;
+        min-height: 20rem;
+    }
+    .first aside{
+        display: none;
     }
     .second_container{
         margin:0rem 0rem!important;
