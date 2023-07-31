@@ -304,7 +304,7 @@ main section{
     display: flex;
     flex-direction: column;
     width: 49%;
-    height: 30rem;
+    min-height: 30rem;
 }
 .project1 img,.project2 img{
     min-height: 10rem;
@@ -479,6 +479,11 @@ footer{
     .fifth{
         min-height: 45rem;
     }
+    .fourth article{
+        min-height: 30rem;
+        width: 100%;
+        padding: 0rem 4rem;
+    }
 }
 
 @media(max-width:1124px)  {
@@ -504,6 +509,9 @@ footer{
     .fifth{
         min-height: 45rem;
     }
+    .fourth article{
+        padding: 0rem 3rem;
+    }
 }
 @media(max-width:1024px)  {
     .third_box1, .third_box2, .third_box3{
@@ -527,6 +535,9 @@ footer{
     }
     .fifth{
         min-height: 45rem;
+    }
+    .fourth article{
+        padding: 0rem 3rem;
     }
 }
 @media(max-width:900px)  {
@@ -552,6 +563,9 @@ footer{
     .fifth{
         min-height: 45rem;
     }
+}
+.fourth article{
+    padding: 0rem 1.5rem;
 }
 
 @media (max-width:768px) {
@@ -601,6 +615,9 @@ footer{
     .cv_text{
         padding-right: 1.5rem;
     }
+    .fourth article{
+        padding: 0rem 1rem;
+    }
 
 
 }
@@ -622,7 +639,17 @@ footer{
     #third_box1_content,#third_box2_content,#third_box3_content{
         width: 90%;
     }
+    .fourth article{
+        padding: 0rem 2rem;
+    }
+    .project1{
+        width: 100% !important;
+    }
+    .project2{
+        width: 100% !important;
+    }
 }
+
 
 @media(max-width:480px)  {
     .first article h1{
@@ -716,5 +743,19 @@ footer{
     }
     .Start_text{
         font-size: 1.5rem;
+    }
+    .project1{
+        width: 100% !important;
+        height: 20rem !important;
+    }
+    .project2{
+        width: 100% !important;
+        height: 1rem !important;
+    }
+    .p_title{
+        padding-top: 0rem ;
+    } 
+    .blur_p{
+        height: 20rem;
     }
 }
