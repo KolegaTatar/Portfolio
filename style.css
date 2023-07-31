@@ -282,6 +282,42 @@ main section{
     height: 100%;
     width: 30%;
 }
+.fourth{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.fourth h1{
+    text-align: center;
+    padding-top: 2rem;
+}
+.fourth article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 30rem;
+    padding: 0rem 6rem;
+}
+.fourth .project1, .fourth .project2{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    height:10%;
+}
+.fourth .blur_projects:hover{
+    position: relative;
+    z-index: 1;
+    background-color: antiquewhite;
+
+}
+
+.project1 img,.project2 img{
+    min-height: 10rem;
+    width: 100%;
+    border-radius: 0.9rem;
+}
+
 
 
 .fifth{
@@ -639,5 +675,26 @@ footer{
     }
     .first article{
         padding:0rem 3rem !important;
+    }
+}
+@media (max-width:290px) {
+    .third_container{
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+    }
+    .third_box1, .third_box2, .third_box3{
+        width:100%;
+        padding: 1rem 1rem;
+        font-size: 1rem;
+    }
+    .third article i{
+        margin-right: 0.5rem;
+    }
+    #third_box1_content,#third_box2_content,#third_box3_content{
+        width: 100%;
+        font-size: 0.5rem;
+    }
+    .Start_text{
+        font-size: 1.5rem;
     }
 }
