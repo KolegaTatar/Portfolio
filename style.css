@@ -3,7 +3,8 @@
     --blue:rgb(0, 161, 224);
     --dark_blue:rgba(8,28,41,1);
     --dark_blue2:rgba(15,44,67,1);
-    --light_grey:#e6e6e6;
+    --light_grey:#eee7e7;
+    --green:rgb(114,153,75);
 }
 *{
     scroll-behavior: smooth;
@@ -423,6 +424,15 @@ main section{
 }
 .mode_color{
     color: var(--blue) !important;
+}
+.mode_text{
+    color: black !important;
+}
+.mode_btn:hover{
+    color: white !important;
+}
+.mode_form{
+    color: white !important;
 }
 
 

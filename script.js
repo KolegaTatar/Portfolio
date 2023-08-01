@@ -33,19 +33,42 @@ blur_element2.addEventListener("mouseout",()=>{
 
 let dark_mode = document.querySelector(".mode_nav i");
 let r = document.querySelector(':root');
+let html = document.querySelector("html");
+/* */
+let Start_text = document.querySelector(".Start_text");
+let text_light = document.querySelectorAll(".text-light");
+let btn_cv = document.querySelectorAll(".btn_cv");
+let contact = document.querySelector(".fifth h1");
 
 dark_mode.addEventListener("click", ()=>{
     let rs = getComputedStyle(r);
-    if(rs.getPropertyValue('--dark_blue')=="white"){
+    //dark mode
+    if(rs.getPropertyValue('--dark_blue')=="#fff"){
         r.style.setProperty('--dark_blue', 'rgba(8,28,41,1)');
+        r.style.setProperty('--dark_blue2', 'rgba(15,44,67,1)');
         r.style.setProperty('--white', 'rgb(255, 255, 255)');
+        r.style.setProperty('--blue', 'rgb(0, 161, 224)');
+        Start_text.classList.remove('mode_text');
+        text_light.forEach(element => {
+            element.classList.remove("mode_text")
+        });
+        contact.classList.remove("mode_form");
     }
+    //light mode
     else{
-        r.style.setProperty('--dark_blue', 'white');
-        console.log("rrr");
-        r.style.setProperty('--white', 'rgb(0, 161, 224);');
+        r.style.setProperty('--dark_blue', '#fff');
+        r.style.setProperty('--dark_blue2', '#eee');
+        r.style.setProperty('--white', 'black');       
+        r.style.setProperty('--blue', '#a4c756');
+        Start_text.classList.add('mode_text');
+        text_light.forEach(element => {
+            element.classList.add("mode_text")
+        });
+        btn_cv.forEach(element => {
+            element.classList.add("mode_btn")
+        });
+        contact.classList.add("mode_form");
     }
-    dark_mode.classList.toggle("mode_color")
 })
 
 
