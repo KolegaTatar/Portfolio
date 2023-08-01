@@ -65,7 +65,7 @@ header .mode_nav i:hover, header .mode_nav a:hover{
 }
 .nav-link.active {
     color: var(--white) !important;
-    background-color: var(--blue) !important; 
+    background-color: var(--blue) !important;
 }
 .mode_nav i{
     color: var(--white);
@@ -434,7 +434,21 @@ main section{
 .mode_form{
     color: white !important;
 }
+.mode_border{
+    border-color: white !important;
+    color: black !important;
+}
+.mode_border::placeholder{
+    color: white !important;
+}
+.mode_border:focus-visible{ 
+    background-color:white !important;
+    color: black;
 
+}
+.mode_card:hover{
+    background-color: #eee !important;
+}
 
 /* Footer section */
 footer{

@@ -39,6 +39,10 @@ let Start_text = document.querySelector(".Start_text");
 let text_light = document.querySelectorAll(".text-light");
 let btn_cv = document.querySelectorAll(".btn_cv");
 let contact = document.querySelector(".fifth h1");
+let fifth_button =document.querySelector(".fifth button");
+let mode_border = document.querySelectorAll(".mode_border");4
+let third_box_container_grade = document.querySelectorAll(".third_box_container .grade .grade1");
+let third_box_container_card = document.querySelectorAll(".third_box_container .card");
 
 dark_mode.addEventListener("click", ()=>{
     let rs = getComputedStyle(r);
@@ -52,9 +56,22 @@ dark_mode.addEventListener("click", ()=>{
         text_light.forEach(element => {
             element.classList.remove("mode_text")
         });
+        btn_cv.forEach(element => {
+            element.classList.remove("mode_btn")
+        });
         contact.classList.remove("mode_form");
+        fifth_button.classList.remove("mode_text");
+        mode_border.forEach(element => {
+            element.classList.remove("mode_border")
+        });
+        third_box_container_grade.forEach(element => {
+            element.style.backgroundColor = "rgba(0, 160, 224, 0.5)"
+        });
+        third_box_container_card.forEach(element => {
+            element.classList.remove("mode_card")
+        });
     }
-    //light mode
+    //light mode 
     else{
         r.style.setProperty('--dark_blue', '#fff');
         r.style.setProperty('--dark_blue2', '#eee');
@@ -68,6 +85,16 @@ dark_mode.addEventListener("click", ()=>{
             element.classList.add("mode_btn")
         });
         contact.classList.add("mode_form");
+        fifth_button.classList.add("mode_text");
+        mode_border.forEach(element => {
+            element.classList.add("mode_border")
+        });
+        third_box_container_grade.forEach(element => {
+            element.style.backgroundColor = "rgba(186, 215, 124, 0.5)"
+        });
+        third_box_container_card.forEach(element => {
+            element.classList.add("mode_card")
+        });
     }
 })
 
