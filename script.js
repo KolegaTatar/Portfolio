@@ -32,7 +32,20 @@ blur_element2.addEventListener("mouseout",()=>{
 
 
 let dark_mode = document.querySelector(".mode_nav i");
+let r = document.querySelector(':root');
+
 dark_mode.addEventListener("click", ()=>{
-    dark_mode.classList.toggle("mode_color");
+    let rs = getComputedStyle(r);
+    if(rs.getPropertyValue('--dark_blue')=="white"){
+        r.style.setProperty('--dark_blue', 'rgba(8,28,41,1)');
+        r.style.setProperty('--white', 'rgb(255, 255, 255)');
+    }
+    else{
+        r.style.setProperty('--dark_blue', 'white');
+        console.log("rrr");
+        r.style.setProperty('--white', 'rgb(0, 161, 224);');
+    }
+    dark_mode.classList.toggle("mode_color")
 })
+
 

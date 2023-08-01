@@ -66,7 +66,9 @@ header .mode_nav i:hover, header .mode_nav a:hover{
     color: var(--white) !important;
     background-color: var(--blue) !important; 
 }
-
+.mode_nav i{
+    color: var(--white);
+}
 /* mian section */
 h1{
     font-size: 3rem;
@@ -419,7 +421,9 @@ main section{
 .arrow_up:hover{
     color: var(--blue);
 }
-
+.mode_color{
+    color: var(--blue) !important;
+}
 
 
 /* Footer section */
@@ -567,9 +571,7 @@ footer{
 .fourth article{
     padding: 0rem 1.5rem;
 }
-.mode_color{
-    color: var(--blue) !important;
-}
+
 
 @media (max-width:768px) {
     main .first article{
