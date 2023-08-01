@@ -44,6 +44,8 @@ let mode_border = document.querySelectorAll(".mode_border");4
 let third_box_container_grade = document.querySelectorAll(".third_box_container .grade .grade1");
 let third_box_container_card = document.querySelectorAll(".third_box_container .card");
 let blur_p = document.querySelectorAll(".blur_p");
+let navbar_toggler = document.querySelector(".navbar-toggler");
+let navbar_toggler_icon= document.querySelector(".navbar-toggler-icon");
 
 dark_mode.addEventListener("click", ()=>{
     let rs = getComputedStyle(r);
@@ -74,6 +76,8 @@ dark_mode.addEventListener("click", ()=>{
         blur_p.forEach(element => {
             element.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
         });
+        navbar_toggler.classList.remove("mode_navbar_icon");
+        navbar_toggler_icon.classList.remove("mode_icon");
     }
     //light mode 
     else{
@@ -102,6 +106,8 @@ dark_mode.addEventListener("click", ()=>{
         blur_p.forEach(element => {
             element.style.backgroundColor = "rgba(255, 255, 255, 0.5)"
         });
+        navbar_toggler.classList.add("mode_navbar_icon");
+        navbar_toggler_icon.classList.add("mode_icon");
     }
 })
 
