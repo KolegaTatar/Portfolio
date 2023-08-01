@@ -567,6 +567,9 @@ footer{
 .fourth article{
     padding: 0rem 1.5rem;
 }
+.mode_color{
+    color: var(--blue) !important;
+}
 
 @media (max-width:768px) {
     main .first article{
