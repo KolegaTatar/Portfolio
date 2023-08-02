@@ -373,17 +373,17 @@ main section{
     height: 4.2rem;
     margin-top: 1rem;
     padding: 1.5rem;
-    color: var(--white);
+    color: white !important;
 
 }
 .fifth form input::placeholder, .fifth form textarea::placeholder{ 
     opacity:1;
-    color: var(--white);
+    color:white !important;
 }
 
 .fifth form input:focus-visible,.fifth form textarea:focus-visible{ 
     background-color: var(--white);
-    color: var(--dark_blue);
+    color:rgba(8,28,41,1) !important;
 
 }
 .fifth form textarea{
@@ -443,7 +443,7 @@ main section{
 }
 .mode_border:focus-visible{ 
     background-color:white !important;
-    color: black;
+    color: black !important;
 
 }
 .mode_card:hover{
