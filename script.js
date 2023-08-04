@@ -34,7 +34,7 @@ blur_element2.addEventListener("mouseout",()=>{
 let dark_mode = document.querySelector(".mode_nav i");
 let r = document.querySelector(':root');
 let html = document.querySelector("html");
-/* */
+/* main javascript file */
 let Start_text = document.querySelector(".Start_text");
 let text_light = document.querySelectorAll(".text-light");
 let btn_cv = document.querySelectorAll(".btn_cv");
