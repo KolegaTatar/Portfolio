@@ -354,7 +354,7 @@ main section{
 }
 
 .fifth{
-    background-image: url(img/contact-image.jpg);
+    background-image: url(img/contact-image.webp);
     min-height: 50rem;
     background-repeat: no-repeat;
     background-size: cover;
