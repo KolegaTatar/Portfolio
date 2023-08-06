@@ -211,7 +211,7 @@ main section{
     align-items: center;
     width: 100%;
 }
-#third_box1_content,#third_box2_content,#third_box3_content{
+#third_box1_content,#third_box2_content,#third_box3_content,#third_box4_content{
     width: 60%;
 }
 
@@ -255,6 +255,11 @@ main section{
     justify-content: center;
     align-items: center;
 }
+.third_box_container .grade .grade1_0{
+    background-color: var(--blue);
+    height: 100%;
+    width: 50%;
+}
 .third_box_container .grade .grade1_1{
     background-color: var(--blue);
     height: 100%;
@@ -264,6 +269,11 @@ main section{
     background-color: var(--blue);
     height: 100%;
     width: 50%;
+}
+.third_box_container .grade .grade1_2_1{
+    background-color: var(--blue);
+    height: 100%;
+    width: 10%;
 }
 .third_box_container .grade .grade1_3{
     background-color: var(--blue);
