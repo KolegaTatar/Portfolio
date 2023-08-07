@@ -111,5 +111,9 @@ dark_mode.addEventListener("click", ()=>{
     }
 })
 
+let third_box_3= document.querySelector(".third_box_3");
+ third_box_3.addEventListener("click",()=>{
+    console.log("aa")
+ })
 
 
