@@ -59,7 +59,7 @@ header .mode_nav i, header .mode_nav a{
     padding: 1rem;
     text-decoration: none;
 }
-header .mode_nav i:hover, header .mode_nav a:hover{
+header .mode_nav i:hover, header{
     color: var(--blue) !important;
     cursor: pointer;
 }
@@ -68,7 +68,28 @@ header .mode_nav i:hover, header .mode_nav a:hover{
     background-color: var(--blue) !important;
 }
 .mode_nav i{
+    color: var(--white) !important;
+}
+.git_hub{
+    min-width: 1rem;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: var(--blue);
+    border-radius: 0.9rem;
+    margin-left: 1.5rem;
+}
+.git_hub a{
     color: var(--white);
+    padding: 1rem 0.5rem !important;
+}
+
+.git_hub:hover, .git_hub:hover a{
+    color: var(--blue) !important;
+}
+.git_hub:hover{
+    background-color: var(--white) !important;
 }
 /* mian section */
 h1{
