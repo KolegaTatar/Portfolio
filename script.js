@@ -1,18 +1,3 @@
-/*let fourth_content=document.querySelectorAll(".fourth_content");
-let blur_p= document.querySelectorAll(".blur_p");
-
-fourth_content.forEach(element => {
-    element.addEventListener("mouseover",()=>{
-        blur_p.forEach(e=>{
-            e.style.display="flex";
-        })
-    })
-    element.addEventListener("mouseout",()=>{
-        blur_p.forEach(e=>{
-            e.style.display="none";
-        })
-    })
-});*/
 let blur_element1 = document.querySelector(".project1 a");
 let blur_p1 =document.querySelector(".project1 a div");
 let blur_element2 = document.querySelector(".project2 a");
@@ -30,87 +15,57 @@ blur_element2.addEventListener("mouseout",()=>{
     blur_p2.style.display="none";
 })
 
+/* dark mode */
 
 let dark_mode = document.querySelector(".dark_light_mode");
 let r = document.querySelector(':root');
 let html = document.querySelector("html");
-/* main javascript file */
-let Start_text = document.querySelector(".Start_text");
-let text_light = document.querySelectorAll(".text-light");
-let btn_cv = document.querySelectorAll(".btn_cv");
-let contact = document.querySelector(".fifth h1");
-let fifth_button =document.querySelector(".fifth button");
-let mode_border = document.querySelectorAll(".mode_border");4
-let third_box_container_grade = document.querySelectorAll(".third_box_container .grade .grade1");
-let third_box_container_card = document.querySelectorAll(".third_box_container .card");
+
+let dark_light_mode_change = document.querySelectorAll(".dark_light_mode_change");
+let dark_light_mode_change2 = document.querySelectorAll(".dark_light_mode_change2");
+let dotted_color= document.querySelectorAll(".dotted_color");
+let btn_color = document.querySelectorAll(".btn_color");
+let btn_cv_change = document.querySelectorAll(".btn_cv_change");
+let form_btn  = document.querySelector("form button");
+let footer = document.querySelector("footer");
+let arrow_up = document.querySelector("footer a");
+let text_light= document.querySelectorAll(".text-light");
+let third_box_container_grade_grade1 = document.querySelectorAll(".third_box_container .grade .grade1");
 let blur_p = document.querySelectorAll(".blur_p");
-let navbar_toggler = document.querySelector(".navbar-toggler");
-let navbar_toggler_icon= document.querySelector(".navbar-toggler-icon");
+let menu_icon = document.querySelector("header nav div button span");
+let menu_icon_button = document.querySelector("header nav div button");
 
-dark_mode.addEventListener("click", ()=>{
-    let rs = getComputedStyle(r);
-    //dark mode
-    if(rs.getPropertyValue('--dark_blue')=="#fff"){
-        r.style.setProperty('--dark_blue', 'rgba(8,28,41,1)');
-        r.style.setProperty('--dark_blue2', 'rgba(15,44,67,1)');
-        r.style.setProperty('--white', 'rgb(255, 255, 255)');
-        r.style.setProperty('--blue', 'rgb(0, 161, 224)');
-        Start_text.classList.remove('mode_text');
-        text_light.forEach(element => {
-            element.classList.remove("mode_text")
-        });
-        btn_cv.forEach(element => {
-            element.classList.remove("mode_btn")
-        });
-        contact.classList.remove("mode_form");
-        fifth_button.classList.remove("mode_text");
-        mode_border.forEach(element => {
-            element.classList.remove("mode_border")
-        });
-        third_box_container_grade.forEach(element => {
-            element.style.backgroundColor = "rgba(0, 160, 224, 0.5)"
-        });
-        third_box_container_card.forEach(element => {
-            element.classList.remove("mode_card")
-        });
-        blur_p.forEach(element => {
-            element.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
-        });
-        navbar_toggler.classList.remove("mode_navbar_icon");
-        navbar_toggler_icon.classList.remove("mode_icon");
-    }
-    //light mode 
-    else{
-        r.style.setProperty('--dark_blue', '#fff');
-        r.style.setProperty('--dark_blue2', '#eee');
-        r.style.setProperty('--white', 'black');       
-        r.style.setProperty('--blue', '#a4c756');
-        Start_text.classList.add('mode_text');
-        text_light.forEach(element => {
-            element.classList.add("mode_text")
-        });
-        btn_cv.forEach(element => {
-            element.classList.add("mode_btn")
-        });
-        contact.classList.add("mode_form");
-        fifth_button.classList.add("mode_text");
-        mode_border.forEach(element => {
-            element.classList.add("mode_border")
-        });
-        third_box_container_grade.forEach(element => {
-            element.style.backgroundColor = "rgba(186, 215, 124, 0.5)"
-        });
-        third_box_container_card.forEach(element => {
-            element.classList.add("mode_card")
-        });
-        blur_p.forEach(element => {
-            element.style.backgroundColor = "rgba(255, 255, 255, 0.5)"
-        });
-        navbar_toggler.classList.add("mode_navbar_icon");
-        navbar_toggler_icon.classList.add("mode_icon");
-    }
+dark_mode.addEventListener("click",()=>{
+    (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');
+    dark_light_mode_change.forEach(e => {
+        e.classList.toggle("dark_light_mode_change_click");
+    });
+    dark_light_mode_change2.forEach(e => {
+        e.classList.toggle("dark_light_mode_change_click2");
+    });
+    dotted_color.forEach(e => {
+        e.classList.toggle("change_color");
+    });
+    btn_color.forEach(e => {
+        e.classList.toggle("btn_color_change");
+    });
+    btn_cv_change.forEach(e => {
+        e.classList.toggle("btn_cv_change_mode");
+    });
+    form_btn.classList.toggle("send");
+    footer.classList.toggle("footer_change");
+    arrow_up.classList.toggle("arrow_up_mode_change");
+    text_light.forEach(e => {
+        e.classList.toggle("black_text_mode");
+    });
+    third_box_container_grade_grade1.forEach(e=>{
+        e.classList.toggle("grade_color_mode");
+    })
+    blur_p.forEach(e=>{
+        e.classList.toggle("blur_p_mode");
+    })
+    menu_icon.classList.toggle("mode_icon");
+    menu_icon_button.classList.toggle("mode_navbar_icon");
 })
-
-
 
 

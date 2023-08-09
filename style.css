@@ -67,9 +67,10 @@ header .mode_nav i:hover, header{
     color: var(--white) !important;
     background-color: var(--blue) !important;
 }
+/*
 .mode_nav i{
     color: var(--white) !important;
-}
+}*/
 .git_hub{
     min-width: 1rem;
     font-style: normal;
@@ -79,10 +80,12 @@ header .mode_nav i:hover, header{
     background-color: var(--blue);
     border-radius: 0.9rem;
     margin-left: 1.5rem;
+    height: 2rem !important;
+    margin-top: 1rem !important;
 }
 .git_hub a{
     color: var(--white);
-    padding: 1rem 0.5rem !important;
+    padding: 0.1rem 0.5rem !important;
 }
 
 .git_hub:hover, .git_hub:hover a{
@@ -256,7 +259,7 @@ main section{
     justify-content: center;
 }
 .third_box_container .card:hover{
-    background-color: var(--light_grey);
+    background-color: #f0f0f0;
     cursor: pointer;
 }
 .third_box_container .grade{
@@ -458,6 +461,7 @@ main section{
 .arrow_up:hover{
     color: var(--blue);
 }
+/*
 .mode_color{
     color: var(--blue) !important;
 }
@@ -484,6 +488,52 @@ main section{
 }
 .mode_card:hover{
     background-color: #eee !important;
+}
+.mode_navbar_icon{
+    border-color: rgba(0, 0, 0, 0.5) !important;
+}
+*/
+
+.dark_light_mode_change, .dark_light_mode_change2{
+
+}
+.dark_light_mode_change_click{
+    background-color: #fff !important;
+    color: black !important;
+}
+.dark_light_mode_change_click2{
+    background-color: #eee !important;
+    color: black !important;
+}
+.change_color{
+    color: #a4c756 !important;
+}
+.btn_color_change{
+    background-color: #a4c756 !important;
+    color: black !important;
+}
+.btn_cv_change_mode:hover{
+    background-color: black !important;
+    color: white !important;
+}
+.send:hover{
+    background-color: #a4c756 !important;
+}
+.footer_change{
+    background-color: #a4c756 !important;
+}
+.black_text_mode{
+    color: black !important;
+}
+.arrow_up_mode_change:hover{
+    background-color: white !important;
+    color: #a4c756 !important;
+}
+.grade_color_mode{
+    background-color: rgba(186, 215, 124, 0.5) !important;
+}
+.blur_p_mode{
+    background-color: rgba(255, 255, 255, 0.5) !important;
 }
 .mode_navbar_icon{
     border-color: rgba(0, 0, 0, 0.5) !important;
