@@ -138,7 +138,7 @@ main section{
 }
 .img-start{
     border-radius: 1rem;
-    width: 100%;
+    width: 80%;
 }
 .first article h1{
     font-size: 3.5rem;
@@ -384,7 +384,7 @@ main section{
     position: relative;
 }
 .fifth .blur_efect{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
     position: absolute;
