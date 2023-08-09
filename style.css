@@ -133,12 +133,12 @@ main section{
 .first aside{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     height: 30rem;
 }
 .img-start{
     border-radius: 1rem;
-    width: 80%;
+    width: 18rem;
 }
 .first article h1{
     font-size: 3.5rem;
