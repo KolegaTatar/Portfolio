@@ -83,12 +83,11 @@ header .mode_nav i:hover, header{
     height: 2rem !important;
     margin-top: 1rem !important;
 }
-.git_hub a{
-    color: var(--white);
+.git_hub .git_logo{
     padding: 0.1rem 0.5rem !important;
 }
 
-.git_hub:hover, .git_hub:hover a{
+.git_hub:hover, .git_hub:hover .git_logo{
     color: var(--blue) !important;
 }
 .git_hub:hover{
