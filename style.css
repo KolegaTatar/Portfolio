@@ -42,9 +42,11 @@ nav{
 }
 .nav-link{
     padding: 1rem;
+    transition:0.3s;
 }
 .nav-link:hover{
     color: var(--blue) !important;
+    transition:0.3s;
 }
 .Start_text{
     font-size: 2rem;
@@ -375,6 +377,26 @@ main section{
     padding: 0.9rem;
     border-radius: 0.9rem;
 }
+.nav_projects{
+    display: flex;
+    justify-content: center;
+
+}
+.nav_projects i{
+    padding: 1rem 3rem;
+    font-style: normal;
+    margin: 2rem 1rem 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 4px transparent solid;
+    transition:0.5s;
+}
+.nav_projects i:hover{
+    border-bottom: 4px var(--blue) solid;
+    color: var(--blue);
+    cursor: pointer;
+    transition:0.5s;
+}
 
 .fifth{
     background-image: url(img/contact-image.webp);
@@ -658,6 +680,10 @@ footer{
     .fourth article{
         padding: 0rem 3rem;
     }
+    .nav_projects i{
+        margin: 1rem 0.5rem 0.5rem 0.5rem;
+        padding: 1rem 2rem;
+    }
 }
 @media(max-width:900px)  {
     .third_box1, .third_box2, .third_box3{
@@ -738,7 +764,10 @@ footer{
     .fourth article{
         padding: 0rem 1rem;
     }
-
+    .nav_projects i{
+        margin: 1rem 0.5rem 0.5rem 0.5rem;
+        padding: 1rem 1.5rem;
+    }
 
 }
 @media (max-width:685px) {
@@ -767,6 +796,11 @@ footer{
     }
     .project2{
         width: 100% !important;
+    }
+    .nav_projects i{
+        margin: 1rem 0rem 0.5rem 0rem;
+        padding: 1rem 1rem;
+        font-size: 1rem;
     }
 }
 
@@ -850,6 +884,11 @@ footer{
     .p_title{
         margin-top: 1rem;
     }
+    .nav_projects i{
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 1rem 0.9rem;
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width:320px) {
@@ -868,6 +907,11 @@ footer{
     }
     .fourth article{
         padding: 0rem 1.7rem;
+    }
+    .nav_projects i{
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 1rem 0.75rem;
+        font-size: 0.7rem;
     }
 }
 @media (max-width:290px) {
@@ -903,5 +947,9 @@ footer{
     .fourth article{
         padding: 0rem 1rem;
     }
-
+    .nav_projects i{
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 1rem 0.5rem;
+        font-size: 0.7rem;
+    }
 }
