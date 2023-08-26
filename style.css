@@ -9,7 +9,7 @@
 *{
     scroll-behavior: smooth;
     scroll-padding-top: 0rem;
-}
+} 
 ::-webkit-scrollbar {
     width: 0.2rem;
 }
