@@ -67,5 +67,41 @@ dark_mode.addEventListener("click",()=>{
     menu_icon.classList.toggle("mode_icon");
     menu_icon_button.classList.toggle("mode_navbar_icon");
 })
+let project_btn_1 = document.querySelector(".project_btn_1");
+let project_btn_2 = document.querySelector(".project_btn_2");
+let project_btn_3 = document.querySelector(".project_btn_3");
+let project1_img = document.querySelector(".project1 a img");
+let project1_title = document.querySelector(".project1 .p_title");
+let project1_desc = document.querySelector(".project1 .p_desc");
+
+let project2_img = document.querySelector(".project2 a img");
+let project2_title = document.querySelector(".project2 .p_title");
+let project2_desc = document.querySelector(".project2 .p_desc");
+
+project_btn_1.addEventListener("click", ()=>{
+    project1_img.src = "img/food_website.webp";
+    project1_title.innerText="FOOD WORLD";
+    project1_desc.innerText ="website fastfood project";
+    project2_img.src = "img/sport_website.webp";
+    project2_title.innerText="POZNANIAK";
+    project2_desc.innerText ="website football shop project"
+})
+
+project_btn_2.addEventListener("click", ()=>{
+    project1_img.src = "img/works.webp";
+    project1_title.innerText="UPDATE WEBSITE";
+    project1_desc.innerText ="This will new project";
+    project2_img.src = "img/works.webp";
+    project2_title.innerText="UPDATE WEBSITE";
+    project2_desc.innerText ="This will new project"
+})
+project_btn_3.addEventListener("click", ()=>{
+    project1_img.src = "img/works.webp";
+    project1_title.innerText="UPDATE WEBSITE";
+    project1_desc.innerText ="This will new project";
+    project2_img.src = "img/works.webp";
+    project2_title.innerText="UPDATE WEBSITE";
+    project2_desc.innerText ="This will new project"
+})
 
 
