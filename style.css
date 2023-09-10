@@ -69,6 +69,7 @@ header .mode_nav i:hover, header{
 .nav-link.active {
     color: var(--white) !important;
     background-color: var(--blue) !important;
+    border-radius: 0.5rem;
 }
 /*
 .mode_nav i{
@@ -81,7 +82,7 @@ header .mode_nav i:hover, header{
     font-weight: bold;
     font-size: 1.25rem;
     background-color: var(--blue);
-    border-radius: 0.9rem;
+    border-radius: 0.5rem;
     margin-left: 1.5rem;
     height: 2rem !important;
     margin-top: 1rem !important;
