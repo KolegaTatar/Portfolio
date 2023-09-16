@@ -292,6 +292,11 @@ main section{
     height: 100%;
     width: 75%;
 }
+.third_box_container .grade .grade1_1_1{
+    background-color: var(--blue);
+    height: 100%;
+    width: 60%;
+}
 .third_box_container .grade .grade1_2{
     background-color: var(--blue);
     height: 100%;
@@ -300,8 +305,14 @@ main section{
 .third_box_container .grade .grade1_2_1{
     background-color: var(--blue);
     height: 100%;
+    width: 20%;
+}
+.third_box_container .grade .grade1_2_2{
+    background-color: var(--blue);
+    height: 100%;
     width: 10%;
 }
+
 .third_box_container .grade .grade1_3{
     background-color: var(--blue);
     height: 100%;
