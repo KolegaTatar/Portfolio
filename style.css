@@ -2,10 +2,11 @@
 :root{
     --white:rgb(255, 255, 255);
     --blue:rgb(0, 161, 224);
+    --blue2:rgb(179, 216, 231);
     --dark_blue:rgba(8,28,41,1);
     --dark_blue2:rgba(15,44,67,1);
     --light_grey:#eee7e7;
-    --green:rgb(114,153,75);
+    --green:rgb(115, 154, 76);
 }
 *{
     scroll-behavior: smooth;
@@ -295,7 +296,7 @@ main section{
 .third_box_container .grade .grade1_1_1{
     background-color: var(--blue);
     height: 100%;
-    width: 60%;
+    width: 65%;
 }
 .third_box_container .grade .grade1_2{
     background-color: var(--blue);
@@ -305,12 +306,12 @@ main section{
 .third_box_container .grade .grade1_2_1{
     background-color: var(--blue);
     height: 100%;
-    width: 20%;
+    width: 25%;
 }
 .third_box_container .grade .grade1_2_2{
     background-color: var(--blue);
     height: 100%;
-    width: 10%;
+    width: 20%;
 }
 
 .third_box_container .grade .grade1_3{
@@ -405,10 +406,14 @@ main section{
     transition:0.5s;
 }
 .nav_projects i:hover{
-    border-bottom: 4px var(--blue) solid;
+    border-bottom: 4px var(--blue) solid !important;
     color: var(--blue);
     cursor: pointer;
     transition:0.5s;
+}
+.nav_project_i_color_border{
+    border-bottom: 4px var(--blue2) solid !important;
+    color: var(--blue2);
 }
 
 .fifth{

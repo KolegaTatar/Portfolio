@@ -37,6 +37,8 @@ let menu_icon_button = document.querySelector("header nav div button");
 
 dark_mode.addEventListener("click",()=>{
     (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');
+
+    (r.style.getPropertyValue('--blue2')=="#808c72")?r.style.setProperty('--blue2', 'rgb(179, 216, 231)'):r.style.setProperty('--blue2', '#808c72');
     dark_light_mode_change.forEach(e => {
         e.classList.toggle("dark_light_mode_change_click");
     });
@@ -91,6 +93,10 @@ project_btn_1.addEventListener("click", ()=>{
     project2_title.innerText="POZNANIAK";
     project2_desc.innerText ="website football shop project"
     project2_a.href="https://kolegatatar.github.io/Football_Shop_Website/";
+
+    project_btn_1.classList.add("nav_project_i_color_border");
+    project_btn_2.classList.remove("nav_project_i_color_border");
+    project_btn_3.classList.remove("nav_project_i_color_border");
 })
 
 project_btn_2.addEventListener("click", ()=>{
@@ -103,6 +109,10 @@ project_btn_2.addEventListener("click", ()=>{
     project2_title.innerText="Laravel App";
     project2_desc.innerText ="School Laravel Project"
     project2_a.href="https://github.com/KolegaTatar/zsk_2023.git";
+
+    project_btn_1.classList.remove("nav_project_i_color_border");
+    project_btn_2.classList.add("nav_project_i_color_border");
+    project_btn_3.classList.remove("nav_project_i_color_border");
 })
 project_btn_3.addEventListener("click", ()=>{
     project1_img.src = "img/works.webp";
@@ -114,6 +124,10 @@ project_btn_3.addEventListener("click", ()=>{
     project2_title.innerText="UPDATE WEBSITE";
     project2_desc.innerText ="This will new project";
     project2_a.href="";
+
+    project_btn_1.classList.remove("nav_project_i_color_border");
+    project_btn_2.classList.remove("nav_project_i_color_border");
+    project_btn_3.classList.add("nav_project_i_color_border");
 })
 
 
