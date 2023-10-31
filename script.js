@@ -39,6 +39,7 @@ dark_mode.addEventListener("click",()=>{
     (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');
 
     (r.style.getPropertyValue('--blue2')=="#808c72")?r.style.setProperty('--blue2', 'rgb(179, 216, 231)'):r.style.setProperty('--blue2', '#808c72');
+    
     dark_light_mode_change.forEach(e => {
         e.classList.toggle("dark_light_mode_change_click");
     });
