@@ -99,10 +99,10 @@ project_btn_2.addEventListener("click", ()=>{
     project1_desc.innerText ="Tutoring website ";
     project1_a.href="https://kolegatatar.github.io/Bootstrap/Projekt/";
 
-    project2_img.src = "img/works.webp";
-    project2_title.innerText="UPDATE WEBSITE";
-    project2_desc.innerText ="This will new project"
-    project2_a.href="";
+    project2_img.src = "img/laravel.webp";
+    project2_title.innerText="Laravel App";
+    project2_desc.innerText ="School Laravel Project"
+    project2_a.href="https://github.com/KolegaTatar/zsk_2023.git";
 })
 project_btn_3.addEventListener("click", ()=>{
     project1_img.src = "img/works.webp";
