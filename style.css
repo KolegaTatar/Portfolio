@@ -298,6 +298,12 @@ main section{
     height: 100%;
     width: 65%;
 }
+
+.third_box_container .grade .grade1_1_1t{
+    background-color: var(--blue);
+    height: 100%;
+    width: 30%;
+}
 .third_box_container .grade .grade1_2{
     background-color: var(--blue);
     height: 100%;
@@ -413,7 +419,7 @@ main section{
 }
 .nav_project_i_color_border{
     border-bottom: 4px var(--blue2) solid !important;
-    color: var(--blue2);
+    color: var(--blue2) ;
 }
 
 .fifth{
