@@ -309,6 +309,16 @@ main section{
     height: 100%;
     width: 50%;
 }
+.third_box_container .grade .grade1_2P{
+    background-color: var(--blue);
+    height: 100%;
+    width: 35%;
+}
+.third_box_container .grade .grade1_2C{
+    background-color: var(--blue);
+    height: 100%;
+    width: 30%;
+}
 .third_box_container .grade .grade1_2_1{
     background-color: var(--blue);
     height: 100%;
