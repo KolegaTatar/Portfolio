@@ -26,7 +26,7 @@ let dark_light_mode_change2 = document.querySelectorAll(".dark_light_mode_change
 let dotted_color= document.querySelectorAll(".dotted_color");
 let btn_color = document.querySelectorAll(".btn_color");
 let btn_cv_change = document.querySelectorAll(".btn_cv_change");
-let form_btn  = document.querySelector("form button");
+//let form_btn  = document.querySelector("form button");
 let footer = document.querySelector("footer");
 let arrow_up = document.querySelector("footer a");
 let text_light= document.querySelectorAll(".text-light");
@@ -39,6 +39,10 @@ dark_mode.addEventListener("click",()=>{
     (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');
 
     (r.style.getPropertyValue('--blue2')=="#808c72")?r.style.setProperty('--blue2', 'rgb(179, 216, 231)'):r.style.setProperty('--blue2', '#808c72');
+
+    (r.style.getPropertyValue('--light_blue')=="#95c565a3")?r.style.setProperty('--light_blue', 'rgba(0, 160, 224, 0.502)'):r.style.setProperty('--light_blue', '#95c565a3');
+
+    //(r.style.getPropertyValue('--white')=="#ffffff")?r.style.setProperty('--white', 'rgb(255, 255, 255)'):r.style.setProperty('--white', '#ffffff');
     
     dark_light_mode_change.forEach(e => {
         e.classList.toggle("dark_light_mode_change_click");
@@ -55,7 +59,7 @@ dark_mode.addEventListener("click",()=>{
     btn_cv_change.forEach(e => {
         e.classList.toggle("btn_cv_change_mode");
     });
-    form_btn.classList.toggle("send");
+    //form_btn.classList.toggle("send");
     footer.classList.toggle("footer_change");
     arrow_up.classList.toggle("arrow_up_mode_change");
     text_light.forEach(e => {
@@ -90,10 +94,10 @@ project_btn_1.addEventListener("click", ()=>{
     project1_desc.innerText ="website fastfood project";
     project1_a.href="https://kolegatatar.github.io/Fast_Food_Restaurant_Website/";
 
-    project2_img.src = "img/sport_website.webp";
-    project2_title.innerText="POZNANIAK";
-    project2_desc.innerText ="website football shop project"
-    project2_a.href="https://kolegatatar.github.io/Football_Shop_Website/";
+    project2_img.src = "img/animaster.webp";
+    project2_title.innerText="Animaster";
+    project2_desc.innerText ="Website for the Animaster company";
+    project2_a.href="https://animaster.pl";
 
     project_btn_1.classList.add("nav_project_i_color_border");
     project_btn_2.classList.remove("nav_project_i_color_border");
@@ -101,10 +105,10 @@ project_btn_1.addEventListener("click", ()=>{
 })
 
 project_btn_2.addEventListener("click", ()=>{
-    project1_img.src = "img/math_website.webp";
-    project1_title.innerText="Licz.My";
-    project1_desc.innerText ="Tutoring website ";
-    project1_a.href="https://kolegatatar.github.io/Bootstrap/Projekt/";
+    project1_img.src = "img/c-sharp.webp";
+    project1_title.innerText="C# CONSOLE APP";
+    project1_desc.innerText ="Project in progress";
+    project1_a.href="";
 
     project2_img.src = "img/laravel.webp";
     project2_title.innerText="Laravel App";
@@ -116,16 +120,16 @@ project_btn_2.addEventListener("click", ()=>{
     project_btn_3.classList.remove("nav_project_i_color_border");
 })
 project_btn_3.addEventListener("click", ()=>{
-    project1_img.src = "img/works.webp";
-    project1_title.innerText="UPDATE WEBSITE";
-    project1_desc.innerText ="This will new project";
-    project1_a.href="";
+    project1_img.src = "img/math_website.webp";
+    project1_title.innerText="Licz.My";
+    project1_desc.innerText ="Tutoring website ";
+    project1_a.href="https://kolegatatar.github.io/Bootstrap/Projekt/";
 
-    project2_img.src = "img/works.webp";
-    project2_title.innerText="UPDATE WEBSITE";
-    project2_desc.innerText ="This will new project";
-    project2_a.href="";
-
+    project2_img.src = "img/sport_website.webp";
+    project2_title.innerText="POZNANIAK";
+    project2_desc.innerText ="website football shop project"
+    project2_a.href="https://kolegatatar.github.io/Football_Shop_Website/";
+    
     project_btn_1.classList.remove("nav_project_i_color_border");
     project_btn_2.classList.remove("nav_project_i_color_border");
     project_btn_3.classList.add("nav_project_i_color_border");

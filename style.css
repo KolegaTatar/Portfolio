@@ -6,7 +6,9 @@
     --dark_blue:rgba(8,28,41,1);
     --dark_blue2:rgba(15,44,67,1);
     --light_grey:#eee7e7;
-    --green:rgb(115, 154, 76);
+    --green:rgb(149, 197, 101);
+    --light_blue:rgba(0, 160, 224, 0.502);
+
 }
 *{
     scroll-behavior: smooth;
@@ -182,12 +184,18 @@ main section{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .second_container aside img{
     border-radius: 12%;
     margin-right: 3rem;
+}/*
+.sec_img_1{
+    clip-path: polygon(0 0, 0 100%, 100% 0);
 }
+.sec_img_2{
+    
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}*/
 .second article{
     display: flex;
     flex-direction: column;
@@ -274,7 +282,7 @@ main section{
     font-size: 1.1rem;
 }
 .third_box_container .grade .grade1{
-    background-color: rgba(0, 160, 224, 0.5);
+    background-color: var(--light_blue);
     width: 95%;
 }
 .third_box_container .grade .grade2{
@@ -288,6 +296,12 @@ main section{
     height: 100%;
     width: 50%;
 }
+.third_box_container .grade .grade1_0_balsamiq{
+    background-color: var(--blue);
+    height: 100%;
+    width: 60%;
+}
+
 .third_box_container .grade .grade1_1{
     background-color: var(--blue);
     height: 100%;
@@ -448,6 +462,23 @@ main section{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    justify-content: center;
+}
+.fifth .blur_efect .maildiv{
+    text-align: center;
+    padding-top: 1.5rem;
+    background-color: #eeeeee49;
+    padding: 4rem;
+    border-radius: .9rem;
+    width: 80%;
+    margin-top:2rem;
+}
+.fifth .blur_efect .maildiv .mailto{
+    color: white;
+    text-decoration: none;
+}
+.fifth .blur_efect .maildiv .mailto:hover{
+    text-decoration:underline;
 }
 .fifth form{
     display: flex;
@@ -836,6 +867,13 @@ footer{
         padding: 1rem 1rem;
         font-size: 1rem;
     }
+    .fifth .blur_efect .maildiv, .fifth .blur_efect .maildiv a{
+        font-size: 1rem;
+        padding: 3rem;
+    }
+    .fifth .blur_efect .maildiv h2{
+        font-size: 1.35rem;
+    }
 }
 
 
@@ -922,6 +960,16 @@ footer{
         margin: 1rem 0rem 0rem 0rem;
         padding: 1rem 0.9rem;
         font-size: 0.85rem;
+    }
+    .fifth .blur_efect .maildiv{
+        font-size: 1rem;
+        padding: 2.2rem;
+    }
+    .fifth .blur_efect .maildiv a{
+        font-size: 0.75rem;
+    }
+    .fifth .blur_efect .maildiv h2{
+        font-size: 1.1rem;
     }
 }
 
