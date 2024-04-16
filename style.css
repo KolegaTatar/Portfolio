@@ -532,7 +532,9 @@ main section{
     color: var(--white);
     background-color: var(--blue);
 }
-
+.pl_icon, .eng_icon{
+    font-size: 1rem;
+}
 
 
 .arrow_up{
