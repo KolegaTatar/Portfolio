@@ -111,6 +111,8 @@ pl_icon.addEventListener("click",()=>{
     document.querySelector("main .second .cv_text .f11").innerText=", zapraszam do przejrzenia mojego ";
     document.querySelector("main .second .cv_text .f12").innerText="portfolio";
     document.querySelector("main .second .cv_text .f13").innerText="i kontaktu. ";
+    document.querySelector("main .second_container .btn_cv_change").href = "Wiktor Tatarynowicz CV - pl.pdf";
+    document.querySelector("main .second_container .btn_cv_change").download = "Wiktor Tatarynowicz CV - pl.pdf";
     change_desc_web()
 
 });
@@ -149,6 +151,8 @@ eng_icon.addEventListener("click",()=>{
     document.querySelector("main .second .cv_text .f11").innerText=", I invite you to browse my ";
     document.querySelector("main .second .cv_text .f12").innerText="portfolio";
     document.querySelector("main .second .cv_text .f13").innerText="and contact me.";
+    document.querySelector("main .second_container .btn_cv_change").href = "Wiktor Tatarynowicz CV - en.pdf";
+    document.querySelector("main .second_container .btn_cv_change").download = "Wiktor Tatarynowicz CV - en.pdf";
     change_desc_web()
 
 });
