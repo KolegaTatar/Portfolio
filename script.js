@@ -113,6 +113,8 @@ pl_icon.addEventListener("click",()=>{
     document.querySelector("main .second .cv_text .f13").innerText="i kontaktu. ";
     document.querySelector("main .second_container .btn_cv_change").href = "Wiktor Tatarynowicz CV - pl.pdf";
     document.querySelector("main .second_container .btn_cv_change").download = "Wiktor Tatarynowicz CV - pl.pdf";
+    document.querySelector(".third_cert .certificates .testing").innerHTML ="Praktyczny kurs testowania oprogramowania";
+    document.querySelector(".third_cert .certificates .postman").innerHTML ="Postman od podstaw - testowanie REST API";
     change_desc_web()
 
 });
@@ -153,6 +155,8 @@ eng_icon.addEventListener("click",()=>{
     document.querySelector("main .second .cv_text .f13").innerText="and contact me.";
     document.querySelector("main .second_container .btn_cv_change").href = "Wiktor Tatarynowicz CV - en.pdf";
     document.querySelector("main .second_container .btn_cv_change").download = "Wiktor Tatarynowicz CV - en.pdf";
+    document.querySelector(".third_cert .certificates .testing").innerHTML ="Practical software testing course";
+    document.querySelector(".third_cert .certificates .postman").innerHTML ="Postman from scratch - testing REST API";
     change_desc_web()
 
 });
