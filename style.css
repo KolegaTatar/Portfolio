@@ -371,6 +371,38 @@ main section{
     height: 100%;
     width: 30%;
 }
+/* Certificates */
+.third .certificates{
+    display: flex;
+    flex-direction: row !important;
+    justify-content:space-around ;
+}
+.third .certificates .third_box_container{
+    width: 28%;
+    text-align: center;
+
+}
+.third .certificates .third_box_container a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 10rem !important;
+}
+
+.certificates .third_box_container #it_essential, .certificates .third_box_container #testing, .certificates .third_box_container #postman{
+    height: 100%;
+    width: 100%;
+}
+
+.certificates .third_box_container #it_essential .grade , .certificates .third_box_container #testing .grade, .certificates .third_box_container #postman .grade{
+    height: 100%;
+    width: 100%;
+}
+.certificates .third_box_container #it_essential .grade img, .certificates .third_box_container #testing .grade img, .certificates .third_box_container #postman .grade img{
+    width: 100%;
+
+}
 .fourth{
     display: flex;
     flex-direction: column;
