@@ -393,6 +393,7 @@ main section{
 .certificates .third_box_container #it_essential, .certificates .third_box_container #testing, .certificates .third_box_container #postman{
     height: 100%;
     width: 100%;
+    
 }
 
 .certificates .third_box_container #it_essential .grade , .certificates .third_box_container #testing .grade, .certificates .third_box_container #postman .grade{
