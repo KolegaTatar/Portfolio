@@ -895,6 +895,9 @@ footer{
     .it_essential, .testing, .postman{
         font-size: 1rem ;
     }
+    .third_cert .third_box_container{
+        min-height: 2rem;
+    }   
 
 }
 @media (max-width:685px) {
@@ -944,7 +947,7 @@ footer{
     }
     .third .certificates .third_box_container{
         width: 80%;
-        height: 8rem;
+        min-height: 5rem;
     }
 }
 
