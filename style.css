@@ -759,6 +759,9 @@ footer{
     .fourth article{
         padding: 0rem 3rem;
     }
+    .it_essential, .testing, .postman{
+        font-size: 1.2rem ;
+    }
 }
 @media(max-width:1024px)  {
     .third_box1, .third_box2, .third_box3{
@@ -790,6 +793,9 @@ footer{
         margin: 1rem 0.5rem 0.5rem 0.5rem;
         padding: 1rem 2rem;
     }
+    .it_essential, .testing, .postman{
+        font-size: 1.1rem ;
+    }
 }
 @media(max-width:900px)  {
     .third_box1, .third_box2, .third_box3{
@@ -814,6 +820,7 @@ footer{
     .fifth{
         min-height: 45rem;
     }
+
 }
 .fourth article{
     padding: 0rem 1.5rem;
@@ -874,6 +881,9 @@ footer{
         margin: 1rem 0.5rem 0.5rem 0.5rem;
         padding: 1rem 1.5rem;
     }
+    .it_essential, .testing, .postman{
+        font-size: 1rem ;
+    }
 
 }
 @media (max-width:685px) {
@@ -914,6 +924,15 @@ footer{
     }
     .fifth .blur_efect .maildiv h2{
         font-size: 1.35rem;
+    }
+    .it_essential, .testing, .postman{
+        font-size: 1.2rem ;
+    }
+    .third .certificates{
+        flex-direction: column !important;
+    }
+    .third .certificates .third_box_container{
+        width: 80%;
     }
 }
 
@@ -1011,6 +1030,9 @@ footer{
     }
     .fifth .blur_efect .maildiv h2{
         font-size: 1.1rem;
+    }
+    .third .certificates .third_box_container{
+        width: 95%;
     }
 }
 
