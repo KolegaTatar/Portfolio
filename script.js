@@ -76,7 +76,7 @@ function change_desc_web(){
         document.querySelector("main .fourth article .project1 .p_desc").innerText = web_project_desc_pl[4];
         document.querySelector("main .fourth article .project2 .p_desc").innerText = web_project_desc_pl[5];
     }
-};
+};/*
 pl_icon.addEventListener("click",()=>{
     document.querySelector("main .first article .name").innerText =pl_description[0];
     document.querySelector("main .first article .name_d").innerText =pl_description[1];
@@ -117,8 +117,8 @@ pl_icon.addEventListener("click",()=>{
     document.querySelector(".third_cert .certificates .postman").innerHTML ="Postman od podstaw - testowanie REST API";
     change_desc_web()
 
-});
-
+});*/
+/*
 eng_icon.addEventListener("click",()=>{
     document.querySelector("main .first article .name").innerText =eng_description[0];
     document.querySelector("main .first article .name_d").innerText =eng_description[1];
@@ -160,7 +160,7 @@ eng_icon.addEventListener("click",()=>{
     change_desc_web()
 
 });
-
+*/
 
 dark_mode.addEventListener("click",()=>{
     (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');
