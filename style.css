@@ -1048,7 +1048,7 @@ footer{
     }
     .third .certificates .third_box_container{
         width: 95%;
-        height: 9rem;
+        min-height: 5rem;
     }
 }
 
