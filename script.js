@@ -26,6 +26,9 @@ let dark_light_mode_change2 = document.querySelectorAll(".dark_light_mode_change
 let dotted_color= document.querySelectorAll(".dotted_color");
 let btn_color = document.querySelectorAll(".btn_color");
 let btn_cv_change = document.querySelectorAll(".btn_cv_change");
+// tu są ziemmne pobrane ze stronki cn 
+
+
 //let form_btn  = document.querySelector("form button");
 let footer = document.querySelector("footer");
 let arrow_up = document.querySelector("footer a");
@@ -161,6 +164,9 @@ eng_icon.addEventListener("click",()=>{
 
 });
 */
+
+
+//a samo działanie zmiany motywu jest tu:
 
 dark_mode.addEventListener("click",()=>{
     (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');

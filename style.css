@@ -396,7 +396,7 @@ main section{
     
 }
 
-.certificates .third_box_container #it_essential .grade , .certificates .third_box_container #testing .grade, .certificates .third_box_container #postman .grade{
+.certificates .third_box_container #it_essential .grade, .certificates .third_box_container #testing .grade, .certificates .third_box_container #postman .grade{
     height: 100%;
     width: 100%;
 }
