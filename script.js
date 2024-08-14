@@ -13,8 +13,7 @@ function scrollFunction() {
 
 let pol = document.querySelector('.mode_nav .pl_icon');
 let eng = document.querySelector('.mode_nav .eng_icon');
-let pol_hidden = document.querySelector('.mode_nav_hidden .pl_icon');
-let eng_hidden = document.querySelector('.mode_nav_hidden .eng_icon');
+let do_false = document.querySelector(".collapse");
 
 let link1 = document.querySelector("#main-menu .link_1_1");
 let link2 = document.querySelector(".link_2");
@@ -166,6 +165,8 @@ eng.addEventListener("click",()=>{
 })
 
 
+let pol_hidden = document.querySelector('.mode_nav_2 .pl_icon');
+let eng_hidden = document.querySelector('.mode_nav_2 .eng_icon');
 
 pol_hidden.addEventListener("click",()=>{
     link1.innerText ="O mnie";

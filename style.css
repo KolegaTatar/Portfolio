@@ -642,6 +642,9 @@ section h4{
     .sec3{
         min-height: 2vh !important;
     }
+    .mode_nav_2 .light_dark{
+        display: none;
+    }
 }
 
 
