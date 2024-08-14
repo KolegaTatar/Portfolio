@@ -25,6 +25,7 @@ let left_btn = document.querySelector(".btn_a_2");
 let left_info = document.querySelector(".dev_info");
 let btn_2 = document.querySelector(".btn_a_1");
 let Im= document.querySelector(".Im");
+let name_imie= document.querySelector(".name_imie");
 
 let me_about = document.querySelector("#about .web_dev");
 let info_prof = document.querySelector("#about h4");
@@ -37,6 +38,7 @@ let info_prof3 = document.querySelector("#certificates h4");
 
 let me_about4 = document.querySelector("#cooperation .web_dev");
 let info_prof4 = document.querySelector("#cooperation h4");
+let buttons = document.querySelectorAll(".content_img a");
 
 let text_wsp1 = document.querySelector("#cooperation .text_wsp .text_1");
 let text_wsp2 = document.querySelector("#cooperation .text_wsp .text_2");
@@ -45,7 +47,25 @@ let text_wsp4 = document.querySelector("#cooperation .text_wsp .text_4");
 let text_wsp5 = document.querySelector("#cooperation .text_wsp .text_5");
 
 let footer = document.querySelector("footer"); 
+let cv = document.querySelector(".fa-download");
 
+let f1 = document.querySelector(".f1");
+let f2 = document.querySelector(".f2");
+let f3 = document.querySelector(".f3");
+let f4 = document.querySelector(".f4");
+let f5 = document.querySelector(".f5");
+let f6 = document.querySelector(".f6");
+let f7 = document.querySelector(".f7");
+let f8 = document.querySelector(".f8");
+let f9 = document.querySelector(".f9");
+let f10 = document.querySelector(".f10");
+let f11 = document.querySelector(".f11");
+let f12 = document.querySelector(".f12");
+let f13 = document.querySelector(".f13");
+let f14 = document.querySelector(".f14");
+let f15 = document.querySelector(".f15");
+let f16 = document.querySelector(".f16");
+let f17 = document.querySelector(".f17");
 
 pol.addEventListener("click",()=>{
     link1.innerText ="O mnie";
@@ -55,6 +75,8 @@ pol.addEventListener("click",()=>{
     left_btn.innerText = "Wyślij wiadomość";
     btn_2.innerHTML ="Więcej";
     Im.innerHTML ="Jestem";
+    cv.innerHTML=" Pobierz CV";
+    name_imie.innerHTML ="nazwyam się";
     left_info.innerText ="Specjalizuję się w projektowaniu stron internetowych oraz aplikacji webowych. Oferuję kompleksowe usługi obejmujące cały proces – od projektu, przez wdrożenie, aż po testy końcowe.";
     me_about.innerText ="O mnie";
     info_prof.innerText = "Kreatywność, innowacyjność, profesionalizm";
@@ -69,7 +91,29 @@ pol.addEventListener("click",()=>{
     text_wsp3.innerText = "W relacjach z ludźmi kładę nacisk na pozytywną atmosferę i efektywną komunikację. Dzięki temu wiedzę zdobywaną podczas naszych rozmów konwertuję na konkretne działania, napędzając inicjatywę w procesie realizacji projektu. Zaufanie jest dla mnie kluczowe, dlatego stawiam na transparentność i zaangażowanie na każdym etapie współpracy.";
     text_wsp4.innerText = "Zapraszam do podzielenia się swoją wizją, abyśmy mogli razem przekształcić ją w rzeczywistość.";
     text_wsp5.innerText = "Mam spore doświaczenie w korzystaniu z tych technologii:";
-    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. Wszystkie prawa zastrzeżone."
+    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. Wszystkie prawa zastrzeżone.";
+    buttons.forEach(e => {
+        e.innerHTML = "Zobacz więcej";
+    });
+    f1.innerText="Jestem";
+    f2.innerText="młodym, doświadczonym front-end developerem";
+    f3.innerText=", którego pasją jest tworzenie ";
+    f4.innerText="responsywnych i estetycznych ";
+    f5.innerText="stron internetowych. Posiadam rozległą wiedzę z zakresu ";
+    f6.innerText="HTML, CSS, PHP i JavaScript";
+    f7.innerText=", a także doświadczenie w samodzielnej i zespołowej pracy nad różnymi projektami. Śledzę najnowsze trendy i technologie front-endowe oraz odważnie eksperymentuję z nowymi narzędziami i bibliotekami. Znam systemy kontroli wersji takie jak ";
+    f8.innerText="Git";
+    f9.innerText=". Moim priorytetem jest tworzenie wydajnych, przystępnych cenowo i przyjaznych SEO stron internetowych. Jeśli szukasz kreatywnego front-end developera, który ";
+    f10.innerText="wprowadzi Twoje pomysły w życie";
+    f11.innerText=", zapraszam do przejrzenia mojego ";
+    f12.innerText="portfolio";
+    f13.innerText="i kontaktu.";
+    f14.innerText="Zachęcam również do dowiedzenia się";
+    f15.innerText=" więcej ";
+    f16.innerText="o mnie oraz do zapoznania się z moim ";
+    f17.innerText="CV:";
+
+
 
 
 })
@@ -82,6 +126,8 @@ eng.addEventListener("click",()=>{
     left_btn.innerText = "Send message";
     btn_2.innerHTML ="More";
     Im.innerHTML ="I'm";
+    name_imie.innerHTML ="I am";
+    cv.innerHTML=" Download CV";
     left_info.innerText ="I specialize in web design and web applications. I offer comprehensive services covering the entire process - from design to implementation to final testing.";
     me_about.innerText ="About me";
     info_prof.innerText = "Creativity, innovation, professionalism";
@@ -96,7 +142,27 @@ eng.addEventListener("click",()=>{
     text_wsp3.innerText = "In my relationships with people, I emphasize a positive atmosphere and effective communication. Thanks to this, I convert the knowledge gained during our discussions into concrete actions, driving the initiative in the process of project implementation. Trust is key for me, so I focus on transparency and commitment at every stage of cooperation.";
     text_wsp4.innerText = "I invite you to share your vision so that together we can turn it into reality.";
     text_wsp5.innerText = "I have a lot of experience in using these technologies:";
-    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. All rights reserved."
+    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. All rights reserved.";
+    buttons.forEach(e => {
+        e.innerHTML = "Read more";
+    });
+    f1.innerText="I'm";
+    f2.innerText="a young, experienced front-end developer";
+    f3.innerText=", whose passion is creating ";
+    f4.innerText="responsive and aesthetically ";
+    f5.innerText="pleasing websites. I have extensive knowledge of ";
+    f6.innerText="HTML, CSS, PHP and JavaScript";
+    f7.innerText=", as well as experience working independently and in teams on various projects. I follow the latest front-end trends and technologies and boldly experiment with new tools and libraries. I am familiar with version control systems such as ";
+    f8.innerText="Git";
+    f9.innerText=". My priority is to create efficient, affordable and SEO-friendly websites. If you are looking for a creative front-end developer ";
+    f10.innerText="to bring your ideas to life";
+    f11.innerText=", I invite you to browse my ";
+    f12.innerText="portfolio";
+    f13.innerText="and contact me.";
+    f14.innerText="I also encourage you to learn";
+    f15.innerText=" more ";
+    f16.innerText="about me and take a look at my ";
+    f17.innerText="CV:";
 })
 
 
@@ -109,6 +175,8 @@ pol_hidden.addEventListener("click",()=>{
     left_btn.innerText = "Wyślij wiadomość";
     btn_2.innerHTML ="Więcej";
     Im.innerHTML ="Jestem";
+    name_imie.innerHTML ="nazwyam się";
+    cv.innerHTML=" Pobierz CV";
     left_info.innerText ="Specjalizuję się w projektowaniu stron internetowych oraz aplikacji webowych. Oferuję kompleksowe usługi obejmujące cały proces – od projektu, przez wdrożenie, aż po testy końcowe.";
     me_about.innerText ="O mnie";
     info_prof.innerText = "Kreatywność, innowacyjność, profesionalizm";
@@ -123,7 +191,27 @@ pol_hidden.addEventListener("click",()=>{
     text_wsp3.innerText = "W relacjach z ludźmi kładę nacisk na pozytywną atmosferę i efektywną komunikację. Dzięki temu wiedzę zdobywaną podczas naszych rozmów konwertuję na konkretne działania, napędzając inicjatywę w procesie realizacji projektu. Zaufanie jest dla mnie kluczowe, dlatego stawiam na transparentność i zaangażowanie na każdym etapie współpracy.";
     text_wsp4.innerText = "Zapraszam do podzielenia się swoją wizją, abyśmy mogli razem przekształcić ją w rzeczywistość.";
     text_wsp5.innerText = "Mam spore doświaczenie w korzystaniu z tych technologii:";
-    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. Wszystkie prawa zastrzeżone."
+    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. Wszystkie prawa zastrzeżone.";
+    buttons.forEach(e => {
+        e.innerHTML = "Zobacz więcej";
+    });
+    f1.innerText="Jestem";
+    f2.innerText="młodym, doświadczonym front-end developerem";
+    f3.innerText=", którego pasją jest tworzenie ";
+    f4.innerText="responsywnych i estetycznych ";
+    f5.innerText="stron internetowych. Posiadam rozległą wiedzę z zakresu ";
+    f6.innerText="HTML, CSS, PHP i JavaScript";
+    f7.innerText=", a także doświadczenie w samodzielnej i zespołowej pracy nad różnymi projektami. Śledzę najnowsze trendy i technologie front-endowe oraz odważnie eksperymentuję z nowymi narzędziami i bibliotekami. Znam systemy kontroli wersji takie jak ";
+    f8.innerText="Git";
+    f9.innerText=". Moim priorytetem jest tworzenie wydajnych, przystępnych cenowo i przyjaznych SEO stron internetowych. Jeśli szukasz kreatywnego front-end developera, który ";
+    f10.innerText="wprowadzi Twoje pomysły w życie";
+    f11.innerText=", zapraszam do przejrzenia mojego ";
+    f12.innerText="portfolio";
+    f13.innerText="i kontaktu.";
+    f14.innerText="Zachęcam również do dowiedzenia się";
+    f15.innerText=" więcej ";
+    f16.innerText="o mnie oraz do zapoznania się z moim ";
+    f17.innerText="CV:";
 })
 
 eng_hidden.addEventListener("click",()=>{
@@ -134,6 +222,8 @@ eng_hidden.addEventListener("click",()=>{
     left_btn.innerText = "Send message";
     btn_2.innerHTML ="More";
     Im.innerHTML ="I'm";
+    name_imie.innerHTML ="I am";
+    cv.innerHTML=" Download CV";
     left_info.innerText ="I specialize in web design and web applications. I offer comprehensive services covering the entire process - from design to implementation to final testing.";
     me_about.innerText ="About me";
     info_prof.innerText = "Creativity, innovation, professionalism";
@@ -148,5 +238,25 @@ eng_hidden.addEventListener("click",()=>{
     text_wsp3.innerText = "In my relationships with people, I emphasize a positive atmosphere and effective communication. Thanks to this, I convert the knowledge gained during our discussions into concrete actions, driving the initiative in the process of project implementation. Trust is key for me, so I focus on transparency and commitment at every stage of cooperation.";
     text_wsp4.innerText = "I invite you to share your vision so that together we can turn it into reality.";
     text_wsp5.innerText = "I have a lot of experience in using these technologies:";
-    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. All rights reserved."
+    footer.innerText ="Copyright © 2024 Wiktor Tatarynowicz. All rights reserved.";
+    buttons.forEach(e => {
+        e.innerHTML = "Read more";
+    });
+    f1.innerText="I'm";
+    f2.innerText="a young, experienced front-end developer";
+    f3.innerText=", whose passion is creating ";
+    f4.innerText="responsive and aesthetically ";
+    f5.innerText="pleasing websites. I have extensive knowledge of ";
+    f6.innerText="HTML, CSS, PHP and JavaScript";
+    f7.innerText=", as well as experience working independently and in teams on various projects. I follow the latest front-end trends and technologies and boldly experiment with new tools and libraries. I am familiar with version control systems such as ";
+    f8.innerText="Git";
+    f9.innerText=". My priority is to create efficient, affordable and SEO-friendly websites. If you are looking for a creative front-end developer ";
+    f10.innerText="to bring your ideas to life";
+    f11.innerText=", I invite you to browse my ";
+    f12.innerText="portfolio";
+    f13.innerText="and contact me.";
+    f14.innerText="I also encourage you to learn";
+    f15.innerText=" more ";
+    f16.innerText="about me and take a look at my ";
+    f17.innerText="CV:";
 })

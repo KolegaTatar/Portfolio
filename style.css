@@ -221,7 +221,7 @@ footer{
 .sec0 .div_btn{
     margin-top: 2.5rem !important;
 }
-.Im{
+.Im, .name_imie{
     color: white !important;
 }
 
@@ -725,6 +725,9 @@ section h4{
     }
     .sec1 h4, .sec2 h4{
         font-size: 2.2rem !important;
+    }
+    nav .logo_text{
+        margin-left: 2rem !important;
     }
 }
 @media (max-width:425px ){
