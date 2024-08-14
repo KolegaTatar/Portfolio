@@ -166,7 +166,6 @@ eng_icon.addEventListener("click",()=>{
 */
 
 
-//a samo działanie zmiany motywu jest tu:
 
 dark_mode.addEventListener("click",()=>{
     (r.style.getPropertyValue('--blue')=="#a4c756")?r.style.setProperty('--blue', 'rgb(0, 161, 224)'):r.style.setProperty('--blue', '#a4c756');

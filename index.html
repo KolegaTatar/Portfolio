@@ -1,478 +1,293 @@
-
 <!DOCTYPE html>
 <html lang="PL-pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Wiktor Tatarynowicz</title>
-    <meta name="author" content="Wiktor Tatarynowicz">
-    <meta name="keywords" content="portfolio">
-    <meta name="description" content="portfolio Wiktor Tatarynowicz"> 
-    <link rel="icon" type="image/x-icon" href="img/logo.webp">
+    <title>Wiktor Tatarynowicz - Web Developer</title>
+    <link rel="shortcut icon" href="img/logo_icon.webp" type="img/x-icon" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c0495921f2.js" crossorigin="anonymous"></script>
 </head>
-<body data-bs-spy="scroll" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="-1">
-    <header class="fixed-top dark_light_mode_change" id="navigation_main">
-        <nav class="navbar bg-nav navbar-expand-lg  navbar-dark dark_light_mode_change" >
-            <div class="container-fluid">
+<body>
+    <header id="header">
+        <nav class="navbar bg-nav navbar-expand-md  navbar-dark" >
+            
+            <a href="#start" class="navbar-brand fw-bold ms-5 logo_text"> # <span class="span1  text-light"> T </span> <span class="dotted_color">.</span></a>
 
-              <a href="#start" class="navbar-brand fw-bold Start_text ms-5 text-light">Tatarynowicz <span class="dotted_color">.</span></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation"> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation"> 
                 <span class="navbar-toggler-icon"></span>
               </button>
-              
-              
-              <div class="collapse navbar-collapse dark_light_mode_change" id="main-menu">
-                <ul class="navbar-nav m-auto nav nav-pills" >
-                    <li class="nav-item ms-4">
-                        <a href="#about" class="nav-link text-light fw-bold ps-2 pe-2 li1">About me</a>
+
+
+            <div class="collapse navbar-collapse dark_light_mode_change" id="main-menu">
+                <ul class="navbar-nav nav " >
+                    <li class="nav-item ms-2 link_1">
+                        <a href="#about" class="nav-link fw-bold ps-2 pe-2" >O mnie</a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a href="#skils" class="nav-link text-light fw-bold ps-2 pe-2 li2">Skils</a>
+                        <a href="#projects" class="nav-link fw-bold ps-2 pe-2">Projekty</a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a href="#projects" class="nav-link text-light fw-bold ps-2 pe-2 li3">Projects</a>
+                        <a href="#certificates" class="nav-link fw-bold ps-2 pe-2 link_3">Certyfikaty</a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a href="#certificates" class="nav-link text-light fw-bold ps-2 pe-2 li4">Certificates</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a href="#contact" class="nav-link text-light fw-bold ps-2 pe-2 li4">Contact</a>
+                        <a href="#cooperation
+                        " class="nav-link fw-bold ps-2 pe-2 link_4">Współpraca</a>
                     </li>
                 </ul>
-                <div class="mode_nav text_light mt-1">
-                    <!--<a href="" class="fa-brands fa-twitter text-light ms-3"></a>-->
-                    <!--<i class="pl_icon mode text-light"><b>PL</b></i> <span class="ikonka">|</span>
-                    <i class="eng_icon mode text-light"><b>ENG</b></i>-->
-                    <a class="git_hub btn_cv_change text-light" href="https://github.com/KolegaTatar">GitHub<i href="https://github.com/KolegaTatar" target="_blank" class="fa-brands fa-github text-light git_logo"></i></a>
-                    <a href="https://github.com/KolegaTatar" target="_blank" class="fa-brands fa-github text-light git_logo git_logo2"></a>
+                <div class="mode_nav_2">
                     
-                    <i class="fa-solid fa-circle-half-stroke me-5 mode dark_light_mode text-light"></i>
+                    <i class="pl_icon mode me-1">PL</i> <span class="ikonka">|</span>
+                    <i class="eng_icon mode ms-1">ENG</i>
+                    <i class="fa-solid fa-circle-half-stroke ms-3 me-4 mode dark_light_mode"></i>
                 </div>  
-                
-                
-              </div>
             </div>
-          </nav>
-    </header>
-    <main class="" id="start">
-        <div class="fake_padding">
-            <div class="fake_color1"></div>
-            <div class="fake_color2"></div>
-        </div>
-        <section class="box1 first row me-0 pt-5 dark_light_mode_change">
-            <aside class="col-sm-12 col-md-5 ms-4">
-                <img src="img/start_image.webp" alt="" class=" img-start mb-2 ms-3" >
-            </aside>
-            <article class=" col-sm-6 ps-5 me-4 start_art">
-                <h1 class="fw-bold mb-4">Front End Developer</h1>
-                <p class="h4 fw-bold mb-3 name">
-                    Hi, I'm Wiktor
-                </p>
-                <p class="mb-4 h5 name_d">
-                    I invite you to take a look at my portfolio.
-                </p>
-                <a href="#contact" class="btn_cv btn_color btn_cv_change">Contact</a>
-            </article>
-            <!--
-            <aside class="col-sm-12 col-md-4">
-                <img src="img/start_image.webp" alt="" class=" img-start mb-2 ms-3" >
-            </aside>
-        -->
-        </section>
-
-
-        <div class="fake_padding" id="about">
-            <div class="fake_color1 dark_light_mode_change"></div>
-            <div class="fake_color2 dark_light_mode_change2"></div>
-        </div>
-        <section class="box2 second dark_light_mode_change2">
-            <h1 class="fw-bold"><span class="ab">About</span> <span class="dotted_color">me</span> </h1>
-            <div class="second_container ms-5 me-2">
-                <aside class="col-md-4 col-sm-12 mb-5">
-                    <img src="img/me-2.webp" alt="" class="img-fluid sec_img_1">
-                    <!--<img src="img/me.webp" alt="" class="img-fluid sec_img_2">-->
-                </aside>
-                <article class=" col-md-7 col-sm-12">
-                
-                    <p class="h3 fw-bold mb-5">
-                        Wiktor Tatarynowicz
-                    </p>
-                    <p class="mb-4  text_me cv_text">
-                        <span class="f1">I am a</span> <span class="dotted_color fw-bold f2">young, experienced front-end developer</span> <span class="f3">, with a passion for creating </span> <span class="dotted_color fw-bold f4">responsive and aesthetically</span> <span class="f5">pleasing websites. I have extensive knowledge of </span> <span class="dotted_color fw-bold f6">HTML, CSS, PHP and JavaScript</span> <span class="f7">, as well as experience working both independently and in teams on various projects. I follow the latest trends and front-end technologies and boldly experiment with new tools and libraries. I am familiar with version control systems such as </span> <span class="dotted_color fw-bold f8">Git</span><span class="f9">. My priority is to create efficient, affordable and SEO-friendly websites. If you are looking for a creative front-end developer who will </span> <span class="dotted_color fw-bold f10">bring your ideas to life</span> <span class="f11">, I invite you to browse my </span> <span class="dotted_color fw-bold f12">portfolio</span> <span class="f13">and contact me.</span>
-                    </p>
-                    <a href="Wiktor Tatarynowicz CV - en.pdf" class="fw-bold btn_cv btn_cv_change btn_color" download="Wiktor Tatarynowicz CV - en.pdf" target="_blank"><i class="fa fa-download"> </i><span class="span_cv">Download CV</span></a>
-                </article>
-            </div>    
-        </section>
-
-
-        <div class="fake_padding"  id="skils">
-            <div class="fake_color2 dark_light_mode_change2"></div>
-            <div class="fake_color1 dark_light_mode_change"></div>
-        </div>
-        <section class="box1 third dark_light_mode_change">
-            <h1 class="fw-bold mb-4">Skils</h1>
-            <article class="ms-5 me-5 third_container">
-                <div class="third_box_container mt-5">
-                    <a class="third_box1 text-light fw-bold btn_color" data-bs-toggle="collapse" href="#third_box1_content" role="button" aria-expanded="false" aria-controls="third_box1_content">
-                        <i class="fa-solid fa-code"></i>Frontend Development
-                    </a>
-                    <div class="collapse" id="third_box1_content">
-                        <div class="card  mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">HTML</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_3"></div>
-                                </div>
-                                <div class="grade2 fw-bold">80%</div>    
-                            </div>
-                        </div>
-                        <div class="card  mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">CSS</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_4"></div>
-                                </div>
-                                <div class="grade2 fw-bold">80%</div>    
-                            </div>
-                        </div>
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">JavaScript</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_5"></div>
-                                </div>
-                                <div class="grade2 fw-bold">50%</div>    
-                            </div>
-                        </div>
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Bootstrap</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_6"></div>
-                                </div>
-                                <div class="grade2 fw-bold">30%</div>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="third_box_container">
-                    <a class="third_box2 mt-4 text-light fw-bold btn_color" data-bs-toggle="collapse" href="#third_box2_content" role="button" aria-expanded="false" aria-controls="third_box2_content">
-                        <i class="fa-solid fa-server"></i>Backend Development
-                    </a>
-                    <div class="collapse" id="third_box2_content">
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">SQL</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_2"></div>
-                                </div>
-                                <div class="grade2 fw-bold">50%</div>    
-                            </div>
-                        </div>
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Python</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_2P"></div>
-                                </div>
-                                <div class="grade2 fw-bold">35%</div>    
-                            </div>
-                        </div>
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">C#</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_2C"></div>
-                                </div>
-                                <div class="grade2 fw-bold">30%</div>    
-                            </div>
-                        </div>
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">PHP</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_2_1"></div>
-                                </div>
-                                <div class="grade2 fw-bold">25%</div>    
-                            </div>
-                        </div>
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Laravel</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_2_2"></div>
-                                </div>
-                                <div class="grade2 fw-bold">20%</div>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="third_box_container">
-                    <a class="third_box2 mt-4 text-light fw-bold btn_color" data-bs-toggle="collapse" href="#third_box3_content" role="button" aria-expanded="false" aria-controls="third_box3_content">
-                        <i class="fa-solid fa-gear"></i>CMS
-                    </a>
-                    <div class="collapse" id="third_box3_content">
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Wordpress</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_1"></div>
-                                </div>
-                                <div class="grade2 fw-bold">75%</div>    
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="third_box_container">
-                    <a class="third_box2 mt-4 text-light fw-bold btn_color" data-bs-toggle="collapse" href="#third_box4_content" role="button" aria-expanded="false" aria-controls="third_box4_content">
-                        <i class="fa-solid fa-toolbox"></i><span class="other">Tools & Software</span>
-                        
-                    </a>
-                    <div class="collapse" id="third_box4_content">
-
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Git</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_1_1"></div>
-                                </div>
-                                <div class="grade2 fw-bold">65%</div>    
-                            </div>
-                        </div>
-                        
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Figma</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_0"></div>
-                                </div>
-                                <div class="grade2 fw-bold">50%</div>    
-                            </div>
-
-                        </div>
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Axure RP</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_0"></div>
-                                </div>
-                                <div class="grade2 fw-bold">50%</div>    
-                            </div>
-
-                        </div>
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Jira</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_0_jira"></div>
-                                </div>
-                                <div class="grade2 fw-bold">30%</div>    
-                            </div>
-
-                        </div>
-
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Trello</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_1_1t"></div>
-                                </div>
-                                <div class="grade2 fw-bold">30%</div> 
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="third_box_container">
-                    <a class="third_box2 mt-4 text-light fw-bold btn_color" data-bs-toggle="collapse" href="#third_box5_content" role="button" aria-expanded="false" aria-controls="third_box5_content">
-                        <i class="fa-brands fa-sketch"></i><span class="other">Other</span>
-                        
-                    </a>
-                    <div class="collapse" id="third_box5_content">
+           
+            <div class="mode_nav">
                     
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Balsamiq</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_0_balsamiq"></div>
-                                </div>
-                                <div class="grade2 fw-bold">60%</div>    
-                            </div>
-                        </div>
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">BrowserStack</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_0"></div>
-                                </div>
-                                <div class="grade2 fw-bold">50%</div>    
-                            </div>
-                        </div>
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">TestLink</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_0_jira"></div>
-                                </div>
-                                <div class="grade2 fw-bold">30%</div>    
-                            </div>
-
-                        </div>
-
-
-                        <div class="card mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1">Postman</p>
-                            <div class="grade">
-                                <div class="grade1 me-3">
-                                    <div class="grade1_1_1t"></div>
-                                </div>
-                                <div class="grade2 fw-bold">30%</div> 
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-
-        <div class="fake_padding" id="projects">
-            <div class="fake_color1 dark_light_mode_change"></div>
-            <div class="fake_color2 dark_light_mode_change2"></div>
-        </div>
-        <section class="box2 fourth  dark_light_mode_change2">
-            <h1 class="fw-bold mb-5 mt-4">Projects</h1>
-            <div class="nav_projects">
-                <i class="project_btn_1 nav_project_i_color_border">Projects 1</i>
-                <i class="project_btn_2">Projects 2</i>
-                <i class="project_btn_3">Projects 3</i>
-            </div>
-            <article class="mt-4">
-                <div class="project1 fourth_content">
-                    <a href="https://kolegatatar.github.io/Fast_Food_Restaurant_Website/" target="_blank" class="blur_project">
-                        <img src="img/food_website.webp" alt="">
-                        <div class="blur_p"><i class="fa-solid fa-magnifying-glass-plus plus"></i></div>
-                    </a>
-                    <p class="pt-4 fw-bold h3 p_title">FOOD WORLD</p>
-                    <p class="pb-3 p_desc">website fastfood project</p>
-                </div>
-                <div class="project2 fourth_content">
-                    <a href="https://animaster.pl" target="_blank" class="blur_project">
-                        <img src="img/animaster.webp" alt="">
-                        <div class="blur_p"><i class="fa-solid fa-magnifying-glass-plus plus"></i></div>
-                    </a>
-                    <p class="pt-4 fw-bold h3 p_title">Animaster </p>
-                    <p class="p_desc">Website for the Animaster company</p>
-                </div>
-            </article>
-
-        </section>
-
-
-
-
-        <div class="fake_padding"  id="certificates">
-            <div class="fake_color2 dark_light_mode_change2"></div>
-            <div class="fake_color1 dark_light_mode_change"></div>
-        </div>
-        <section class="box1 third third_cert dark_light_mode_change">
-            <h1 class="fw-bold mb-4">Certificates</h1>
-            <article class="ms-5 me-5 third_container certificates">
-                <div class="third_box_container mt-5">
-                    <a class="third_box1 text-light fw-bold btn_color it_essential" data-bs-toggle="collapse" href="#it_essential" role="button" aria-expanded="false" aria-controls="it_essential">
-                        CISCO IT ESSENTIALS
-                    </a>
-                    <div class="collapse" id="it_essential">
-                        <div class="card  mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1 fw-bolder">CISCO</p>
-                            <div class="grade">
-                                <img src="img/cisco.webp" alt="cisco" >
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="third_box_container mt-5">
-                    <a class="third_box1 text-light fw-bold btn_color testing" data-bs-toggle="collapse" href="#testing" role="button" aria-expanded="false" aria-controls="testing">
-                        Practical software testing course
-                    </a>
-                    <div class="collapse" id="testing">
-                        <div class="card  mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1 fw-bolder">Udemy</p>
-                            <div class="grade">
-                                <img src="img/testing.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="third_box_container mt-5">
-                    <a class="third_box1 text-light fw-bold btn_color postman" data-bs-toggle="collapse" href="#postman" role="button" aria-expanded="false" aria-controls="postman">
-                        Postman from scratch - testing REST API
-                    </a>
-                    <div class="collapse" id="postman">
-                        <div class="card  mode_card card-body text-dark mt-1">
-                            <p class="h6 mb-3 mt-1 fw-bolder">Udemy</p>
-                            <div class="grade">
-                                <img src="img/postman.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <div class="fake_padding" id="contact">
-            <div class="fake_color1 dark_light_mode_change2"></div>
-            <div class="fake_color1 dark_light_mode_change2"></div>
-        </div>
-        <section class="box1 fifth">
-            <div class="blur_efect">
-                <h1 class="fw-bold mb-4 mt-5">Contact</h1>
-                <!--https://formspree.io/f/maygqlle-->
-                <!--
-                <form action="" method="post">
-                    <input type="text" placeholder="Name and surname" class="mode_border" name="Name" required>
-                    <input type="email" placeholder="Email"class="mode_border" name="email" required>
-                    <input type="text" placeholder="Subject" class="mode_border" name="subject">
-                    <textarea name="message" id="" cols="30" rows="100" placeholder="Message..." class="mode_border"></textarea>
-                    <div>
-                        <button type="submit" class="mt-4" name="submit">Send</button>
-                    </div>
-                </form>
-            -->
-
-            <div class="maildiv">
-                <h2><span>You can reach me via e-mail: </span><a href="mailto:" class="mailto">wiktor.tatarynowicz@gmail.com</a></h2>
-                <span class="text_1_mail">If I don't write back for 48 hours, it means I'm out of contact at the moment.</span> <br><span class="text_2_mail">You should expect a response back within several dozen hours.</span>
-            </div>
-                
-            </div>
-        </section>
+                <i class="pl_icon mode me-1">PL</i> <span class="ikonka">|</span>
+                <i class="eng_icon mode ms-1">ENG</i>
+                <i class="fa-solid fa-circle-half-stroke ms-3 me-4 mode dark_light_mode"></i>
+            </div>  
+            
+    
+    </nav>  
+    </header>
+    <main>
+        <section class="sec0">
+            
+            <div class="text_logo">
+                <p class="web_dev_name">Hi, nazywam się <span>Wiktor</span> <br></p>
+                <p class="web_dev">jestem <span>Web Developerem</span></p>
+                <p class="mt-2 web_dev">Specjalizuję się w projektowaniu stron internetowych  oraz aplikacji webowych. Oferuję kompleksowe usługi obejmujące
+                     cały proces – od projektu, przez wdrożenie, aż po testy końcowe.
+                </p>
+                <p class="mt-3 left_icons">
+                    <a class="icons_a" href="https://github.com/KolegaTatar" target="_blank"><i href="https://github.com/KolegaTatar" target="_blank" class="fa-brands fa-github icons"></i></a>
         
+                    <a class="icons_a" href="https://discord.com/invite/uNcZchuF" target="_blank"><i  class="fa-brands fa-discord icons"></i></a>
+        
+                    <a class="icons_a last_a" href="https://github.com/KolegaTatar"><i href="https://github.com/KolegaTatar" target="_blank" class="fa-brands fa-linkedin icons"></i></a>
+                </p>
+                <div class="div_btn mt-4">
+                    <a href="#about" class="btn_a_1">Więcej</a>
+                    <a href="mailto:wiktor.tatarynowicz@gmail.com" class="btn_a_2">Wyślij wiadomość</a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="img/I.webp" alt="">
+             </div>
+
+        </section>
+
+        <section class="sec1" id="about">
+            <div class="parent_sec1">
+                <h6 class="web_dev mb-3">O mnie</h6>
+                <h4 class="mb-3">Kreatywność, innowacyjność, profesionalizm</h4>
+                <p class="mb-4  text_me cv_text">
+                    <span class="f1">Jestem</span> <span class="dotted_color_cv fw-bold f2">młodym, doświadczonym front-end developerem</span> <span class="f3">, którego pasją jest tworzenie </span> <span class="dotted_color_cv fw-bold f4">responsywnych i estetycznych</span> <span class="f5">stron internetowych. Posiadam rozległą wiedzę z zakresu </span> <span class="dotted_color_cv fw-bold f6">HTML, CSS, PHP i JavaScript</span> <span class="f7">, a także doświadczenie w samodzielnej i zespołowej pracy nad różnymi projektami. Śledzę najnowsze trendy i technologie front-endowe oraz odważnie eksperymentuję z nowymi narzędziami i bibliotekami. Znam systemy kontroli wersji takie jak </span> <span class="dotted_color_cv fw-bold f8">Git</span><span class="f9">. Moim priorytetem jest tworzenie wydajnych, przystępnych cenowo i przyjaznych SEO stron internetowych. Jeśli szukasz kreatywnego front-end developera, który </span> <span class="dotted_color_cv fw-bold f10">wprowadzi Twoje pomysły w życie</span> <span class="f11">, zapraszam do przejrzenia mojego </span> <span class="dotted_color_cv fw-bold f12">portfolio</span> <span class="f13">i kontaktu.</span>
+                </p>
+                <p>Zapraszam do dowiedzenia się <span class="dotted_color_cv fw-bold"> więcej </span> o mnie oraz do zapoznania się z moim <span class="dotted_color_cv fw-bold"> CV:</span></p>
+                <a class="fa-solid fa-download fw-bold" href="Wiktor Tatarynowicz CV - pl.pdf" download="Wiktor Tatarynowicz CV - pl.pdf"> Pobierz CV</a>
+            </div>
+            <div class="child_sec1">
+                <img src="img/indomay32.webp" alt="">
+            </div>
+        </section>
+
+        <section class="sec2" id="projects">
+            <h6 class="web_dev mb-3">PROJEKTY</h6>
+            <h4 class="mb-5">Zaufaj doświadczeniu</h4>
+            <div class="project_section">
+        
+                <div class="projects_content">
+                    <img src="img/animaster.webp" alt="animaster">
+                    <div class="content_img">
+                        <h4>Animaster</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh lacus, consectetur et libero et, tristique pulvinar ex. Suspendisse in scelerisque libero. Suspendisse tincidunt augue nibh, quis vehicula nunc vulputate et. Ut in tincidunt risus.</p>
+                        <a href="https://animaster.pl"  target="_blank">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="projects_content">
+                    <img src="img/hendi.webp" alt="hendi">
+                    <div class="content_img">
+                        <h4>Hendi E-Learning</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh lacus, consectetur et libero et, tristique pulvinar ex. Suspendisse in scelerisque libero. Suspendisse tincidunt augue nibh, quis vehicula nunc vulputate et. Ut in tincidunt risus.</p>
+                        <a href="http://elearning.hendi.com/login/"  target="_blank">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="projects_content">
+                    <img src="img/math_website.webp" alt="licz.my">
+                    <div class="content_img">
+                        <h4>Licz.my</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh lacus, consectetur et libero et, tristique pulvinar ex. Suspendisse in scelerisque libero. Suspendisse tincidunt augue nibh, quis vehicula nunc vulputate et. Ut in tincidunt risus.</p>
+                        <a href="https://kolegatatar.github.io/Bootstrap/Projekt/"  target="_blank">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="projects_content">
+                    <img src="img/food_website.webp" alt="food_website">
+                    <div class="content_img">
+                        <h4>Food Word</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh lacus, consectetur et libero et, tristique pulvinar ex. Suspendisse in scelerisque libero. Suspendisse tincidunt augue nibh, quis vehicula nunc vulputate et. Ut in tincidunt risus.</p>
+                        <a href="https://kolegatatar.github.io/Fast_Food_Restaurant_Website/"  target="_blank">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="projects_content">
+                    <img src="img/c-sharp.webp" alt="c#">
+                    <div class="content_img">
+                        <h4>C# console app</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh lacus, consectetur et libero et, tristique pulvinar ex. Suspendisse in scelerisque libero. Suspendisse tincidunt augue nibh, quis vehicula nunc vulputate et. Ut in tincidunt risus.</p>
+                        <a href="https://github.com/KolegaTatar/Currency_Calculator"  target="_blank">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="projects_content">
+                    <img src="img/laravel.webp" alt="laravel">
+                    <div class="content_img">
+                        <h4>Laravel App</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh lacus, consectetur et libero et, tristique pulvinar ex. Suspendisse in scelerisque libero. Suspendisse tincidunt augue nibh, quis vehicula nunc vulputate et. Ut in tincidunt risus.</p>
+                        <a href="https://github.com/KolegaTatar/zsk_2023-2024_laravel"  target="_blank">Zobacz więcej</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec3" id="certificates">
+            <h6 class="web_dev mb-3">Certyfikaty</h6>
+            <h4 class="mb-5">Wiedza mówi sama za siebie</h4>
+                <div class="container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon fw-bold">1</div>
+                            <div class="description">
+                                <h4>Postman</h4>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" >
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon fw-bold">2</div>
+                            <div class="description">
+                                <h4>CISCO IT Essentials</h4>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" >
+                    <label for="c3" class="card">
+                        <div class="row">
+                            <div class="icon fw-bold">3</div>
+                            <div class="description">
+                                <h4>Testowanie oprogramowania</h4>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+        </section>
+
+
+        <section class="sec4" id="cooperation">
+            <h6 class="web_dev mb-3">Współpraca</h6>
+            <h4 class="mb-3">Wspólnie zwyciężymy</h4>
+            <div class="parent_sec4">
+                <div class="icons_sklis">
+                    <p class="mb-4 text_wsp">
+                        <span class="text_1">
+                            Wierzę, że każdy projekt jest wyjątkowy i wymaga niepowtarzalnego podejścia. Moje podejście opiera się na zrozumieniu wizji oraz specyfiki projektu, co pozwala mi dostosować strategię do konkretnych potrzeb. 
+                        </span> 
+                        <br> <br>
+                        <span class="text_2">
+                            Dążę do doskonałości poprzez starannie dobraną paletę technologii, które zapewniają nie tylko odpowiednie, lecz także szybkie funkcjonowanie aplikacji. Moim zadaniem jest tworzenie rozwiązań, które nie tylko spełniają oczekiwania, ale również je przekraczają.
+                        </span>
+                        
+                            <br><br>
+                        <span class="text_3">
+                            W relacjach z ludźmi kładę nacisk na pozytywną atmosferę i efektywną komunikację. Dzięki temu wiedzę zdobywaną podczas naszych rozmów konwertuję na konkretne działania, napędzając inicjatywę w procesie realizacji projektu. Zaufanie jest dla mnie kluczowe, dlatego stawiam na transparentność i zaangażowanie na każdym etapie współpracy.
+                        </span>
+                        
+                        <br><br>
+                        <span class="text_4">
+                            Zapraszam do podzielenia się swoją wizją, abyśmy mogli razem przekształcić ją w rzeczywistość.
+                        </span>
+                        
+                        <br><br>
+                        <span class="text_5">
+                            Mam spore doświaczenie w korzystaniu z tych technologii:
+                        </span>
+                        
+                    </p>
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;">
+                        <div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" class="css-xtbb2s">
+                            <div class="css-mr3j8u">HTML</div>
+                        </div>
+                    </div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" class="css-xtbb2s"><div class="css-mr3j8u">CSS</div></div></div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" class="css-xtbb2s"><div class="css-mr3j8u">JavaScript</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-csharp-1-1175241.png?f=webp&w=256" alt="C#" class="css-xtbb2s"><div class="css-mr3j8u">C#</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/laravel-9305885-7694084.png?f=webp&w=256" alt="Laravel" class="css-xtbb2s"><div class="css-mr3j8u">Laravel</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" class="css-xtbb2s"><div class="css-mr3j8u">Git</div></div></div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" class="css-xtbb2s"><div class="css-mr3j8u">Python</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-c-4-226082.png?f=webp&w=256" alt="C++" class="css-xtbb2s"><div class="css-mr3j8u">C++</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="Typescript" class="css-xtbb2s"><div class="css-mr3j8u">Typescript</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-csharp-1-1175241.png?f=webp&w=256" alt="C#" class="css-xtbb2s"><div class="css-mr3j8u">C#</div></div></div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-php-99-1175127.png?f=webp&w=256" alt="PHP" class="css-xtbb2s"><div class="css-mr3j8u">PHP</div></div></div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" class="css-xtbb2s"><div class="css-mr3j8u">MySQL</div></div></div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="css-xtbb2s"><div class="css-mr3j8u">Bootstrap</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-postman-3521648-2945092.png?f=webp&w=256" alt="Postman" class="css-xtbb2s"><div class="css-mr3j8u">Postman</div></div></div>
+                    
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" class="css-xtbb2s"><div class="css-mr3j8u">Figma</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-jira-3628861-3030001.png?f=webp&w=256" alt="Jira" class="css-xtbb2s"><div class="css-mr3j8u">Jira</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;"><div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/trello-2752053-2284870.png?f=webp&w=256" alt="Trello" class="css-xtbb2s"><div class="css-mr3j8u">Trello</div></div></div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;">
+                        <div class="tech css-1jjqhp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code" class="css-xtbb2s"><div class="css-mr3j8u">VS Code</div></div>
+                    </div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;">
+                        <div class="tech css-1jjqhp"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1024px-Visual_Studio_Icon_2019.svg.png" alt="VS" class="css-xtbb2s"><div class="css-mr3j8u">VS</div></div>
+                    </div>
+
+                    <div class="animated fadeInLeft" style="animation-duration: 1s; opacity: 1;">
+                        <div class="tech css-1jjqhp"><img src="https://cdn.iconscout.com/icon/free/png-512/free-wordpress-1-226061.png?f=webp&w=256" alt="WordPress " class="css-xtbb2s">
+                            <div class="css-mr3j8u">WordPress</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="child_sec1">
+                    <img src="img/win.webp" alt="">
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class=" fw-bold">
-        By Wiktor Tatarynowicz
-        <a class="fa-solid fa-arrow-up arrow_up" href="#start"></a>
+    <footer class="">
+        Copyright © 2024 Wiktor Tatarynowicz. Wszystkie prawa zastrzeżone.
     </footer>
+    <a class="up_home" href="#header">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    
 </body>
 </html>
