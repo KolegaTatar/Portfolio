@@ -99,6 +99,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 0.9rem;
 }
 .up_home{
     display: none;
@@ -219,6 +220,9 @@ footer{
 }
 .sec0 .div_btn{
     margin-top: 2.5rem !important;
+}
+.Im{
+    color: white !important;
 }
 
 /* sekcja 1 */ 
@@ -719,6 +723,9 @@ section h4{
     .container{
         display: none;
     }
+    .sec1 h4, .sec2 h4{
+        font-size: 2.2rem !important;
+    }
 }
 @media (max-width:425px ){
     .btn_a_1{
@@ -759,6 +766,9 @@ section h4{
     }
     .container{
         height: 100px !important;
+    }
+    .sec1 h4, .sec2 h4{
+        font-size: 1.8rem !important;
     }
 
 }
