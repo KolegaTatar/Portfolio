@@ -81,14 +81,14 @@ main{
     min-height: 10rem;
 }
 section{
-    min-height: 90vh;
+    min-height: 2rem;
     max-width: 100%;
 }
 .sec0, .sec2, .sec4{
     background-color: var(--dark1);
 }
 .sec0{
-    min-height: 100vh;
+    min-height: 2rem;
 }
 
 footer{
@@ -130,7 +130,7 @@ footer{
     display: flex;
     flex-direction: row;
     padding: 2rem 3em 2rem 5rem;
-    min-height: 100vh;
+    min-height: 2rem;
 }
 .sec0 .logo{
     width: 50%;
