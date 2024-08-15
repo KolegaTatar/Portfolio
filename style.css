@@ -33,6 +33,7 @@ header{
 nav .logo_text{
     font-size: 2rem;
     color: var(--light_beige) !important;
+    margin-left: 5rem !important;
     
 }
 nav .logo_text .span1{
@@ -234,7 +235,7 @@ footer{
     flex-direction: row;
     color: #000000cc;
     padding: 2rem 3em 2rem 5rem;
-    min-height: 50vh !important;
+    min-height: 2rem !important;
 }
 .parent_sec1{
     width: 65%;
@@ -499,6 +500,9 @@ section h4{
         margin-top: 2.5rem;
         line-height: 3rem;
     }
+    nav .logo_text{
+        margin-left: 4rem !important;
+    }
 }
 @media (max-width:1090px ){
     .projects_content{
@@ -644,6 +648,9 @@ section h4{
     }
     .mode_nav_2 .light_dark{
         display: none;
+    }
+    nav .logo_text{
+        margin-left: 3rem !important;
     }
 }
 
