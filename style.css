@@ -1,6 +1,7 @@
 :root{
     --dark1:#161b22;
     --light_beige: #B09E8D;
+    --grey1:#202124;
 }
 *{
     scroll-behavior: smooth;
@@ -26,7 +27,7 @@ body{
     font-size: 1.1rem;
 }
 header{
-    background-color: var(--dark1);
+    background-color: var(--grey1);
     position: absolute;
     width: 100%;;
 }
@@ -86,14 +87,14 @@ section{
     max-width: 100%;
 }
 .sec0, .sec2, .sec4{
-    background-color: var(--dark1);
+    background-color: var(--grey1);
 }
 .sec0{
     min-height: 2rem;
 }
 
 footer{
-    background-color: var(--dark1);
+    background-color: var(--grey1);
     width: 100%;
     height: 5rem;
     color: rgba(255, 255, 255, 0.8);
@@ -122,7 +123,7 @@ footer{
     text-decoration: none;
 }
 .up_home:hover{
-    color: var(--dark1);
+    color: var(--grey1);
 }
 
 /* sekcja 0 */
@@ -135,8 +136,9 @@ footer{
 }
 .sec0 .logo{
     width: 50%;
-    margin-top: 19vh;
+    margin-top: 8rem;
     position: relative;
+    margin-bottom: 3rem;
 }
 .sec0 .logo img{
     width: 25rem;
@@ -255,7 +257,7 @@ footer{
 .sec1 .parent_sec1 a{
     padding: 1.5rem 2rem;
     color: var(--light_beige);
-    border:2px solid white;
+    border:2px solid transparent;
     margin-top: 1rem;
     text-decoration: none;
     word-spacing: 0.2rem;
@@ -424,7 +426,51 @@ input:checked + label .description {
 .card[for="c3"] {
     background-image: url('img/test-soft.webp');
 }
+.sec3 .project_section {
+    display: none;
+    
+}
+.sec3 .project_section .projects_content{
+    box-shadow: 0px 0px 15px var(--grey1);
+}
+.sec3 .project_section .projects_content h4{
+    font-size: 1.7rem;
+    
+}
+#hidden_box{
+    transition: all 1s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+.hidden {
+    display: none !important;
+}
+.visuallyhidden {
+    opacity: 0;
+}
+.sec3 .more, .sec2 .more{
+    display: none;
+    justify-content: center;
+    margin-top: 1rem !important;
+}
+.sec3 .more button, .sec2 .more button{
+    padding: 1rem 2rem;
+    background-color: var(--light_beige);  
+    border-radius: 2rem;  
+    text-decoration: none;
+    color: white;
+    border: 2px solid transparent;
+
+}
+
+.sec3 .more button:hover , .sec2 .more button:hover{
+    color: var(--light_beige);
+    background-color: white;
+    border: 2px solid var(--light_beige);
+}
 
 
 
@@ -485,6 +531,219 @@ section h4{
 }
 
 
+
+/* dark mode */
+/*
+.sec1, .sec3{
+    background-color: #3C4042;
+    color: #bbbbbb
+}*/
+.sec0, header, .sec2, .sec4, footer, #main-menu{
+    background-color: #202124 !important;
+}
+
+@media (min-width:2251px) and (max-width:2560px){
+    section{
+        min-height:45rem !important;
+    }
+    section h4{
+        font-size: 3rem !important;
+        margin-bottom: 5rem !important;
+    }
+    section h6{
+        font-size: 2.2rem !important;
+    }
+    body{
+        font-size: 2.1rem;
+    }
+    .container {
+        height: 40rem;
+    }
+    .sec3{
+        padding-bottom: 5rem;
+    }
+    input:checked +label{
+        width: 100%;
+    }
+    .sec4 .icons_sklis div{
+        font-size: 2rem;
+    }
+    .sec4 .icons_sklis div img{
+        width: 3.5rem;
+    }
+    .sec4 .child_sec1{
+        width: 30%;
+    }
+    .sec4 .icons_sklis{
+        width: 70%;
+    }
+    .sec0 .web_dev{
+        font-size: 2.05rem;
+        margin-top: 1rem !important;
+    }
+    .sec0{
+        min-height: 60rem !important;
+    }
+    nav .logo_text{
+        font-size: 3rem;
+    }
+    nav .logo_text .span1{
+        font-size: 3.5rem;
+    }
+    .up_home{
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+    .left_icons a i{
+        font-size:3rem;
+        width: 6rem;
+        height: 6rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .sec0 .div_btn a{
+        font-size: 2.1rem;
+    }
+    .row{
+        width: 100%;
+    }
+    .row .icon{
+       display: none !important;
+    }
+    .row .description h4{
+        font-size: 2.5rem !important;
+    }
+    .row .description p{
+        font-size: 2rem !important;
+    }
+    .sec0 .logo{
+        width: 30%;
+    }
+    .sec0 .logo img{
+        width: 30rem;
+    }
+
+}
+@media (min-width:2001px) and (max-width:2250px){
+    section h4{
+        font-size: 3.5rem;
+        margin-bottom: 5rem !important;
+    }
+    section h6{
+        font-size: 2rem !important;
+    }
+    body{
+        font-size: 1.85rem;
+    }
+    input:checked +label{
+        width: 80%;
+    }
+    .sec4 .icons_sklis div{
+        font-size: 1.6rem;
+    }
+    .sec4 .icons_sklis div img{
+        width: 3rem;
+    }
+    .sec0 .web_dev{
+        font-size: 1.8rem;
+    }
+    .sec0{
+        min-height: 50rem !important;
+    }
+    .up_home{
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.5rem;
+    }
+    .left_icons a i{
+        font-size: 2.5rem;
+        width: 5rem;
+        height: 5rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .sec0 .div_btn a{
+        font-size: 1.8rem;
+    }
+    .sec0 .logo{
+        width: 30%;
+    }
+    .sec0 .logo img{
+        width: 25rem;
+    }
+}
+@media (min-width:1800px) and (max-width:2000px){
+    body{
+        font-size: 1.7rem;
+    }
+    .sec0 .div_btn a{
+        font-size: 1.5rem;
+    }
+    .left_icons a i{
+        font-size: 2.3rem;
+        width: 4.2rem;
+        height: 4.2rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .sec0 .web_dev{
+        font-size: 1.7rem;
+    }
+    .sec0{
+        min-height: 50rem !important;
+    }
+}
+@media (min-width:1600px) and (max-width:1800px){
+    section{
+        min-height: 50rem !important;
+    }
+    body{
+        font-size: 1.3rem;
+    }
+    .container {
+        height: 30rem;
+
+    }
+    input:checked +label{
+        width: 70%;
+    }
+    .sec4 .icons_sklis div{
+        font-size: 1.5rem;
+    }
+    .sec4 .icons_sklis div img{
+        width: 3rem;
+    }
+    .left_icons a i{
+        font-size: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .sec0 .div_btn a{
+        font-size: 1.25rem;
+    }
+    .sec0 .web_dev{
+        font-size: 1.5rem;
+    }
+    .row{
+        width: 100%;
+    }
+    .row .icon{
+        visibility: hidden;
+    }
+    .row .description h4{
+        font-size: 2.2rem !important;
+    }
+    .row .description p{
+        font-size: 2rem !important;
+    }
+    .sec0 .logo {
+        margin-top: 10rem !important;
+    }
+}
+
 @media (max-width:1250px ){
     .sec1 .parent_sec1 a{
         margin-top: 0rem !important;
@@ -517,6 +776,9 @@ section h4{
     .sec0{
         padding-bottom: 3rem !important;
     }
+    .sec0 .logo img{
+        width: 22rem;
+    }
 }
 
 @media (max-width:1024px ){
@@ -544,7 +806,8 @@ section h4{
         padding-bottom: 2rem !important;
     }
     .sec0 .logo{
-        margin-top: 12vh;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
     }
     .sec0 .logo img{
         width: 20rem;
@@ -552,6 +815,7 @@ section h4{
     .text_me{
         margin-right: 0rem !important;
     }
+
 
 }
 
@@ -584,6 +848,9 @@ section h4{
     }
     .row{
         width:100% !important;
+    }
+    .row .icon{
+        display: none !important;
     }
 
 
@@ -637,7 +904,7 @@ section h4{
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        background-color: var(--dark1);
+        background-color: var(--grey1);
     }
     .collapse{
         border-bottom: 1px solid var(--light_beige);
@@ -739,8 +1006,18 @@ section h4{
     nav .logo_text{
         margin-left: 2rem !important;
     }
+    .sec3 .project_section, .sec2 .project_section {
+        display: flex;
+    }
+    .sec3 .more, .sec2 .more{
+        display: flex;
+    }
+    .hidden_1{
+        display: none;
+    }
+
 }
-@media (max-width:425px ){
+@media (max-width:450px){
     .btn_a_1{
         display: none;
     }
@@ -748,6 +1025,7 @@ section h4{
         background-color: var(--light_beige) !important;  
         color: white !important;
         border: 2px solid transparent !important;
+        font-weight: bold;
     }
     .div_btn .btn_a_2:hover{
         color: var(--light_beige) !important;
@@ -768,6 +1046,10 @@ section h4{
     .last_a{
         margin-right: 0rem !important;
     }
+}
+
+@media (max-width:425px ){
+    
     .projects_content{
         width: 90%;
     }
@@ -783,9 +1065,48 @@ section h4{
     .sec1 h4, .sec2 h4{
         font-size: 1.8rem !important;
     }
+    .sec3 .project_section .projects_content h4{
+        font-size: 1.3rem !important;
+        
+    }
 
 }
 
 @media (max-width:390px ){
 
 }
+
+/* change language animation */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.progress-bar {
+    width: 80%;
+    max-width: 400px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #FF5C35;
+    animation: fill 4s infinite;
+}
+
+@keyframes fill {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/*https://blog.hubspot.com/website/css-loading-animation*/

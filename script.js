@@ -10,6 +10,78 @@ function scrollFunction() {
   }
 }
 
+let more = document.querySelector(".sec3 .more button");
+more.addEventListener("click",()=>{
+    if(document.querySelector(".sec3 .more button i").classList.contains("fa-caret-down")){
+        more.innerHTML='<i class="fa-solid fa-caret-up"></i> Schowaj';      
+    }
+    else{
+        more.innerHTML='<i class="fa-solid fa-caret-down"></i> Więcej';
+    }
+})
+let more2 = document.querySelector(".sec2 .more button");
+more2.addEventListener("click",()=>{
+    if(document.querySelector(".sec2 .more button i").classList.contains("fa-caret-down")){
+        more2.innerHTML='<i class="fa-solid fa-caret-up"></i> Schowaj';      
+    }
+    else{
+        more2.innerHTML='<i class="fa-solid fa-caret-down"></i> Więcej';
+    }
+})
+    
+
+
+
+let box = document.querySelector('.sec3 #hidden_box');
+let more_btn = document.querySelector('.sec3 .more_btn');
+
+more_btn.addEventListener('click', function () {
+    if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        setTimeout(function () {
+        box.classList.remove('visuallyhidden');
+        }, 20);
+    } 
+    else {
+        box.classList.add('visuallyhidden');    
+        box.addEventListener('transitionend', function(e) {
+        box.classList.add('hidden');
+        }, 
+        {
+        capture: false,
+        once: true,
+        passive: false
+        });
+    }
+  
+}, false);
+
+let box2 = document.querySelector('.sec2 #hidden_box');
+let more_btn2 = document.querySelector('.sec2 .more_btn');
+
+more_btn2.addEventListener('click', function () {
+    if (box2.classList.contains('hidden')) {
+        box2.classList.remove('hidden');
+        setTimeout(function () {
+        box2.classList.remove('visuallyhidden');
+        }, 20);
+    } 
+    else {
+        box2.classList.add('visuallyhidden');    
+        box2.addEventListener('transitionend', function(e) {
+        box2.classList.add('hidden');
+        }, 
+        {
+        capture: false,
+        once: true,
+        passive: false
+        });
+    }
+  
+}, false);
+
+
+
 
 let pol = document.querySelector('.mode_nav .pl_icon');
 let eng = document.querySelector('.mode_nav .eng_icon');
@@ -261,3 +333,24 @@ eng_hidden.addEventListener("click",()=>{
     f16.innerText="about me and take a look at my ";
     f17.innerText="CV:";
 })
+
+
+/* dark / light mode */
+let dark_light_mode = document.querySelectorAll(".dark_light_mode");
+let sec0 = document.querySelector(".sec0");
+let sec1 = document.querySelector(".sec1");
+let sec2 = document.querySelector(".sec2");
+let sec3 = document.querySelector(".sec3");
+let sec4 = document.querySelector(".sec4");
+let header = document.querySelector("header");
+
+dark_light_mode.forEach(e => {
+    e.addEventListener("click", ()=>{
+        if(sec1.style.color == "black"){
+            sec0.style.backgroundColor = "#202124";
+        }
+        else{
+            sec0.style.backgroundColor = "var(--dark1)";
+        }
+    })
+});
