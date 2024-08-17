@@ -236,7 +236,6 @@ footer{
     display: flex;
     flex-direction: row;
     color: #000000cc;
-    color: #000000a4;
     padding: 2rem 3em 2rem 5rem;
     min-height: 2rem !important;
     font-weight: 500;
@@ -858,9 +857,12 @@ section h4{
     .row .icon{
         display: none !important;
     }
-
+    .link_1{
+        margin-left: 1.5rem !important;
+    }
 
 }
+
 
 @media (max-width:768px ){
     .sec0{
@@ -892,7 +894,12 @@ section h4{
         display: none;
     }
     .navbar-toggler{
-        margin-right: 2rem;
+        margin-right: 1rem;
+        border: none;
+        margin-top: -0.5rem;
+    }
+    .navbar-toggler:focus{
+        box-shadow: 0 0 0 0.1rem;
     }
     
     .collapse ul li, .mode_nav_2{
@@ -944,6 +951,7 @@ section h4{
     }
     .sec1{
         padding-bottom: 2.5rem !important;
+        color: #000000a4 !important;
     }
 
     .sec4  .icons_sklis div{
@@ -1083,18 +1091,34 @@ section h4{
 }
 
 /* change language animation */
-.loader-container {
-    display: flex;
+.loading_web{
+    display: none;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    backdrop-filter:blur(20px);
+}
+.country{
+    color:white ;
+    font-size: 1.2em;
+    font-family: "Russo One", sans-serif;
+    font-style: normal;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 10px var(--grey1);
+
 }
 
 .progress-bar {
-    width: 80%;
-    max-width: 400px;
-    height: 20px;
-    background-color: #e0e0e0;
+    width: 60%;
+    max-width: 15rem;
+    height: 1rem;
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -1102,9 +1126,11 @@ section h4{
 .progress {
     width: 0;
     height: 100%;
-    background-color: #FF5C35;
-    animation: fill 4s infinite;
+    background-color: var(--light_beige);
+    animation: fill 1.5s 1;
 }
+
+
 
 @keyframes fill {
     0% {
@@ -1115,4 +1141,12 @@ section h4{
     }
 }
 
-/*https://blog.hubspot.com/website/css-loading-animation*/
+.progress {
+    width: 100%;
+}
+
+.loading_web{
+    display: none;
+    transition: all display 5s;
+}
+

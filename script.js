@@ -138,6 +138,20 @@ let f15 = document.querySelector(".f15");
 let f16 = document.querySelector(".f16");
 let f17 = document.querySelector(".f17");
 
+let loading_web = document.querySelector(".loading_web");
+let country = document.querySelector(".country");
+
+let progress_100 =()=>{
+    loading_web.style.display ="none"
+}
+let show_loading =(x_country)=>{
+    country.innerText =x_country;
+    loading_web.style.display = "flex";
+    
+
+    setTimeout(progress_100,1600);
+}
+
 pol.addEventListener("click",()=>{
     link1.innerText ="O mnie";
     link2.innerText ="Projekty";
@@ -147,7 +161,7 @@ pol.addEventListener("click",()=>{
     btn_2.innerHTML ="Więcej";
     Im.innerHTML ="Jestem";
     cv.innerHTML=" Pobierz CV";
-    name_imie.innerHTML ="nazwyam się";
+    name_imie.innerHTML ="nazywam się";
     left_info.innerText ="Specjalizuję się w projektowaniu stron internetowych oraz aplikacji webowych. Oferuję kompleksowe usługi obejmujące cały proces – od projektu, przez wdrożenie, aż po testy końcowe.";
     me_about.innerText ="O mnie";
     info_prof.innerText = "Kreatywność, innowacyjność, profesionalizm";
@@ -183,7 +197,7 @@ pol.addEventListener("click",()=>{
     f15.innerText=" więcej ";
     f16.innerText="o mnie oraz do zapoznania się z moim ";
     f17.innerText="CV:";
-
+    show_loading("PL");
 
 
 
@@ -234,6 +248,7 @@ eng.addEventListener("click",()=>{
     f15.innerText=" more ";
     f16.innerText="about me and take a look at my ";
     f17.innerText="CV:";
+    show_loading("ENG");
 })
 
 
@@ -248,7 +263,7 @@ pol_hidden.addEventListener("click",()=>{
     left_btn.innerText = "Wyślij wiadomość";
     btn_2.innerHTML ="Więcej";
     Im.innerHTML ="Jestem";
-    name_imie.innerHTML ="nazwyam się";
+    name_imie.innerHTML ="nazywam się";
     cv.innerHTML=" Pobierz CV";
     left_info.innerText ="Specjalizuję się w projektowaniu stron internetowych oraz aplikacji webowych. Oferuję kompleksowe usługi obejmujące cały proces – od projektu, przez wdrożenie, aż po testy końcowe.";
     me_about.innerText ="O mnie";
@@ -285,6 +300,7 @@ pol_hidden.addEventListener("click",()=>{
     f15.innerText=" więcej ";
     f16.innerText="o mnie oraz do zapoznania się z moim ";
     f17.innerText="CV:";
+    show_loading("PL");
 })
 
 eng_hidden.addEventListener("click",()=>{
@@ -332,7 +348,10 @@ eng_hidden.addEventListener("click",()=>{
     f15.innerText=" more ";
     f16.innerText="about me and take a look at my ";
     f17.innerText="CV:";
+    show_loading("ENG");
 })
+
+
 
 
 /* dark / light mode */
