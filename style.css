@@ -478,6 +478,8 @@ input:checked + label .description {
 /* sekcja 4 */
 .sec4{
     color: #FFFFFFCC;
+    color: #ffffffe8;;
+    font-weight: 500;
     padding: 2rem 5rem 2rem 5rem;
     display: flex;
     flex-direction: column;
