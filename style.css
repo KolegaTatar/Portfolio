@@ -238,6 +238,7 @@ footer{
     color: #000000cc;
     padding: 2rem 3em 2rem 5rem;
     min-height: 2rem !important;
+    font-weight: 500;
 }
 .parent_sec1{
     width: 65%;
@@ -520,10 +521,12 @@ section h4{
     font-family: "Russo One", sans-serif;
     font-weight: 100;
     font-style: normal;
+
 }
 .sec1 h4, .sec3 h4{
     color: black;
     font-size: 2.5rem;
+
 }
 .sec4 .child_sec1 img{
     width: 100%
