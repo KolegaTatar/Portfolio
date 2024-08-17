@@ -236,6 +236,7 @@ footer{
     display: flex;
     flex-direction: row;
     color: #000000cc;
+    color: #000000a4;
     padding: 2rem 3em 2rem 5rem;
     min-height: 2rem !important;
     font-weight: 500;
