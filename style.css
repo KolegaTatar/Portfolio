@@ -51,11 +51,11 @@ nav .collapse{
     flex-direction: row;
     justify-content: center;
 }
-nav .collapse ul li a{
-    border-bottom: 2px solid transparent;
+nav ul li a{
+    border-bottom: 2px solid transparent !important;
 }
-nav .collapse ul li a:hover{
-    border-bottom: 2px solid var(--light_beige);
+nav ul li a:hover{
+    border-bottom: 2px solid var(--light_beige) !important;
 }
 nav{
     color: rgba(255, 255, 255, .55);
@@ -95,6 +95,7 @@ section{
 }
 .sec0{
     min-height: 2rem;
+    padding-top: 3rem !important;
 }
 
 footer{
@@ -263,19 +264,47 @@ footer{
     padding: 1.5rem 2rem;
     color: var(--light_beige);
     border:2px solid transparent;
-    margin-top: 1rem;
+    margin-top: 1rem !important;
     text-decoration: none;
     word-spacing: 0.2rem;
     border-bottom: 5px solid var(--light_beige);
     transition: background-color 2.5s, color 2s;
+    position: relative;
+    transition: all .35s;
 }
 
 .sec1 .parent_sec1 a:hover{
     background-color: var(--light_beige);
     color:white !important;
     cursor: pointer;
-    transition: background-color 3s, color 2s;
+    transition: background-color 3s, color 1s;
 }
+
+.sec1 .parent_sec1 a:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--light_beige);
+    transition: all .35s;
+    color: white !important;
+}
+.sec1 .parent_sec1 a span{
+    position: relative;
+    z-index: 33;
+}
+
+.sec1 .parent_sec1 a:hover{
+    color: #ffffff !important;
+}
+
+.sec1 .parent_sec1 a:hover:after{
+    width: 100%;
+    color: #ffffff !important;
+}
+
 
 /* sekcja 2 */
 .sec2{
@@ -331,6 +360,30 @@ footer{
     background-color: var(--light_beige);
     cursor: pointer;
 }
+
+.fake_img {
+    position: relative;
+    display: inline-block;
+ }
+ .fake_img img {
+    display: flex;
+ }
+ .fake_img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 1rem 1rem 0rem 0rem;
+    transition: background-color 0.5s linear;
+    padding: 2rem;
+ }
+ .fake_img .overlay:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s linear;
+ }
+ 
 
 
 
@@ -548,6 +601,10 @@ section h4{
 .offcanvas-header{
     padding-top: 0.5rem !important;
 }
+.offcanvas-body{
+    padding-top: 0rem !important;
+}
+
 
 
 /* dark mode */
@@ -556,7 +613,7 @@ section h4{
     background-color: #3C4042;
     color: #bbbbbb
 }*/
-.sec0, header, .sec2, .sec4, footer, #main-menu{
+.sec0, header, .sec2, .sec4, footer{
     background-color: #202124 !important;
 }
 
@@ -918,12 +975,18 @@ section h4{
         padding-right: 3rem !important;
     }
 
+    nav ul li{
+        font-size: 1.1rem !important;
+        padding-top: 0.4rem !important;
+        padding-bottom: 0.4rem !important;
+    }
 
     .navbar-toggler:focus{
         box-shadow: 0 0 0 0.1rem;
     }
-
-    
+    .offcanvas-header{
+        padding-bottom: 0.5rem !important;
+    }
     .collapse ul li{
         margin-left: 3rem !important;
         margin-bottom: 0.5rem;
