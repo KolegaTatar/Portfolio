@@ -87,7 +87,7 @@ let pol = document.querySelector('.mode_nav .pl_icon');
 let eng = document.querySelector('.mode_nav .eng_icon');
 let do_false = document.querySelector(".collapse");
 
-let link1 = document.querySelector("#main-menu .link_1_1");
+let link1 = document.querySelector(".link_1_1");
 let link2 = document.querySelector(".link_2");
 let link3 = document.querySelector(".link_3");
 let link4 = document.querySelector(".link_4");
@@ -149,7 +149,7 @@ let show_loading =(x_country)=>{
     loading_web.style.display = "flex";
     
 
-    setTimeout(progress_100,1600);
+    setTimeout(progress_100,1100);
 }
 
 pol.addEventListener("click",()=>{

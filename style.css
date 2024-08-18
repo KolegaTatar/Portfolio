@@ -73,9 +73,13 @@ nav i:hover{
 }
 .mode_nav{
     margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mode_nav_2{
     display: none;
+
 }
 main{
     display: flex;
@@ -536,6 +540,15 @@ section h4{
 }
 
 
+.offcanvas{
+    background-color: var(--grey1) !important;
+    height: 70% !important;
+    border-bottom: 2px solid var(--light_beige) !important;
+}
+.offcanvas-header{
+    padding-top: 0.5rem !important;
+}
+
 
 /* dark mode */
 /*
@@ -862,9 +875,23 @@ section h4{
     }
 
 }
-
+@media (max-width:810px){
+    nav{
+        font-size: 1rem !important;
+    }
+}
+@media (max-width:770px){
+    .mode_nav{
+        display: none;
+    }
+}
 
 @media (max-width:768px ){
+    .offcanvas{
+        border-bottom: 2px solid var(--light_beige);
+
+    }
+
     .sec0{
         padding-top: 4.5rem !important;
     }
@@ -890,27 +917,25 @@ section h4{
         padding-left: 3rem !important;
         padding-right: 3rem !important;
     }
-    nav .mode_nav{
-        display: none;
-    }
-    .navbar-toggler{
-        margin-right: 1rem;
-        border: none;
-        margin-top: -0.5rem;
-    }
+
+
     .navbar-toggler:focus{
         box-shadow: 0 0 0 0.1rem;
     }
+
     
-    .collapse ul li, .mode_nav_2{
+    .collapse ul li{
         margin-left: 3rem !important;
         margin-bottom: 0.5rem;
     }
     .mode_nav_2{
         display: flex;
         margin-top: 1rem;
-        margin-left: 3.5rem !important;
+        margin-left: 2rem !important;
         margin-bottom: 1.5rem !important;
+        color: #ffffff8c !important;
+        font-style: normal !important;
+        font-weight: bold !important;
     }
     #main-menu{
         z-index: 2;
@@ -1101,7 +1126,7 @@ section h4{
     background-color: transparent;
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 999999;
     backdrop-filter:blur(20px);
 }
 .country{
@@ -1127,7 +1152,7 @@ section h4{
     width: 0;
     height: 100%;
     background-color: var(--light_beige);
-    animation: fill 1.5s 1;
+    animation: fill 1s 1;
 }
 
 
