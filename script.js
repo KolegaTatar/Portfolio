@@ -351,8 +351,12 @@ eng_hidden.addEventListener("click",()=>{
     show_loading("ENG");
 })
 
-
-
+/*
+let cisco = document.querySelector(".cisco");
+cisco.addEventListener("mouseover"){
+    document.querySelector(".cisco img").src = "
+    img/"
+}*/
 
 /* dark / light mode */
 let dark_light_mode = document.querySelectorAll(".dark_light_mode");

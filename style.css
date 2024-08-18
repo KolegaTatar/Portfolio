@@ -370,6 +370,8 @@ footer{
  }
  .fake_img .overlay {
     position: absolute;
+    display: flex;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -377,12 +379,13 @@ footer{
     background-color: transparent;
     border-radius: 1rem 1rem 0rem 0rem;
     transition: background-color 0.5s linear;
-    padding: 2rem;
+    padding: 1.5rem;
  }
  .fake_img .overlay:hover {
     background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 0.5s linear;
  }
+
  
 
 
@@ -530,6 +533,19 @@ input:checked + label .description {
     border: 2px solid var(--light_beige);
 }
 
+.cisco:hover {
+    background-image: url('img/cisco.webp') !important;
+}
+.test_web:hover {
+    background-image: url('img/testing.webp') !important;
+}
+.postman:hover {
+    background-image: url('img/postman.webp') !important;
+}
+.card:hover .row .description h4, .card:hover .row .description p{
+    color: black !important;
+    transition: color 500ms linear ;
+}
 
 
 
