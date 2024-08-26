@@ -139,6 +139,7 @@ let f14 = document.querySelector(".f14");
 let f15 = document.querySelector(".f15");
 let f16 = document.querySelector(".f16");
 let f17 = document.querySelector(".f17");
+let a_cv = document.querySelector(".cv_cv");
 
 let loading_web = document.querySelector(".loading_web");
 let country = document.querySelector(".country");
@@ -202,7 +203,8 @@ pol.addEventListener("click",()=>{
     f16.innerText="o mnie oraz do zapoznania się z moim ";
     f17.innerText="CV:";
     show_loading("PL");
-
+    a_cv.setAttribute("href","Wiktor Tatarynowicz CV - pl.pdf");
+    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - pl.pdf")
 
 
 })
@@ -255,6 +257,8 @@ eng.addEventListener("click",()=>{
     f16.innerText="about me and take a look at my ";
     f17.innerText="CV:";
     show_loading("ENG");
+    a_cv.setAttribute("href","Wiktor Tatarynowicz CV - en.pdf");
+    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - en.pdf")
 })
 
 
@@ -309,6 +313,8 @@ pol_hidden.addEventListener("click",()=>{
     f16.innerText="o mnie oraz do zapoznania się z moim ";
     f17.innerText="CV:";
     show_loading("PL");
+    a_cv.setAttribute("href","Wiktor Tatarynowicz CV - pl.pdf");
+    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - pl.pdf")
 })
 
 eng_hidden.addEventListener("click",()=>{
@@ -359,6 +365,8 @@ eng_hidden.addEventListener("click",()=>{
     f16.innerText="about me and take a look at my ";
     f17.innerText="CV:";
     show_loading("ENG");
+    a_cv.setAttribute("href","Wiktor Tatarynowicz CV - en.pdf");
+    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - en.pdf")
 })
 
 /*
