@@ -371,7 +371,6 @@ footer{
  .fake_img .overlay {
     position: absolute;
     display: flex;
-
     top: 0;
     left: 0;
     width: 100%;
@@ -380,10 +379,16 @@ footer{
     border-radius: 1rem 1rem 0rem 0rem;
     transition: background-color 0.5s linear;
     padding: 1.5rem;
+    color: transparent;
+    transition:color 0.4s linear;
  }
  .fake_img .overlay:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     transition: background-color 0.5s linear;
+    color: rgba(255, 255, 255, 0.932);
+    transition:color 0.8s linear;
+    font-weight: 500;
+
  }
 
  
@@ -906,7 +911,9 @@ section h4{
     .text_me{
         margin-right: 0rem !important;
     }
-
+    .overlay:hover{
+        color: transparent !important;
+    }
 
 }
 
@@ -952,6 +959,7 @@ section h4{
     nav{
         font-size: 1rem !important;
     }
+
 }
 @media (max-width:770px){
     .mode_nav{
