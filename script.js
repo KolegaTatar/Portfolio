@@ -141,6 +141,13 @@ let f16 = document.querySelector(".f16");
 let f17 = document.querySelector(".f17");
 let a_cv = document.querySelector(".cv_cv");
 
+let ov1 = document.querySelector(".ov1");
+let ov2 = document.querySelector(".ov2");
+let ov3 = document.querySelector(".ov3");
+let ov4 = document.querySelector(".ov4");
+let ov5 = document.querySelector(".ov5");
+let ov6 = document.querySelector(".ov6");
+
 let loading_web = document.querySelector(".loading_web");
 let country = document.querySelector(".country");
 
@@ -204,7 +211,14 @@ pol.addEventListener("click",()=>{
     f17.innerText="CV:";
     show_loading("PL");
     a_cv.setAttribute("href","Wiktor Tatarynowicz CV - pl.pdf");
-    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - pl.pdf")
+    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - pl.pdf");
+    ov1.innerHTML = "Strona internetowa firmy została stworzona przy użyciu systemu WordPress, co pozwala na elastyczne zarządzanie treścią. Strona ma na celu przyciągnięcie rodziców i organizatorów wydarzeń, oferując szczegółowe informacje o usługach animacyjnych.";
+    ov2.innerHTML = "Plaftorma e-learningowa Hendi, powstała w opraciu o WordPress. Jej zadaniem jest szkolenie nowych klientów oraz kontrahentów w zakresie  oferowanych usług przez firmę Hendi. Zawiera ona szereg szkoleń w postaci zarówno wideo, jak i tekstowej - PDF."
+    ov3.innerHTML ="Licz.my  została stworzona przy użyciu języków HTML, CSS oraz frameworka Bootstrap. Te technologie zapewniają responsywność, łatwość nawigacji i estetyczny wygląd, co jest kluczowe dla pozytywnego doświadczenia użytkownika.";
+    ov4.innerHTML="Food World to platforma zaprojektowana dla restauracji typu fast food, której celem jest ułatwienie zamawiania jedzenia online przez klientów restauracji. Do realizacji tego projektu wykorzystano technologie HTML, CSS oraz Bootstrap.";
+    ov5.innerHTML ="Aplikacja konsolowa napisana C#, umożliwiająca zarządzanie użytkownikami w prosty i efektywny sposób. Głównym celem jest zapewnienie podstawowych funkcji takich jak: dodawanie, usuwanie, aktualizacja i wyświetlanie listy użytkowników.";
+    ov6.innerHTML =" System zarządzania użytkownikami zaprojektowany w oparciu o technologie takie jak: Laravel, Blade, PHP oraz Breeze. System ten pozwala na kompleksowe administrowanie danymi pracowników, ich rolami i uprawnieniami.";
+
 
 
 })
@@ -256,9 +270,16 @@ eng.addEventListener("click",()=>{
     f15.innerText=" more ";
     f16.innerText="about me and take a look at my ";
     f17.innerText="CV:";
+    ov1.innerHTML = "The company's website was created using the WordPress system, which allows for flexible content management. The site is designed to attract parents and event organizers by offering detailed information on animation services.";
+    ov2.innerHTML = "Hendi e-learning platform, based on WordPress. Its purpose is to train new customers and contractors in the services offered by Hendi. It contains a number of training courses in both video and text form - PDF."
+    ov3.innerHTML ="Licz.my was developed using HTML, CSS and the Bootstrap framework. These technologies provide responsive, easy-to-navigate and aesthetically pleasing design, which is key to a positive user experience.";
+    ov4.innerHTML="Food World is a platform designed for fast food restaurants to facilitate online food ordering by restaurant customers. HTML, CSS, and Bootstrap technologies were used to complete this project.";
+    ov5.innerHTML ="A console application written in C# to manage users in a simple and efficient way. The main goal is to provide basic functions such as adding, deleting, updating and displaying a list of users.";
+    ov6.innerHTML ="User management system designed based on technologies such as Laravel, Blade, PHP and Breeze. This system allows for comprehensive administration of employee data, roles and permissions.";
     show_loading("ENG");
     a_cv.setAttribute("href","Wiktor Tatarynowicz CV - en.pdf");
-    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - en.pdf")
+    a_cv.setAttribute("download","Wiktor Tatarynowicz CV - en.pdf");
+    
 })
 
 
