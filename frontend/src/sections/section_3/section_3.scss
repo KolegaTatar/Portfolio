@@ -1,0 +1,35 @@
+.section_3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 120vh;
+  background: white;
+  padding-bottom: 10rem;
+  margin-top: 28rem;
+
+
+  h2{
+    font-size: 32px;
+    color: #141C3A;
+    margin-block-end: 0rem;
+  }
+  p{
+    font-size: 20px;
+    padding-right: 20rem;
+    padding-left: 20rem;
+    text-align: center;
+    color: #141C3A;
+
+    a{
+      color: #FFA725;
+    }
+  }
+  .boxes_projects{
+    width: 90%;
+    min-height: 20rem;
+    background-color: darkgray;
+  }
+
+}

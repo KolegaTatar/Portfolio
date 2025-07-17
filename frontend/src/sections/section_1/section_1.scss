@@ -1,0 +1,44 @@
+.section_1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height:130vh;
+  margin-top: 3rem;
+
+  h1{
+    font-size: 48px;
+    margin-block-start: 0rem;
+    margin-block-end: 1rem;
+    color:#141C3A;
+  }
+  p{
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    margin-bottom: 5rem;
+    font-size: 24px;
+    color: #141C3A;
+  }
+  .img_me{
+    width: 15rem;
+    height: 15rem;
+    color: #A6CDC6;
+    background-color: #72b3ac;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 5rem;
+
+    img{
+      width: 112%;
+      height: 112%;
+      border-radius: 50%;
+    }
+  }
+  .img_baner{
+    width: 55%;
+  }
+
+}

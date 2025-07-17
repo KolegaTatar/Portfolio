@@ -1,0 +1,26 @@
+*{
+  scroll-behavior: smooth;
+  scroll-padding-top: 0rem;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #141C3A;
+  border-radius: 0.3rem;
+}
+::selection{
+  background-color: #141C3A;
+  color: white;
+}
+
+body{
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  font-family: "poppins" !important;
+
+}
