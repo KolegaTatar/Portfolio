@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 120vh;
+  min-height: 160vh;
   background: white;
-  padding-bottom: 10rem;
   margin-top: 28rem;
+  border-bottom: 1px solid #A6CDC6;
 
 
   h2{
@@ -28,8 +28,15 @@
   }
   .boxes_projects{
     width: 90%;
-    min-height: 20rem;
-    background-color: darkgray;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+  }
+  button{
+    font-size: 20px;
   }
 
 }

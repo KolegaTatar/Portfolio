@@ -19,8 +19,11 @@ body{
   padding: 0 !important;
   margin: 0 !important;
 
-  display: flex;
-  flex-direction: column;
   font-family: "poppins" !important;
 
+  .container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 }

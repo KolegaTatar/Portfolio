@@ -1,4 +1,5 @@
 import './header.scss';
+import Button from "../Button/Button.tsx";
 
 const Header = ()=>{
     return (
@@ -11,9 +12,7 @@ const Header = ()=>{
             </div>
 
             <div className="header_content">
-                <button>
-                    Say Hello!
-                </button>
+                <Button text="Say Hello"/>
 
             </div>
 

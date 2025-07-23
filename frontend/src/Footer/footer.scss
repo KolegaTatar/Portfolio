@@ -1,0 +1,47 @@
+footer{
+  width:100%;
+  height:80vh;
+  background-color: #72b3ac;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .project_start{
+    width:90%;
+    height: 11rem;
+    background-color: #141C3A;
+    color: white;
+    border-radius: 15px;
+    position: absolute;
+    top:-4rem;
+    display: flex;
+    flex-direction: row;
+
+    div{
+      height: 100%;
+      width:33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .start_info{
+      h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:32px;
+        font-family: poppins;
+      }
+    }
+    .start_desc{
+      p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size:18px;
+      }
+    }
+  }
+}
