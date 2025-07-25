@@ -5,7 +5,6 @@
   align-items: center;
   width: 100%;
   min-height: 90vh;
-  margin-top: -1rem;
   background: #72b3ac;
   padding-bottom: 10rem;
   position: relative;
@@ -15,13 +14,11 @@
     color: white;
     margin-block-end: 0rem;
   }
-  p{
+  .about_section_2{
     font-size: 20px;
-    padding-right: 20rem;
-
-    padding-left: 20rem;
     text-align: center;
     color: white;
+    width: 70%;
   }
   .content_sklis{
     width: 90%;
@@ -29,18 +26,78 @@
     background-color: white;
     border-radius: 1rem;
     position: absolute;
-    bottom:-30rem;
-    border: 1px solid rgba(211, 211, 211, 0.46);
+    bottom:-40rem;
+    border: 1px solid rgba(209, 209, 209, 0.5);
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 0px 1px black;
+    box-shadow: 0px 0px 5px rgba(209, 209, 209, 0.5);;
 
     .skill_1, .skill_2{
-      border-right: 1px solid rgba(211, 211, 211, 0.46);
+      border-right: 1px solid rgba(209, 209, 209, 0.5);
+    }
+    .skill_1, .skill_2, .skill_3{
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-start;
       width: 33%;
-      height: 100%;
+      padding: 0rem 2rem;
+      padding-bottom: 2rem;
+
+      .skills_icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+
+        i{
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          padding: 15px;
+          color: white;
+          font-size: 32px;
+          text-decoration: none;
+          background-color: #FFA725;
+          margin-top: 2rem;
+        }
+      }
+      h2{
+        color: #141C3A;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 1.5rem;
+      }
+      p{
+        width: 100%;
+        color: #141C3A;
+        text-align: center;
+      }
+      .about_1{
+        margin-top: 1.5rem;
+      }
+      .color_about{
+        color: #72b3ac;
+        font-weight: bold;
+        margin-bottom: 0rem;
+        margin-top: 2rem;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 800px) {
+  .section_2 {
+    .content_sklis {
+      flex-direction: column;
+
+      .skill_1, .skill_2, .skill_3 {
+        width: 100%;
+        border-right: none !important;
+      }
+      .skill_1, .skill_2{
+        border-bottom: 1px solid rgba(209, 209, 209, 0.5);
+      }
     }
   }
-
-
 }

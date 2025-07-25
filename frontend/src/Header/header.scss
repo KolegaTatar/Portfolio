@@ -1,6 +1,6 @@
 header{
   background-color: #fff;
-  height: 120px !important;
+  height: 110px !important;
   width: 100%;
   padding: 0rem 7rem 0rem 7rem;
   border-bottom: 1px rgba(209, 209, 209, 0.49) solid;
@@ -51,5 +51,33 @@ header{
 
   }
 
+}
 
+@media (max-width: 1250px){
+  header{
+    padding: 0rem 6rem 0rem 6rem;
+    height: 100px !important;
+  }
+}
+
+
+@media (max-width: 1024px){
+  header{
+    padding: 0rem 4rem 0rem 4rem;
+  }
+}
+
+@media (max-width: 512px){
+  header{
+    padding: 0rem 3rem 0rem 3rem;
+    height: 95px !important;
+
+  }
+}
+
+@media (max-width: 400px){
+  header{
+    padding: 0rem 2rem 0rem 2rem;
+
+  }
 }

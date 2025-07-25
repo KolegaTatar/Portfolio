@@ -4,7 +4,7 @@ import Button from "../Button/Button.tsx";
 const Header = ()=>{
     return (
         <header className="header">
-            <div className="header_logo" >
+            <div className="header_logo">
                 <a className="logo_text"> #
                     <span className="span1"> T </span>
                     <span className="dotted_color">.</span>
@@ -18,6 +18,6 @@ const Header = ()=>{
 
 
         </header>
-    )
+)
 }
 export default Header

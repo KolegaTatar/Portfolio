@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height:130vh;
+  min-height:10rem  ;
   margin-top: 3rem;
 
   h1{
@@ -12,6 +12,7 @@
     margin-block-start: 0rem;
     margin-block-end: 1rem;
     color:#141C3A;
+    text-align: center;
   }
   p{
     margin-block-start: 0rem;
@@ -19,6 +20,7 @@
     margin-bottom: 5rem;
     font-size: 24px;
     color: #141C3A;
+    text-align: center;
   }
   .img_me{
     width: 15rem;
@@ -37,8 +39,71 @@
       border-radius: 50%;
     }
   }
-  .img_baner{
-    width: 55%;
+  .div_baner{
+    display: flex;
+    justify-content: center;
+    .img_baner{
+      width: 50rem;
+    }
   }
+}
 
+@media (max-width:1250px) {
+  .section_1{
+
+    h1{
+      font-size: 36px;
+      width: 90%;
+    }
+    p{
+      width: 90%;
+    }
+    .div_baner{
+      .img_baner{
+        width: 50rem;
+      }
+    }
+  }
+}
+@media (max-width:850px) {
+  .section_1{
+    .div_baner{
+      .img_baner{
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media (max-width:800px) {
+  .section_1{
+    .img_me {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+}
+
+@media (max-width:700px) {
+  .section_1{
+    h1{
+      font-size: 32px;
+    }
+    p{
+      font-size: 20px;
+    }
+    .img_me {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
+
+@media (max-width:700px) {
+  .section_1{
+    .img_me {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
 }
