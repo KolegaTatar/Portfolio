@@ -6,7 +6,7 @@ The site features:
 - A **projects section** highlighting my work with descriptions and technologies used.  
 - A **skills overview** displaying my technical expertise.  
 - An **about me** section with insights into my professional journey.  
-- **Contact options** to connect and collaborate.  
+- **Error options** to connect and collaborate.  
 
 Built with **HTML, CSS, JavaScript**, the portfolio is continuously evolving with new features and updates.  
 

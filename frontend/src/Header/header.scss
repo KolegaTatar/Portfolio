@@ -49,6 +49,17 @@ header{
     align-items: center;
     justify-content: center;
 
+    a{
+      font-size: 22px;
+      color: #72b3ac !important;
+      text-decoration: none;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    a:hover{
+      color:#A6CDC6 !important;
+    }
+
   }
 
 }
