@@ -1,8 +1,4 @@
-import Section_1 from "../sections/section_1/section_1.tsx";
-import Section_2 from "../sections/section_2/section_2.tsx";
 import  "./contact.scss"
-import Section_3 from "../sections/section_3/section_3.tsx";
-import Section_4 from "../sections/section_4/section_4.tsx";
 import Button from "../Button/Button.tsx";
 
 const Contact = ()=>{

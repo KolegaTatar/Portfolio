@@ -8,7 +8,7 @@ const Header = ()=>{
     const url = useLocation();
     const location =url.pathname;
 
-    if(location =="/contact"){
+    if(location =="/contact" || location =="/project-planner"){
         return (
             <header className="header">
                 <div className="header_logo">

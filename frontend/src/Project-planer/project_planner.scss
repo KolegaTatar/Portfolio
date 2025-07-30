@@ -1,0 +1,135 @@
+.main_planner_project{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 10rem;
+  margin-bottom: 8rem;
+  padding-right:3rem;
+  padding-left:3rem;
+  width: 100%;
+
+  h2{
+    text-align: center;
+  }
+  .img_me{
+    width: 5rem;
+    height: 5rem;
+    color: #A6CDC6;
+    background-color: #72b3ac;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    top:-2.5rem;
+
+    img{
+      width: 112%;
+      height: 112%;
+      border-radius: 50%;
+    }
+  }
+  form{
+    margin-top: 2rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(41, 51, 71, 0.65);
+    .top_inputs{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-bottom: 2rem;
+
+      .input_1{
+        width: 48% !important;
+        color: rgba(41, 51, 71, 0.65);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        input, select{
+          border: 1px solid rgba(209, 209, 209, 0.7);
+          border-radius: 8px;
+          width: 100%;
+          height: 3rem;
+          margin-top: 0.5rem;
+          font-size: 17px;
+          padding: 0rem 1rem;
+          color: #2c2c2c;
+        }
+        select{
+          option{
+            color: #141C3A;
+          }
+        }
+      }
+    }
+    label{
+      text-align: left !important;
+      width: 100%;
+    }
+    textarea{
+      border: 1px solid rgba(209, 209, 209, 0.7);
+      border-radius: 8px;
+      width: 100%;
+      height: 10rem;
+      color: #2c2c2c;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+      font-size: 17px;
+      padding: 0.8rem 1rem;
+    }
+    button{
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .main_planner_project{
+    margin-bottom: 20rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .main_planner_project{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    form{
+      width: 95%;
+      .top_inputs{
+        flex-direction: column;
+        width: 100%;
+        .input_1{
+          width: 100% !important;
+        }
+        .input_1:last-child{
+          margin-top: 2rem !important;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main_planner_project{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    form{
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .main_planner_project{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

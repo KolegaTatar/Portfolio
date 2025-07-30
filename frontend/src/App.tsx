@@ -4,6 +4,8 @@ import Home from "./Home/home.tsx";
 import Footer from "./Footer/footer.tsx";
 import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import Contact from "./Contact/contact.tsx";
+import Error from "./Error/error.tsx";
+import Project_planner from "./Project-planer/project_planner.tsx";
 
 
 function App() {
@@ -13,8 +15,9 @@ function App() {
           <main className="main-container">
               <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="*" element={<Navigate to="/error" />} />
+                    <Route path="*" element={<Error/>} />
                     <Route path="/contact" element={<Contact/>} />
+                    <Route path="/project-planner" element={<Project_planner/>} />
               </Routes>
           </main>
           <Footer/>

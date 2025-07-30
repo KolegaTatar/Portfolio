@@ -12,7 +12,7 @@ const Footer = ()=>{
                     </p>
                 </div>
                 <div className="start_btn">
-                    <Button text="Let's do this"/>
+                    <Button text="Let's do this" route={"/project-planner"}/>
                 </div>
 
             </div>
