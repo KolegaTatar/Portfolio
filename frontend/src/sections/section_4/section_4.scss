@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 10rem;
   background: white;
   padding-bottom: 10rem;
   margin-top: 7rem;
@@ -14,6 +14,7 @@
     font-size: 32px;
     color: #141C3A;
     margin-block-end: 0rem;
+    text-align: center;
   }
 
   .helps_firms{
@@ -24,5 +25,25 @@
     flex-wrap: wrap;
     margin-bottom: 2rem;
 
+  }
+}
+@media (max-width: 1200px) {
+  .section_4 {
+    padding-bottom: 8rem;
+  }
+}
+@media (max-width: 1025px) {
+  .section_4 {
+    padding-bottom: 15rem;
+  }
+}
+@media (max-width: 800px) {
+  .section_4 {
+    padding-bottom: 20rem;
+
+    h2 {
+      width: 90%;
+      font-size: 28px;
+    }
   }
 }

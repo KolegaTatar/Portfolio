@@ -6,9 +6,9 @@ const Section_4 =()=>{
         <div className="section_4">
             <h2>I'm proud to have collaborated with some awesome companies:</h2>
             <div className="helps_firms">
-                <Box></Box>
-                <Box></Box>
-                <Box></Box>
+                <Box title={"CCNA"} url={"../../src/images/ccna.webp"}></Box>
+                <Box title={"IT Essential"} url={"../../src/images/ite.webp"}></Box>
+                <Box title={"IT Essential"} url={"../../src/images/ccna.webp"}></Box>
             </div>
         </div>
     )

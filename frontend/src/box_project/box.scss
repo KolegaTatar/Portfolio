@@ -1,7 +1,82 @@
-.box{
-  width: 32%;
-  height: 17rem;
-  background: rosybrown;
+.hover-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  width: 32%  ;
+  height: 18rem;
+  background-size: cover;
+  background-position: center;
   border-radius: 15px;
   margin-bottom: 2rem;
+
+  .hover-card__initial {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+  }
+
+  .hover-card__content {
+    position: absolute;
+    inset: 0;
+    background-color: rgb(20, 28, 58);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 2;
+
+    h3{
+      font-family: poppins !important;
+    }
+    button{
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      background-color: #72b3ac;
+      color: white;
+      cursor: pointer;
+      border-color: #72b3ac;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+
+.hover-card:hover .hover-card__content {
+  opacity: 1;
+}
+
+.hover-card:hover .hover-card__initial {
+  opacity: 0;
+}
+@media (max-width: 1200px) {
+  .hover-card{
+    width: 49%;
+  }
+}
+@media (max-width: 750px) {
+  .hover-card{
+    width:100%;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .hover-card{
+
+    height: 25vh;
+  }
 }
