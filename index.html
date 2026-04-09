@@ -168,11 +168,15 @@
         </div>
     </div>
 
-    <div id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" class="fixed inset-0 z-50 modal-enter flex items-center justify-center bg-gray-900/40 dark:bg-black/70 backdrop-blur-sm p-4 overflow-y-auto" onclick="closeProjectModal(event)">
-        <div class="bg-white dark:bg-[#202124] border border-gray-200 dark:border-gray-700 rounded-3xl max-w-2xl w-full modal-scale shadow-2xl relative my-8" onclick="event.stopPropagation()">
+    <div id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" class="fixed inset-0 z-50 modal-enter flex items-start justify-center bg-gray-900/40 dark:bg-black/70 backdrop-blur-sm p-4 overflow-y-auto" onclick="closeProjectModal(event)">
+        <!--<div class="bg-white dark:bg-[#202124] border border-gray-200 dark:border-gray-700 rounded-3xl max-w-2xl w-full modal-scale shadow-2xl relative my-8" onclick="event.stopPropagation()">-->
+        <div class="bg-white dark:bg-[#202124] border border-gray-200 dark:border-gray-700 rounded-3xl max-w-2xl w-full modal-scale shadow-2xl relative my-auto sm:my-8" 
+         onclick="event.stopPropagation()">
             <button onclick="closeProjectModal(null, true)" class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-black/50 hover:bg-black text-white rounded-full transition-colors">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
+
+            
             
             <div id="projectModalHeader" class="w-full h-48 sm:h-64 rounded-t-3xl overflow-hidden relative bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
 
