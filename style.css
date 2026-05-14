@@ -65,7 +65,6 @@
     50% { opacity: 0; } 
 }
 
-/* Filtry projektów */
 .filter-btn {
     transition: all 0.3s ease;
 }
