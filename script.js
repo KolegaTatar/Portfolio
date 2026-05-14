@@ -21,11 +21,23 @@ const portfolioData = {
         { name: "Figma", icon: '<i class="fa-brands fa-figma mr-2"></i>', colorClass: "text-pink-500" }
     ],
 
-    projects: [
+projects: [
+        {
+            id: "home-library", category: "web",
+            title: "Domowa Biblioteczka", rgb: "168, 85, 247", // Ładny fiolet (Purple-500)
+            inProgress: true, recentlyFinished: false,
+            img: "", icon: '<i class="fa-solid fa-book-open"></i>', iconBg: "bg-purple-500/10 text-purple-500",
+            descPl: "Nowoczesna aplikacja webowa do zarządzania osobistym księgozbiorem z integracją Google Books API.",
+            descEn: "Modern web application (React) for managing a personal book collection with Google Books API integration.",
+            longDescPl: "Złożona aplikacja front-endowa (SPA) służąca do katalogowania książek. Pozwala na intuicyjne filtrowanie i kategoryzację lektur (posiadane, audiobooki, wishlista) oraz zarządzanie ocenami.<br><br><strong>Kluczowe osiągnięcia techniczne:</strong><br>&bull; <strong>Wydajność:</strong> Zastosowanie hooka <code>useMemo</code> do błyskawicznego, wielopoziomowego sortowania i filtrowania listy bez zbędnych re-renderów.<br>&bull; <strong>Integracja API:</strong> Asynchroniczne pobieranie meta-danych i okładek z Google Books API, wspierane mechanizmem <i>Debounce</i> zapobiegającym przeciążeniu sieci.<br>&bull; <strong>UI/UX:</strong> Stworzenie nowoczesnego, responsywnego interfejsu z dynamicznymi widokami (Siatka/Lista) oraz obsługą formatowania obrazów base64 z poziomu przeglądarki.",
+            longDescEn: "A complex front-end application (SPA) used for cataloging books. It allows for intuitive filtering and categorization of reading materials (owned, audiobooks, wishlist) and ratings management.<br><br><strong>Key technical achievements:</strong><br>&bull; <strong>Performance:</strong> Utilizing the <code>useMemo</code> hook for lightning-fast, multi-level sorting and filtering without unnecessary re-renders.<br>&bull; <strong>API Integration:</strong> Asynchronous fetching of metadata and covers from Google Books API, backed by a <i>Debounce</i> mechanism to prevent network overload.<br>&bull; <strong>UI/UX:</strong> Creating a modern, responsive interface with dynamic views (Grid/List) and base64 image formatting handling directly from the browser.",
+            rolePl: "Full-stack Developer", roleEn: "Full-stack Developer",
+            tag: "Web / Books", tagColor: "text-purple-500", extraClass: "", githubLink: "", liveLink: ""
+        },
         {
             id: "familiada-pc", category: "hardware",
-            title: "Familiada System PC", rgb: "234, 179, 8",
-            inProgress: true, recentlyFinished: false,
+            title: "Familiada System PC", rgb: "234, 179, 8", // Żółty (Yellow-500)
+            inProgress: false, recentlyFinished: true,
             img: "", icon: '<i class="fa-solid fa-tv"></i>', iconBg: "bg-yellow-500/10 text-yellow-500",
             descPl: "System teleturniejowy z 3 niezależnymi ekranami (widz, admin, prowadzący).",
             descEn: "Game show system with 3 independent screens (audience, admin, host).",
@@ -36,8 +48,8 @@ const portfolioData = {
         },
         {
             id: "familiada-ard", category: "hardware",
-            title: "Familiada Arduino Controller", rgb: "14, 165, 233",
-            inProgress: true, recentlyFinished: false,
+            title: "Familiada Arduino Controller", rgb: "14, 165, 233", 
+            inProgress: false, recentlyFinished: true,
             img: "", icon: '<i class="fa-solid fa-microchip"></i>', iconBg: "bg-sky-500/10 text-sky-500",
             descPl: "Fizyczny kontroler gry z systemem blokad i dynamicznym oświetleniem LED.",
             descEn: "Physical game controller with lockout logic and dynamic LED lighting.",
@@ -48,7 +60,7 @@ const portfolioData = {
         },
         {
             id: "kw", category: "web",
-            title: "KW Inwentarz", rgb: "37, 99, 235", 
+            title: "KW Inwentarz", rgb: "59, 130, 246", 
             inProgress: false, recentlyFinished: true, 
             img: "", icon: '<i class="fa-solid fa-train"></i>', iconBg: "bg-blue-500/10 text-blue-500",
             descPl: "Kompleksowy system SPA dla Kolei Wielkopolskich do ewidencji zasobów IT.",
@@ -58,22 +70,21 @@ const portfolioData = {
             rolePl: "Full-stack Developer", roleEn: "Full-stack Developer",
             tag: "React / Node.js / MSSQL", tagColor: "text-blue-500", githubLink: "", liveLink: ""
         },
-
         {
             id: "terraquest", category: "web",
-            title: "TerraQuest Web", rgb: "20, 184, 166",
+            title: "TerraQuest Web", rgb: "99, 102, 241", 
             inProgress: false, recentlyFinished: false,
-            img: "", icon: '<i class="fa-solid fa-hotel"></i>', iconBg: "bg-teal-500/10 text-teal-500",
+            img: "", icon: '<i class="fa-solid fa-hotel"></i>', iconBg: "bg-indigo-500/10 text-indigo-500",
             descPl: "Kompleksowa platforma rezerwacyjna noclegów (booking) z systemem ocen i ofertami promocyjnymi.",
             descEn: "Comprehensive accommodation booking platform with a rating system and promotional offers.",
             longDescPl: "Zaawansowana platforma rezerwacyjna umożliwiająca wyszukiwanie, rezerwowanie i ocenianie obiektów turystycznych. Projekt obejmował stworzenie intuicyjnego interfejsu oraz solidnego zaplecza backendowego.<br><br><strong>Kluczowe funkcjonalności i technologie:</strong><br>&bull; <strong>Frontend:</strong> React.js + SCSS (dynamiczne wyszukiwanie, filtry ceny i ocen, sortowanie).<br>&bull; <strong>Backend:</strong> Node.js + Express.js z bezpiecznym przechowywaniem haseł (bcryptjs).<br>&bull; <strong>Baza danych:</strong> Integracja z Supabase (zarządzanie użytkownikami, recenzjami i rezerwacjami).<br>&bull; <strong>Testy:</strong> Pełne pokrycie testami (Jest, Supertest, React Testing Library).",
             longDescEn: "An advanced booking platform for searching, reserving, and rating tourist accommodations. The project involved creating an intuitive interface and a robust backend.<br><br><strong>Key features and technologies:</strong><br>&bull; <strong>Frontend:</strong> React.js + SCSS (dynamic search, price/rating filters, sorting).<br>&bull; <strong>Backend:</strong> Node.js + Express.js with secure password storage (bcryptjs).<br>&bull; <strong>Database:</strong> Supabase integration (user, review, and booking management).<br>&bull; <strong>Testing:</strong> Full test coverage (Jest, Supertest, React Testing Library).",
             rolePl: "Full-stack Developer (Core Contributor)", roleEn: "Full-stack Developer (Core Contributor)",
-            tag: "React / Node.js / Supabase", tagColor: "text-teal-500", extraClass: "", githubLink: "https://github.com/BergFilip/TerraQuest_web", liveLink: ""
+            tag: "React / Node.js / Supabase", tagColor: "text-indigo-500", extraClass: "", githubLink: "https://github.com/BergFilip/TerraQuest_web", liveLink: ""
         },
         {
             id: "terraquest-mob", category: "mobile",
-            title: "TerraQuest Mobile", rgb: "6, 182, 212",
+            title: "TerraQuest Mobile", rgb: "6, 182, 212", 
             inProgress: false, recentlyFinished: false,
             img: "", icon: '<i class="fa-solid fa-mobile-screen-button"></i>', iconBg: "bg-cyan-500/10 text-cyan-500",
             descPl: "Natywna aplikacja na Androida (Java) będąca mobilnym klientem platformy TerraQuest.",
@@ -84,44 +95,32 @@ const portfolioData = {
             tag: "Android / Java / SQLite", tagColor: "text-cyan-500", extraClass: "", githubLink: "https://github.com/KolegaTatar/TerraQuest_mobile", liveLink: ""
         },
         {
-            id: "skyvision", category: "desktop",
-            title: "SkyVision Desktop", rgb: "99, 102, 241",
-            inProgress: false, recentlyFinished: false,
-            img: "", icon: '<i class="fa-solid fa-cloud-sun"></i>', iconBg: "bg-indigo-500/10 text-indigo-500",
-            descPl: "Intuicyjna aplikacja desktopowa (PyQt6) do monitorowania prognozy pogody w czasie rzeczywistym.",
-            descEn: "Intuitive desktop application (PyQt6) for real-time weather forecast monitoring.",
-            longDescPl: "Eleganckie narzędzie okienkowe korzystające z OpenWeatherMap API, dostarczające precyzyjne dane meteorologiczne dla dowolnego miejsca na świecie.<br><br><strong>Kluczowe osiągnięcia techniczne:</strong><br>&bull; <strong>Interfejs:</strong> Nowoczesny UI oparty na PyQt6 z obsługą motywów (QSS).<br>&bull; <strong>Analityka:</strong> Wizualizacja zmian temperatury i ciśnienia za pomocą biblioteki Matplotlib.<br>&bull; <strong>Integracja:</strong> Obsługa współrzędnych geograficznych i asynchroniczne pobieranie danych pogodowych.",
-            longDescEn: "An elegant window-based tool using the OpenWeatherMap API, providing precise meteorological data for any location in the world.<br><br><strong>Key technical achievements:</strong><br>&bull; <strong>Interface:</strong> Modern UI based on PyQt6 with theme support (QSS).<br>&bull; <strong>Analytics:</strong> Temperature and pressure changes visualization using the Matplotlib library.<br>&bull; <strong>Integration:</strong> Geographical coordinates support and asynchronous weather data retrieval.",
-            rolePl: "Python / Desktop Developer", roleEn: "Python / Desktop Developer",
-            tag: "Python / PyQt6 / API", tagColor: "text-indigo-500", extraClass: "", githubLink: "https://github.com/KolegaTatar/SkyVision_desktop", liveLink: ""
-        },
-        {
             id: "animaster", category: "web",
-            title: "Animaster", rgb: "168, 85, 247",
+            title: "Animaster", rgb: "20, 184, 166",
             inProgress: false, recentlyFinished: false,
-            img: "img/animaster.webp", icon: '<i class="fa-solid fa-palette"></i>', iconBg: "bg-purple-500/10 text-purple-500",
+            img: "img/animaster.webp", icon: '<i class="fa-solid fa-palette"></i>', iconBg: "bg-teal-500/10 text-teal-500",
             descPl: "Nowoczesna strona WWW z systemem CMS dla agencji eventowej.",
             descEn: "Modern website with CMS for an event agency.",
             longDescPl: "Kompleksowa realizacja komercyjna obejmująca wdrożenie pełnej strony internetowej z panelem zarządzania treścią. Celem było stworzenie wesołego, dynamicznego interfejsu przyciągającego zarówno rodziców, jak i biznesowych organizatorów imprez.<br><br><strong>Kluczowe osiągnięcia techniczne:</strong><br>&bull; Implementacja autorskich bloków Gutenberg w ekosystemie WordPress.<br>&bull; Głęboka optymalizacja zasobów statycznych (konwersja WebP, minifikacja CSS/JS), drastycznie zmniejszająca LCP.<br>&bull; Zintegrowanie zewnętrznych wtyczek i formularzy rezerwacyjnych dopasowanych do potrzeb klienta.",
             longDescEn: "A comprehensive commercial implementation involving a full website deployment with a CMS. The goal was to create a cheerful, dynamic interface attracting both parents and corporate event organizers.<br><br><strong>Key technical achievements:</strong><br>&bull; Implementation of custom Gutenberg blocks in the WordPress ecosystem.<br>&bull; Deep optimization of static assets (WebP conversion, CSS/JS minification), drastically reducing LCP.<br>&bull; Integration of external plugins and booking forms tailored to client needs.",
             rolePl: "Web Developer / Wykonawca", roleEn: "Web Developer / Contractor",
-            tag: "WordPress", tagColor: "text-purple-500", githubLink: "", liveLink: "https://animaster.pl"
+            tag: "WordPress", tagColor: "text-teal-500", githubLink: "", liveLink: "https://animaster.pl"
         },
         {
             id: "hendi", category: "web",
-            title: "Hendi E-Learning", rgb: "59, 130, 246",
+            title: "Hendi E-Learning", rgb: "210, 180, 140",
             inProgress: false, recentlyFinished: false,
-            img: "img/hendi.webp", icon: '<i class="fa-solid fa-graduation-cap"></i>', iconBg: "bg-blue-500/10 text-blue-500",
+            img: "img/hendi.webp", icon: '<i class="fa-solid fa-graduation-cap"></i>', iconBg: "bg-[#d2b48c]/10 text-[#d2b48c]",
             descPl: "Platforma szkoleniowa B2B (LMS) certyfikująca kontrahentów Hendi.",
             descEn: "B2B training platform (LMS) certifying Hendi contractors.",
             longDescPl: "Zamknięta platforma edukacyjna stworzona z myślą o weryfikacji i poszerzaniu wiedzy partnerów biznesowych. Narzędzie automatyzuje proces onboardingu sprzętowego.<br><br><strong>Kluczowe osiągnięcia techniczne:</strong><br>&bull; Konfiguracja zaawansowanego systemu LMS na bazie środowiska WordPress.<br>&bull; Wdrożenie mechanizmów weryfikacji odtwarzania wideo (zabezpieczenie przed przewijaniem).<br>&bull; Integracja modułu automatycznego wystawiania spersonalizowanych certyfikatów PDF po zaliczeniu końcowych quizów.",
             longDescEn: "A closed educational platform designed to verify and expand the knowledge of business partners. The tool automates the hardware onboarding process.<br><br><strong>Key technical achievements:</strong><br>&bull; Configuration of an advanced LMS system based on the WordPress environment.<br>&bull; Implementation of video playback verification mechanisms (anti-scrubbing).<br>&bull; Integration of a module for automatic generation of personalized PDF certificates upon completion of final quizzes.",
             rolePl: "E-learning Developer", roleEn: "E-learning Developer",
-            tag: "WordPress / LMS", tagColor: "text-blue-500", githubLink: "", liveLink: "http://elearning.hendi.com/login/"
+            tag: "WordPress / LMS", tagColor: "text-[#d2b48c]", githubLink: "", liveLink: "http://elearning.hendi.com/login/"
         },
         {
             id: "liczmy", category: "web",
-            title: "Licz.my", rgb: "16, 185, 129",
+            title: "Licz.my", rgb: "16, 185, 129", 
             inProgress: false, recentlyFinished: false,
             img: "img/math_website.webp", icon: '<i class="fa-solid fa-calculator"></i>', iconBg: "bg-emerald-500/10 text-emerald-500",
             descPl: "Platforma edukacyjna do narzędzi matematycznych zrealizowana od podstaw.",
@@ -132,8 +131,20 @@ const portfolioData = {
             tag: "HTML / CSS / Bootstrap", tagColor: "text-emerald-500", githubLink: "", liveLink: "https://kolegatatar.github.io/Bootstrap/Projekt/"
         },
         {
+            id: "skyvision", category: "desktop",
+            title: "SkyVision Desktop", rgb: "242, 141, 127",
+            inProgress: false, recentlyFinished: false,
+            img: "", icon: '<i class="fa-solid fa-cloud-sun"></i>', iconBg: "bg-[#f28d7f]/10 text-[#f28d7f]",
+            descPl: "Intuicyjna aplikacja desktopowa (PyQt6) do monitorowania prognozy pogody w czasie rzeczywistym.",
+            descEn: "Intuitive desktop application (PyQt6) for real-time weather forecast monitoring.",
+            longDescPl: "Eleganckie narzędzie okienkowe korzystające z OpenWeatherMap API, dostarczające precyzyjne dane meteorologiczne dla dowolnego miejsca na świecie.<br><br><strong>Kluczowe osiągnięcia techniczne:</strong><br>&bull; <strong>Interfejs:</strong> Nowoczesny UI oparty na PyQt6 z obsługą motywów (QSS).<br>&bull; <strong>Analityka:</strong> Wizualizacja zmian temperatury i ciśnienia za pomocą biblioteki Matplotlib.<br>&bull; <strong>Integracja:</strong> Obsługa współrzędnych geograficznych i asynchroniczne pobieranie danych pogodowych.",
+            longDescEn: "An elegant window-based tool using the OpenWeatherMap API, providing precise meteorological data for any location in the world.<br><br><strong>Key technical achievements:</strong><br>&bull; <strong>Interface:</strong> Modern UI based on PyQt6 with theme support (QSS).<br>&bull; <strong>Analytics:</strong> Temperature and pressure changes visualization using the Matplotlib library.<br>&bull; <strong>Integration:</strong> Geographical coordinates support and asynchronous weather data retrieval.",
+            rolePl: "Python / Desktop Developer", roleEn: "Python / Desktop Developer",
+            tag: "Python / PyQt6 / API", tagColor: "text-[#f28d7f]", extraClass: "", githubLink: "https://github.com/KolegaTatar/SkyVision_desktop", liveLink: ""
+        },
+        {
             id: "linkbridge", category: "web",
-            title: "LinkBridge", rgb: "236, 72, 153",
+            title: "LinkBridge", rgb: "236, 72, 153", 
             inProgress: false, recentlyFinished: false,
             img: "", icon: '<i class="fa-solid fa-link"></i>', iconBg: "bg-pink-500/10 text-pink-500",
             descPl: "Minimalistyczna, open-source'owa alternatywa dla Linktree skupiona na szybkości.",
@@ -145,7 +156,7 @@ const portfolioData = {
         },
         {
             id: "laravel", category: "web",
-            title: "Laravel UserManager", rgb: "239, 68, 68",
+            title: "Laravel UserManager", rgb: "239, 68, 68", 
             inProgress: false, recentlyFinished: false,
             img: "", icon: '<i class="fa-brands fa-laravel"></i>', iconBg: "bg-red-500/10 text-red-500",
             descPl: "Silnik backendowy (PHP) rozwiązujący problem administracji pracownikami.",
@@ -157,7 +168,7 @@ const portfolioData = {
         },
         {
             id: "csharp", category: "desktop",
-            title: "C# Currency Calculator", rgb: "217, 70, 239",
+            title: "C# Currency Calculator", rgb: "217, 70, 239", 
             inProgress: false, recentlyFinished: false,
             img: "", icon: '<i class="fa-solid fa-terminal"></i>', iconBg: "bg-fuchsia-500/10 text-fuchsia-500",
             descPl: "System terminalowy (konsola) wykonujący błyskawiczne konwersje finansowe.",
@@ -169,7 +180,7 @@ const portfolioData = {
         },
         {
             id: "food", category: "web",
-            title: "Food World", rgb: "249, 115, 22",
+            title: "Food World", rgb: "249, 115, 22", 
             inProgress: false, recentlyFinished: false,
             img: "", icon: '<i class="fa-solid fa-burger"></i>', iconBg: "bg-orange-500/10 text-orange-500",
             descPl: "Interfejs kliencki typu Landing Page naśladujący natywną aplikację.",
@@ -179,8 +190,8 @@ const portfolioData = {
             rolePl: "Front-end Developer", roleEn: "Front-end Developer",
             tag: "HTML / CSS / Bootstrap", tagColor: "text-orange-500", extraClass: "border border-dashed border-gray-400 dark:border-gray-700", githubLink: "", liveLink: "https://kolegatatar.github.io/Fast_Food_Restaurant_Website/"
         }
-    ],
-
+    ]
+,
 testimonials: [
     {
         name: "Koleje Wielkopolskie", 

@@ -1,0 +1,973 @@
+import React, { useState, useMemo, useEffect } from 'react';
+import { 
+  Search, 
+  LayoutGrid, 
+  List as ListIcon, 
+  Plus, 
+  Star, 
+  Image as ImageIcon, 
+  Trash2, 
+  Edit3, 
+  X, 
+  BookOpen,
+  Calendar,
+  AlertCircle,
+  Heart,
+  ShoppingCart,
+  Headphones,
+  Lightbulb,
+  Loader2,
+  Check,
+  ChevronDown
+} from 'lucide-react';
+
+// --- POCZĄTKOWE DANE (MOCK) ---
+const initialBooks = [
+  {
+    id: '1',
+    title: 'Solaris',
+    author: 'Stanisław Lem',
+    genre: 'Science Fiction',
+    description: 'Klasyczna powieść science fiction opowiadająca o kontakcie ludzkości z obcą formą inteligencji – pokrywającym całą planetę, myślącym oceanem.',
+    rating: 5,
+    maxRating: 6,
+    dateAdded: '2026-05-01T10:00:00Z',
+    cover: 'https://books.google.com/books/content?id=M2rXAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+    collection: 'owned',
+    isFavorite: true
+  },
+  {
+    id: '2',
+    title: 'Harry Potter i Kamień Filozoficzny',
+    author: 'J.K. Rowling',
+    genre: 'Fantasy',
+    description: 'Początek przygód młodego czarodzieja.',
+    rating: 6,
+    maxRating: 6,
+    dateAdded: '2026-05-02T12:30:00Z',
+    cover: 'https://books.google.com/books/content?id=sA_3jwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+    collection: 'audiobook',
+    isFavorite: true
+  },
+  {
+    id: '3',
+    title: 'Lalka',
+    author: 'Bolesław Prus',
+    genre: 'Klasyka',
+    description: 'Wybitna polska powieść realistyczna ukazująca obraz społeczeństwa polskiego XIX wieku.',
+    rating: 4,
+    maxRating: 5,
+    dateAdded: '2026-05-05T09:15:00Z',
+    cover: '',
+    collection: 'owned',
+    isFavorite: false
+  },
+  {
+    id: '4',
+    title: 'Diuna',
+    author: 'Frank Herbert',
+    genre: 'Science Fiction',
+    description: 'Arcydzieło literatury SF.',
+    rating: 0,
+    maxRating: 5,
+    dateAdded: '2026-05-06T09:15:00Z',
+    cover: 'https://books.google.com/books/content?id=B1hSGQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+    collection: 'to-buy',
+    isFavorite: false
+  }
+];
+
+// Dostępne kategorie w aplikacji
+const COLLECTIONS = [
+  { id: 'owned', label: 'W kolekcji', icon: BookOpen },
+  { id: 'audiobook', label: 'Audiobooki', icon: Headphones },
+  { id: 'to-buy', label: 'Do kupienia', icon: ShoppingCart },
+  { id: 'recommendation', label: 'Rekomendacje', icon: Lightbulb },
+];
+
+export default function App() {
+  const [books, setBooks] = useState(initialBooks);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState('grid');
+  const [sortBy, setSortBy] = useState('dateDesc');
+  const [activeTab, setActiveTab] = useState('all'); // 'all', 'favorites', 'owned', 'audiobook', 'to-buy', 'recommendation'
+  
+  // Modals state
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [editingBook, setEditingBook] = useState(null);
+  const [selectedBook, setSelectedBook] = useState(null);
+
+  // Zoptymalizowane sortowanie i filtrowanie
+  const filteredAndSortedBooks = useMemo(() => {
+    // 1. Filtrowanie po tekście
+    let result = books.filter(book => 
+      book.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    // 2. Filtrowanie po zakładce (Kolekcja/Ulubione)
+    if (activeTab === 'favorites') {
+      result = result.filter(b => b.isFavorite);
+    } else if (activeTab !== 'all') {
+      result = result.filter(b => b.collection === activeTab);
+    }
+
+    // 3. Sortowanie
+    result.sort((a, b) => {
+      switch (sortBy) {
+        case 'title':
+          return a.title.localeCompare(b.title);
+        case 'rating':
+          const aPercent = a.rating / a.maxRating;
+          const bPercent = b.rating / b.maxRating;
+          return bPercent - aPercent;
+        case 'dateAsc':
+          return new Date(a.dateAdded) - new Date(b.dateAdded);
+        case 'dateDesc':
+        default:
+          return new Date(b.dateAdded) - new Date(a.dateAdded);
+      }
+    });
+
+    return result;
+  }, [books, searchQuery, sortBy, activeTab]);
+
+  const handleSaveBook = (bookData) => {
+    if (editingBook) {
+      setBooks(books.map(b => b.id === editingBook.id ? { ...bookData, id: b.id, dateAdded: b.dateAdded } : b));
+    } else {
+      setBooks([{ 
+        ...bookData, 
+        id: Date.now().toString(),
+        dateAdded: new Date().toISOString()
+      }, ...books]);
+    }
+    setIsFormOpen(false);
+    setEditingBook(null);
+  };
+
+  const handleDeleteBook = (id) => {
+    setBooks(books.filter(b => b.id !== id));
+    setIsDetailsOpen(false);
+  };
+
+  const toggleFavorite = (id, e) => {
+    if (e) e.stopPropagation();
+    setBooks(books.map(b => b.id === id ? { ...b, isFavorite: !b.isFavorite } : b));
+    if (selectedBook && selectedBook.id === id) {
+      setSelectedBook({ ...selectedBook, isFavorite: !selectedBook.isFavorite });
+    }
+  };
+
+  const openEdit = (book) => {
+    setEditingBook(book);
+    setIsDetailsOpen(false);
+    setIsFormOpen(true);
+  };
+
+  const openDetails = (book) => {
+    setSelectedBook(book);
+    setIsDetailsOpen(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#f9fafb] text-slate-800 font-sans selection:bg-indigo-100 selection:text-indigo-900 pb-12">
+      {/* Header */}
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2 text-indigo-600">
+            <BookOpen className="w-7 h-7" />
+            <h1 className="text-xl font-bold tracking-tight hidden sm:block">Moja Biblioteczka</h1>
+          </div>
+          
+          <div className="flex-1 max-w-xl mx-4 relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-slate-400" />
+            </div>
+            <input
+              type="text"
+              className="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-full leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors"
+              placeholder="Szukaj po tytule lub autorze..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
+          <button
+            onClick={() => { setEditingBook(null); setIsFormOpen(true); }}
+            className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors shrink-0"
+          >
+            <Plus className="h-5 w-5 sm:mr-2" />
+            <span className="hidden sm:inline">Dodaj książkę</span>
+          </button>
+        </div>
+
+        {/* Tabs Navigation */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex space-x-6 overflow-x-auto py-3 scrollbar-hide">
+            <TabButton active={activeTab === 'all'} onClick={() => setActiveTab('all')} icon={LayoutGrid} label="Wszystkie" />
+            <TabButton active={activeTab === 'favorites'} onClick={() => setActiveTab('favorites')} icon={Heart} label="Ulubione" />
+            {COLLECTIONS.map(col => (
+              <TabButton 
+                key={col.id} 
+                active={activeTab === col.id} 
+                onClick={() => setActiveTab(col.id)} 
+                icon={col.icon} 
+                label={col.label} 
+              />
+            ))}
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Controls */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+          <div className="text-sm text-slate-500">
+            Znaleziono: <span className="font-semibold text-slate-800">{filteredAndSortedBooks.length}</span> pozycji
+          </div>
+          
+          <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+            <SortDropdown value={sortBy} onChange={setSortBy} />
+
+            <div className="flex items-center bg-white border border-slate-200 rounded-md shadow-sm p-1">
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`p-1.5 rounded ${viewMode === 'grid' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-400 hover:text-slate-600'}`}
+                title="Widok siatki"
+              >
+                <LayoutGrid className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`p-1.5 rounded ${viewMode === 'list' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-400 hover:text-slate-600'}`}
+                title="Widok listy"
+              >
+                <ListIcon className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Book Grid / List */}
+        {filteredAndSortedBooks.length > 0 ? (
+          <div className={
+            viewMode === 'grid' 
+              ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6"
+              : "flex flex-col gap-4"
+          }>
+            {filteredAndSortedBooks.map(book => (
+              viewMode === 'grid' 
+                ? <BookCard key={book.id} book={book} onClick={() => openDetails(book)} onToggleFavorite={toggleFavorite} />
+                : <BookListItem key={book.id} book={book} onClick={() => openDetails(book)} onToggleFavorite={toggleFavorite} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20 bg-white rounded-xl shadow-sm border border-slate-100 mt-4">
+            <BookOpen className="mx-auto h-12 w-12 text-slate-300 mb-4" />
+            <h3 className="text-lg font-medium text-slate-900">Brak wyników</h3>
+            <p className="mt-1 text-slate-500">Nie znaleziono książek w tej sekcji lub dla tego zapytania.</p>
+          </div>
+        )}
+      </main>
+
+      {/* Modals */}
+      {isFormOpen && (
+        <BookFormModal 
+          book={editingBook} 
+          onSave={handleSaveBook} 
+          onClose={() => { setIsFormOpen(false); setEditingBook(null); }} 
+        />
+      )}
+      
+      {isDetailsOpen && selectedBook && (
+        <BookDetailsModal 
+          book={selectedBook} 
+          onClose={() => setIsDetailsOpen(false)} 
+          onEdit={() => openEdit(selectedBook)}
+          onDelete={() => handleDeleteBook(selectedBook.id)}
+          onToggleFavorite={toggleFavorite}
+        />
+      )}
+    </div>
+  );
+}
+
+// --- KOMPONENTY WIDOKU ---
+
+function TabButton({ active, onClick, icon: Icon, label }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${
+        active 
+          ? 'border-indigo-600 text-indigo-600' 
+          : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+      }`}
+    >
+      <Icon className={`w-4 h-4 ${active && label === 'Ulubione' ? 'fill-indigo-600' : ''}`} />
+      {label}
+    </button>
+  );
+}
+
+function CollectionBadge({ collectionId, className = "" }) {
+  const col = COLLECTIONS.find(c => c.id === collectionId);
+  if (!col) return null;
+  const Icon = col.icon;
+  
+  let colorClasses = "bg-slate-100 text-slate-700";
+  if (collectionId === 'audiobook') colorClasses = "bg-purple-50 text-purple-700";
+  if (collectionId === 'to-buy') colorClasses = "bg-emerald-50 text-emerald-700";
+  if (collectionId === 'recommendation') colorClasses = "bg-amber-50 text-amber-700";
+
+  return (
+    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider ${colorClasses} ${className}`}>
+      <Icon className="w-3 h-3" />
+      {col.label}
+    </span>
+  );
+}
+
+function BookCard({ book, onClick, onToggleFavorite }) {
+  return (
+    <div 
+      onClick={onClick}
+      className="group cursor-pointer flex flex-col h-full bg-transparent transition-all duration-300 hover:-translate-y-1 relative"
+    >
+      <div className="relative aspect-[2/3] w-full rounded-r-md rounded-l-sm shadow-md overflow-hidden bg-slate-200 mb-3 group-hover:shadow-xl transition-shadow border-l-4 border-slate-900/10">
+        {book.cover ? (
+          <img src={book.cover} alt={`Okładka ${book.title}`} className="w-full h-full object-cover" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-slate-400">
+            <ImageIcon className="w-10 h-10 opacity-50" />
+          </div>
+        )}
+        
+        {/* Odznaki na okładce */}
+        <div className="absolute top-2 right-2 flex flex-col gap-2 items-end">
+          {book.rating > 0 && (
+            <div className="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+              <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+              <span>{book.rating}/{book.maxRating}</span>
+            </div>
+          )}
+        </div>
+        
+        <button 
+          onClick={(e) => onToggleFavorite(book.id, e)}
+          className="absolute top-2 left-2 p-1.5 rounded-full bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-colors shadow-sm"
+        >
+          <Heart className={`w-4 h-4 ${book.isFavorite ? 'fill-red-500 text-red-500' : 'text-white'}`} />
+        </button>
+      </div>
+
+      <div className="flex flex-col flex-grow">
+        <div className="mb-1">
+          <CollectionBadge collectionId={book.collection} />
+        </div>
+        <h3 className="font-semibold text-slate-900 leading-tight line-clamp-2" title={book.title}>{book.title}</h3>
+        <p className="text-sm text-slate-500 mt-1 line-clamp-1">{book.author}</p>
+      </div>
+    </div>
+  );
+}
+
+function BookListItem({ book, onClick, onToggleFavorite }) {
+  return (
+    <div 
+      onClick={onClick}
+      className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm border border-slate-100 cursor-pointer hover:bg-slate-50 transition-colors relative group"
+    >
+      <div className="h-28 w-20 flex-shrink-0 rounded-r-sm rounded-l-[1px] shadow overflow-hidden bg-slate-200 border-l-2 border-slate-900/10 relative">
+        {book.cover ? (
+          <img src={book.cover} alt={`Okładka ${book.title}`} className="w-full h-full object-cover" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-slate-400">
+            <ImageIcon className="w-6 h-6 opacity-50" />
+          </div>
+        )}
+      </div>
+      
+      <div className="flex-grow min-w-0 flex flex-col justify-center py-1">
+        <div className="flex justify-between items-start mb-1">
+          <h3 className="text-lg font-semibold text-slate-900 truncate pr-4">{book.title}</h3>
+          <button 
+            onClick={(e) => onToggleFavorite(book.id, e)}
+            className="p-1 rounded-full hover:bg-slate-200 transition-colors shrink-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
+          >
+            <Heart className={`w-5 h-5 ${book.isFavorite ? 'fill-red-500 text-red-500' : 'text-slate-400'}`} />
+          </button>
+        </div>
+        
+        <p className="text-sm text-slate-600 mb-3">{book.author}</p>
+        
+        <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mt-auto">
+          <CollectionBadge collectionId={book.collection} />
+          {book.genre && <span className="bg-slate-100 px-2 py-1 rounded-md">{book.genre}</span>}
+          {book.rating > 0 && (
+            <div className="flex items-center gap-1 ml-auto sm:ml-0">
+              <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+              <span className="font-medium text-slate-700">{book.rating}/{book.maxRating}</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- KOMPONENT OCEN (Gwiazdki) ---
+function StarRatingInput({ rating, maxRating, onChange, readOnly = false }) {
+  return (
+    <div className="flex items-center gap-1">
+      {[...Array(maxRating)].map((_, index) => {
+        const starValue = index + 1;
+        return (
+          <button
+            key={index}
+            type="button"
+            disabled={readOnly}
+            onClick={() => onChange(starValue)}
+            className={`${readOnly ? 'cursor-default' : 'cursor-pointer hover:scale-110'} transition-transform focus:outline-none`}
+          >
+            <Star 
+              className={`w-7 h-7 sm:w-6 sm:h-6 ${
+                starValue <= rating 
+                  ? 'fill-yellow-400 text-yellow-400' 
+                  : 'fill-slate-100 text-slate-300'
+              }`} 
+            />
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- MODALE ---
+
+function BookDetailsModal({ book, onClose, onEdit, onDelete, onToggleFavorite }) {
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200">
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-10 bg-white/80 backdrop-blur-sm"
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        <div className="flex flex-col md:flex-row">
+          {/* Lewa kolumna: Okładka */}
+          <div className="md:w-2/5 p-8 bg-slate-50 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 relative">
+            <button 
+              onClick={() => onToggleFavorite(book.id)}
+              className="absolute top-6 left-6 p-2 rounded-full bg-white shadow-md hover:bg-slate-50 transition-colors z-10"
+              title={book.isFavorite ? "Usuń z ulubionych" : "Dodaj do ulubionych"}
+            >
+              <Heart className={`w-6 h-6 ${book.isFavorite ? 'fill-red-500 text-red-500' : 'text-slate-400'}`} />
+            </button>
+
+            <div className="w-48 md:w-full aspect-[2/3] max-w-[240px] rounded-r-lg rounded-l-sm shadow-xl overflow-hidden bg-white border-l-8 border-slate-900/10 mt-6 md:mt-0">
+               {book.cover ? (
+                  <img src={book.cover} alt="Okładka" className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 bg-slate-200">
+                    <ImageIcon className="w-16 h-16 opacity-50 mb-2" />
+                    <span className="text-sm font-medium">Brak okładki</span>
+                  </div>
+                )}
+            </div>
+            <div className="mt-6">
+              <CollectionBadge collectionId={book.collection} className="px-3 py-1 text-xs" />
+            </div>
+          </div>
+
+          {/* Prawa kolumna: Detale */}
+          <div className="md:w-3/5 p-8 flex flex-col">
+            <div className="flex-grow">
+              <div className="mb-2">
+                <span className="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full uppercase tracking-wide">
+                  {book.genre || 'Inne'}
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 leading-tight mb-2 pr-8">{book.title}</h2>
+              <p className="text-xl text-slate-600 mb-6 font-serif italic">{book.author}</p>
+
+              {(book.rating > 0 || book.collection === 'owned') && (
+                <div className="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                  <h4 className="text-sm font-semibold text-slate-900 mb-2">Twoja ocena</h4>
+                  <div className="flex items-center gap-3">
+                    <StarRatingInput rating={book.rating} maxRating={book.maxRating} readOnly={true} />
+                    {book.rating > 0 ? (
+                      <span className="text-sm text-slate-500 font-medium">({book.rating}/{book.maxRating})</span>
+                    ) : (
+                      <span className="text-sm text-slate-400 italic">Brak oceny</span>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {book.description && (
+                <div className="mb-8">
+                  <h4 className="text-sm font-semibold text-slate-900 mb-2">Opis / Notatka</h4>
+                  <p className="text-slate-600 leading-relaxed whitespace-pre-line text-sm sm:text-base">{book.description}</p>
+                </div>
+              )}
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center text-xs text-slate-400">
+                <Calendar className="w-4 h-4 mr-1" />
+                Dodano: {new Date(book.dateAdded).toLocaleDateString('pl-PL')}
+              </div>
+              
+              <div className="flex gap-2 relative">
+                {showDeleteConfirm ? (
+                  <div className="flex items-center bg-red-50 text-red-700 px-3 py-1.5 rounded-lg border border-red-100 animate-in slide-in-from-right-4">
+                    <span className="text-sm mr-3 font-medium">Na pewno?</span>
+                    <button onClick={onDelete} className="text-sm bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors mr-2">Tak</button>
+                    <button onClick={() => setShowDeleteConfirm(false)} className="text-sm bg-white border border-slate-200 px-3 py-1 rounded hover:bg-slate-50 transition-colors text-slate-700">Nie</button>
+                  </div>
+                ) : (
+                  <>
+                    <button 
+                      onClick={() => setShowDeleteConfirm(true)}
+                      className="flex items-center justify-center gap-1.5 px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors flex-1 sm:flex-none"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                      Usuń
+                    </button>
+                    <button 
+                      onClick={onEdit}
+                      className="flex items-center justify-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-sm transition-colors flex-1 sm:flex-none"
+                    >
+                      <Edit3 className="w-4 h-4" />
+                      Edytuj
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BookFormModal({ book, onSave, onClose }) {
+  const [formData, setFormData] = useState({
+    title: book?.title || '',
+    author: book?.author || '',
+    genre: book?.genre || '',
+    description: book?.description || '',
+    maxRating: book?.maxRating || 5,
+    rating: book?.rating || 0,
+    cover: book?.cover || '',
+    collection: book?.collection || 'owned',
+    isFavorite: book?.isFavorite || false
+  });
+  
+  const [errors, setErrors] = useState({});
+  
+  // Google Books API Auto-suggest State
+  const [searchTerm, setSearchTerm] = useState(book?.title || '');
+  const [suggestions, setSuggestions] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  // Debounced API Call
+  useEffect(() => {
+    const fetchBooks = async () => {
+      // Ignoruj wyszukiwanie jeśli wpisano mało znaków, lub jeśli tytuł pasuje do już wybranego
+      if (!searchTerm || searchTerm.length < 3 || searchTerm === formData.title) {
+        setSuggestions([]);
+        return;
+      }
+      
+      setIsSearching(true);
+      try {
+        const query = encodeURIComponent(searchTerm);
+        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=5&langRestrict=pl`);
+        const data = await res.json();
+        
+        if (data.items) {
+          const results = data.items.map(item => {
+            const info = item.volumeInfo;
+            // Poprawa linku do okładki na HTTPS
+            let coverUrl = info.imageLinks?.thumbnail || info.imageLinks?.smallThumbnail || '';
+            coverUrl = coverUrl.replace('http:', 'https:');
+            
+            return {
+              id: item.id,
+              title: info.title || '',
+              author: info.authors ? info.authors.join(', ') : '',
+              genre: info.categories ? info.categories[0] : '',
+              description: info.description || '',
+              cover: coverUrl
+            };
+          });
+          setSuggestions(results);
+          setShowSuggestions(true);
+        } else {
+          setSuggestions([]);
+        }
+      } catch (err) {
+        console.error("Błąd pobierania danych:", err);
+      } finally {
+        setIsSearching(false);
+      }
+    };
+
+    const debounceTimer = setTimeout(fetchBooks, 600);
+    return () => clearTimeout(debounceTimer);
+  }, [searchTerm, formData.title]);
+
+  const handleSelectSuggestion = (suggestion) => {
+    setFormData(prev => ({
+      ...prev,
+      title: suggestion.title,
+      author: suggestion.author,
+      genre: suggestion.genre,
+      description: suggestion.description,
+      cover: prev.cover || suggestion.cover // Nadpisz okładkę tylko gdy jest pusta (aby nie psuć wgranej ręcznie)
+    }));
+    setSearchTerm(suggestion.title);
+    setShowSuggestions(false);
+  };
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, cover: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.title.trim()) newErrors.title = 'Tytuł jest wymagany';
+    if (!formData.author.trim()) newErrors.author = 'Autor jest wymagany';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      onSave(formData);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[95vh] flex flex-col animate-in fade-in zoom-in-95 duration-200">
+        
+        <div className="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-xl shrink-0">
+          <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+            {book ? <Edit3 className="w-5 h-5 text-indigo-600" /> : <Plus className="w-5 h-5 text-indigo-600" />}
+            {book ? 'Edytuj książkę' : 'Dodaj nową książkę'}
+          </h2>
+          <button onClick={onClose} className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-200 rounded-full transition-colors">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="p-6 overflow-y-auto flex-grow relative" onClick={() => setShowSuggestions(false)}>
+          
+          {/* Typ kolekcji i Ulubione - GŁÓWNY PANEL NA GÓRZE */}
+          <div className="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <label className="block text-sm font-semibold text-slate-800 mb-2">Gdzie dodać tę książkę?</label>
+              <div className="flex flex-wrap gap-2">
+                {COLLECTIONS.map(col => {
+                  const Icon = col.icon;
+                  return (
+                    <button
+                      key={col.id}
+                      type="button"
+                      onClick={() => setFormData({...formData, collection: col.id})}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
+                        formData.collection === col.id 
+                          ? 'bg-white border-indigo-500 text-indigo-700 shadow-sm ring-1 ring-indigo-500' 
+                          : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      {col.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+            
+            <div className="sm:pl-6 sm:border-l border-indigo-100 flex items-center">
+               <button
+                  type="button"
+                  onClick={() => setFormData({...formData, isFavorite: !formData.isFavorite})}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all ${
+                    formData.isFavorite 
+                      ? 'bg-red-50 border-red-200 text-red-700 shadow-sm' 
+                      : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  <Heart className={`w-5 h-5 ${formData.isFavorite ? 'fill-red-500 text-red-500' : 'text-slate-400'}`} />
+                  <span className="font-medium text-sm">Oznacz jako Ulubioną</span>
+                </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            {/* Kolumna lewa: Dane tekstowe i API */}
+            <div className="space-y-4 relative">
+              
+              <div className="relative">
+                <label className="block text-sm font-medium text-slate-700 mb-1 flex justify-between">
+                  <span>Tytuł *</span>
+                  <span className="text-[10px] text-slate-400 uppercase tracking-wide flex items-center gap-1">
+                    <Search className="w-3 h-3" /> Auto-uzupełnianie
+                  </span>
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={e => {
+                      setSearchTerm(e.target.value);
+                      setFormData({...formData, title: e.target.value});
+                    }}
+                    onFocus={() => { if(suggestions.length > 0) setShowSuggestions(true); }}
+                    onClick={(e) => e.stopPropagation()}
+                    className={`w-full px-3 py-2 pr-10 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none ${errors.title ? 'border-red-500 focus:ring-red-500' : 'border-slate-300'}`}
+                    placeholder="Wpisz tytuł, np. Harry Potter..."
+                    autoComplete="off"
+                  />
+                  {isSearching && (
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <Loader2 className="w-4 h-4 text-indigo-500 animate-spin" />
+                    </div>
+                  )}
+                </div>
+                {errors.title && <p className="mt-1 text-xs text-red-500 flex items-center"><AlertCircle className="w-3 h-3 mr-1"/>{errors.title}</p>}
+
+                {/* Dropdown z podpowiedziami API */}
+                {showSuggestions && suggestions.length > 0 && (
+                  <div className="absolute z-20 w-full mt-1 bg-white border border-slate-200 rounded-lg shadow-xl max-h-60 overflow-y-auto">
+                    {suggestions.map((sug) => (
+                      <div 
+                        key={sug.id} 
+                        onClick={() => handleSelectSuggestion(sug)}
+                        className="flex items-center gap-3 p-3 hover:bg-indigo-50 cursor-pointer border-b border-slate-100 last:border-0"
+                      >
+                        <div className="w-10 h-14 bg-slate-200 shrink-0 overflow-hidden rounded-sm shadow-sm">
+                          {sug.cover ? <img src={sug.cover} alt="cover" className="w-full h-full object-cover" /> : <ImageIcon className="w-full h-full p-2 text-slate-400 opacity-50"/>}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-slate-900 truncate">{sug.title}</p>
+                          <p className="text-xs text-slate-500 truncate">{sug.author}</p>
+                        </div>
+                        <Check className="w-4 h-4 text-indigo-500 ml-auto opacity-0 group-hover:opacity-100" />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Autor *</label>
+                <input
+                  type="text"
+                  value={formData.author}
+                  onChange={e => setFormData({...formData, author: e.target.value})}
+                  className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none ${errors.author ? 'border-red-500 focus:ring-red-500' : 'border-slate-300'}`}
+                  placeholder="np. J.K. Rowling"
+                />
+                {errors.author && <p className="mt-1 text-xs text-red-500 flex items-center"><AlertCircle className="w-3 h-3 mr-1"/>{errors.author}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Gatunek</label>
+                <input
+                  type="text"
+                  value={formData.genre}
+                  onChange={e => setFormData({...formData, genre: e.target.value})}
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                  placeholder="np. Fantasy"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Krótki opis / Notatka</label>
+                <textarea
+                  value={formData.description}
+                  onChange={e => setFormData({...formData, description: e.target.value})}
+                  rows={4}
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-none"
+                  placeholder="Opis fabuły pobrany z sieci lub Twoje własne notatki..."
+                />
+              </div>
+            </div>
+
+            {/* Kolumna prawa: Okładka i Ocena */}
+            <div className="space-y-6">
+              
+              {/* Sekcja Oceny (pokaż tylko jeśli nie jest "do kupienia" lub "rekomendacja") */}
+              <div className={`bg-slate-50 p-4 rounded-xl border transition-opacity ${formData.collection === 'to-buy' || formData.collection === 'recommendation' ? 'opacity-50 border-slate-100' : 'border-slate-200'}`}>
+                <div className="flex justify-between items-center mb-3">
+                  <label className="block text-sm font-medium text-slate-700">
+                    Twoja ocena 
+                    {(formData.collection === 'to-buy' || formData.collection === 'recommendation') && <span className="text-xs font-normal text-slate-400 block">Oceniasz książkę z listy życzeń?</span>}
+                  </label>
+                  <div className="flex items-center text-xs text-slate-500">
+                    <span className="mr-2">Skala:</span>
+                    <select 
+                      value={formData.maxRating} 
+                      onChange={(e) => {
+                        const newMax = parseInt(e.target.value);
+                        setFormData({...formData, maxRating: newMax, rating: Math.min(formData.rating, newMax)});
+                      }}
+                      className="border border-slate-200 rounded px-1 py-0.5 bg-white outline-none focus:ring-1 focus:ring-indigo-500"
+                    >
+                      {[2, 3, 4, 5, 6].map(num => (
+                        <option key={num} value={num}>do {num}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center py-2 bg-white rounded-lg border border-slate-100 shadow-inner">
+                  <StarRatingInput 
+                    rating={formData.rating} 
+                    maxRating={formData.maxRating}
+                    onChange={(val) => setFormData({...formData, rating: val})} 
+                  />
+                </div>
+              </div>
+
+              {/* Sekcja Okładki */}
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Okładka książki</label>
+                <div className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl border border-slate-200 border-dashed">
+                  <div className="relative w-32 aspect-[2/3] rounded shadow-md overflow-hidden bg-white border border-slate-200 mb-4 group">
+                    {formData.cover ? (
+                      <>
+                        <img src={formData.cover} alt="Podgląd okładki" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                          <Trash2 
+                            className="w-6 h-6 text-white cursor-pointer hover:text-red-400" 
+                            onClick={() => setFormData({...formData, cover: ''})}
+                          />
+                        </div>
+                      </>
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 text-xs text-center p-2">
+                        <ImageIcon className="w-8 h-8 opacity-30 mb-2" />
+                        Pobierze się z sieci lub wgraj własną
+                      </div>
+                    )}
+                  </div>
+                  
+                  <label className="cursor-pointer inline-flex items-center justify-center px-4 py-2 border border-slate-300 shadow-sm text-sm font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 transition-colors w-full">
+                    <ImageIcon className="w-4 h-4 mr-2 text-slate-500" />
+                    <span>Wgraj z dysku</span>
+                    <input type="file" className="sr-only" accept="image/*" onChange={handleImageUpload} />
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Stopka Formularza */}
+          <div className="mt-8 pt-4 border-t border-slate-200 flex flex-col-reverse sm:flex-row justify-end gap-3 sticky bottom-0 bg-white py-2">
+            <button
+              type="button"
+              onClick={onClose}
+              className="w-full sm:w-auto px-5 py-2.5 border border-slate-300 rounded-lg text-slate-700 font-medium hover:bg-slate-50 transition-colors"
+            >
+              Anuluj
+            </button>
+            <button
+              type="submit"
+              className="w-full sm:w-auto px-5 py-2.5 bg-indigo-600 rounded-lg text-white font-medium hover:bg-indigo-700 shadow-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Zapisz pozycję w bibliotece
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+// --- KOMPONENT SORTOWANIA ---
+
+function SortDropdown({ value, onChange }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = React.useRef(null);
+
+  const options = [
+    { id: 'dateDesc', label: 'Najnowsze' },
+    { id: 'dateAsc', label: 'Najstarsze' },
+    { id: 'title', label: 'Alfabetycznie (Tytuł)' },
+    { id: 'rating', label: 'Najwyżej oceniane' }
+  ];
+
+  // Obsługa zamykania kliknięciem poza komponent
+  React.useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const selectedLabel = options.find(o => o.id === value)?.label;
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-[200px] pl-4 pr-3 py-2 text-sm border border-slate-200 rounded-lg bg-white shadow-sm hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+      >
+        <span className="truncate font-medium text-slate-700">{selectedLabel}</span>
+        <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute z-30 right-0 sm:left-0 w-full min-w-[200px] mt-1.5 bg-white border border-slate-100 rounded-xl shadow-xl py-1.5 animate-in fade-in slide-in-from-top-2 duration-200 overflow-hidden">
+          {options.map((option) => (
+            <button
+              key={option.id}
+              onClick={() => {
+                onChange(option.id);
+                setIsOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2.5 text-sm flex items-center justify-between transition-colors ${
+                value === option.id 
+                  ? 'bg-indigo-50 text-indigo-700 font-semibold' 
+                  : 'text-slate-600 hover:bg-slate-50 font-medium'
+              }`}
+            >
+              {option.label}
+              {value === option.id && <Check className="w-4 h-4 text-indigo-600" />}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
