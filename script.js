@@ -188,7 +188,7 @@ projects: [
             longDescPl: "Interaktywna wizytówka typu One-Pager dla gastronomii. Oprócz prezentacji produktów, zadaniem kodu było dostarczenie użytkownikowi wrażeń znanych z płynnych aplikacji natywnych.<br><br><strong>Kluczowe osiągnięcia techniczne:</strong><br>&bull; Napisanie modularnego arkusza stylów (Flexbox/Grid), w 100% responsywnego (Mobile-First).<br>&bull; Zakodowanie złożonych animacji hover i przejść stron wyłącznie za pomocą natywnych własności CSS (transitions/transforms).<br>&bull; Logika domowego 'koszyka' oparta o lokalną manipulację drzewem DOM.",
             longDescEn: "An interactive One-Pager showcase for gastronomy. Besides presenting products, the code's task was to provide the user with an experience familiar from smooth native applications.<br><br><strong>Key technical achievements:</strong><br>&bull; Wrote a modular stylesheet (Flexbox/Grid), 100% responsive (Mobile-First).<br>&bull; Coded complex hover animations and page transitions using exclusively native CSS properties (transitions/transforms).<br>&bull; Homebrew 'cart' logic based on local DOM tree manipulation.",
             rolePl: "Front-end Developer", roleEn: "Front-end Developer",
-            tag: "HTML / CSS / Bootstrap", tagColor: "text-orange-500", extraClass: "border border-dashed border-gray-400 dark:border-gray-700", githubLink: "", liveLink: "https://kolegatatar.github.io/Fast_Food_Restaurant_Website/"
+            tag: "HTML / CSS / Bootstrap", tagColor: "text-orange-500", extraClass: "", githubLink: "", liveLink: "https://kolegatatar.github.io/Fast_Food_Restaurant_Website/"
         }
     ]
 ,
